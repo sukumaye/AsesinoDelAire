@@ -1,0 +1,12 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.6.0f1
+CRC: 77275788
+HashAppended: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: atlasbundle
+      Dependencies: {}
+    Info_1:
+      Name: skeleton
+      Dependencies: {}

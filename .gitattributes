@@ -1,0 +1,2 @@
+Library/DataStore/*.bin filter=lfs diff=lfs merge=lfs -text
+*.index filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc078f7bd46de549b828bbfde229022, type: 3}
+  m_Name: Fuerte
+  m_EditorClassIdentifier: Assembly-CSharp::WorldGen.Data.StructureData
+  structureName: Fuerte
+  size: {x: 4, y: 4}
+  doorOffset: {x: 2, y: 0}
+  tiles:
+  - {fileID: 11400000, guid: 997273a11392709418ecfe44cf7521fb, type: 2}
+  - {fileID: 11400000, guid: 03f30ae013e9bd447a73970bbf02d6e5, type: 2}
+  - {fileID: 11400000, guid: b9a11cb547743a2408d6c801b361d25c, type: 2}
+  - {fileID: 11400000, guid: 64d43dd2432cef940a39e145986bdc6a, type: 2}
+  - {fileID: 11400000, guid: a2e339bd87b20dd408f4696831c80034, type: 2}
+  - {fileID: 11400000, guid: 40e689a7818bc3d489cc96f0e9d25e83, type: 2}
+  - {fileID: 11400000, guid: c0dbc279ee64ee74ca28da2e4e6c3a39, type: 2}
+  - {fileID: 11400000, guid: 3d07d22002071204aba1f338ed00ffe6, type: 2}
+  - {fileID: 11400000, guid: 500c0d64d02a3804c863a4a90e1774f1, type: 2}
+  - {fileID: 11400000, guid: d148cd07bad81b04ba4ce4324b1bd659, type: 2}
+  - {fileID: 11400000, guid: d87543356103ebc43823e449583980c4, type: 2}
+  - {fileID: 11400000, guid: fb3b9f0cb93bb4843a544bb5c79beafd, type: 2}
+  - {fileID: 11400000, guid: a6428281bac96cd4389914c69ed114e2, type: 2}
+  - {fileID: 11400000, guid: 0048b923a8cf3ed459d6029184808d7f, type: 2}
+  - {fileID: 11400000, guid: 2fac92140cee7844f8a493c387fd7088, type: 2}
+  - {fileID: 11400000, guid: 3d277d17a0a17c94498d7477d7faa055, type: 2}

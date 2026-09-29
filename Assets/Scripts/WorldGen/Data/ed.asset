@@ -1,0 +1,3605 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbbd7d7c426e33438c9eedd9b08c22d, type: 3}
+  m_Name: ed
+  m_EditorClassIdentifier: Assembly-CSharp::WorldGen.Data.WfcVisualDatabase
+  atlasTexture: {fileID: 2800000, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+  tiles:
+  - id: 0
+    spriteName: Prado_0
+    sprite: {fileID: 1059198087, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 6c0c7fa386339b94eae2a2d93e69ed83, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 16
+      height: 16
+    category: Prado
+    role: 
+    allowedNorth: 46000000470000004800000028000000290000002a000000050000000600000007000000270000002c0000002d0000002e000000080000000a000000000000000200000003000000040000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002b0000002f000000300000003100000032000000330000003400000038000000390000003a0000003b0000003c0000003d0000003e0000003f00000040000000430000004400000045000000490000004a0000004b0000004f00000050000000510000005200000053000000540000005500000056000000570000005a0000005b0000005c0000005d0000005e0000005f00000060000000610000006200000065000000660000006700000068000000690000006a0000006b0000006c0000006d00000070000000710000007200000073000000740000007500000076000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f000000900000009100000092000000930000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000be000000bf000000c0000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000cf000000d0000000d100000001000000i
+    allowedSouth: 2f00000030000000310000001000000011000000120000000500000006000000070000000f00000014000000150000001600000008000000090000000a00000000000000i
+    allowedEast: 2f0000003b00000046000000100000001c00000028000000050000000f0000001b0000002700000014000000200000002c000000130000001f0000002b000000i
+    allowedWest: 310000003d00000048000000120000001e0000002a000000070000000f0000001b0000002700000016000000220000002e000000130000001f0000002b000000i
+    weight: 0.03
+  - id: 1
+    spriteName: Flores_1
+    sprite: {fileID: -842926578, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f9a26a8bfa2e67648886d40d3d8a53b4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 320
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 2
+    spriteName: Flores_2
+    sprite: {fileID: -1035434511, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e3f40c56bb325114ea5d5219df8176c5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 320
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 3
+    spriteName: Flores_3
+    sprite: {fileID: -785563665, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 94e8a39694d7ac64ebc6c7788ef08901, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 320
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 4
+    spriteName: Flores_4
+    sprite: {fileID: 208947017, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 03a8345956219d1469cc84058b08efba, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 320
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 07000000i
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 5
+    spriteName: Camino_5
+    sprite: {fileID: -1381350399, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: dd68ecf021d0dde498f46746b4ddeec5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 320
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Cap_W
+    allowedNorth: 00000000i
+    allowedSouth: 00000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 6
+    spriteName: Camino_6
+    sprite: {fileID: 1867641947, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e411067df41aa9c41b2bb5b98ad73f8a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 320
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Straight_H
+    allowedNorth: 00000000i
+    allowedSouth: 00000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 2
+  - id: 7
+    spriteName: Camino_7
+    sprite: {fileID: -2068786761, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b35fd5bf6c0193a46a09b9930eeb0317, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 320
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Cap_E
+    allowedNorth: 00000000i
+    allowedSouth: 00000000i
+    allowedEast: 00000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1
+  - id: 8
+    spriteName: Camino_Piedra_8
+    sprite: {fileID: 865272131, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 7efcb6eb64ebf03449900724c23d5ba4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 320
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Trans_W
+    allowedNorth: 0000000008000000090000000a000000130000001400000015000000160000001f0000002000000021000000220000002b0000002c0000002d0000002e000000i
+    allowedSouth: 0000000008000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 050000000600000010000000110000001c0000001d0000002800000029000000i
+    weight: 1
+  - id: 9
+    spriteName: Camino_Piedra_9
+    sprite: {fileID: -1535483314, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8f81c70cb6ce2e643b893f2a2819ed2d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 320
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Straight_H
+    allowedNorth: 00000000i
+    allowedSouth: 08000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 2
+  - id: 10
+    spriteName: Camino_Piedra_10
+    sprite: {fileID: -987871884, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f33c4f31cab15274a817f222d7452396, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 320
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Trans_E
+    allowedNorth: 00000000i
+    allowedSouth: 0000000008000000i
+    allowedEast: 060000000700000011000000120000001d0000001e000000290000002a000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1
+  - id: 11
+    spriteName: Flores_11
+    sprite: {fileID: -1938726019, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8b45d28708b2d0748a1d5e73fcf2958e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 304
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 12
+    spriteName: Flores_12
+    sprite: {fileID: -1567597274, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f631ecee82ecea144898f27ae07b4aa5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 304
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 13
+    spriteName: Flores_13
+    sprite: {fileID: 1393135878, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 86300b2d4cbd42e429dc3472fbf5a666, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 304
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 14
+    spriteName: Flores_14
+    sprite: {fileID: 768078413, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0f64a2675da3a824f8f65b4325e3958e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 304
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 15
+    spriteName: Camino_15
+    sprite: {fileID: -1075293856, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 670ab6efdf8c7464e9442e7217269e26, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 304
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Cap_N
+    allowedNorth: 00000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 16
+    spriteName: Camino_16
+    sprite: {fileID: -1434758548, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 28bf5964a4cd81a4dba233cb8944e81f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 304
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Corner_TL
+    allowedNorth: 00000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 17
+    spriteName: Camino_17
+    sprite: {fileID: 1999169120, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b773fdd8138e6c04a97333c808a7f7e5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 304
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_T_Up
+    allowedNorth: 000000002b000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b0000002700000000000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1.2
+  - id: 18
+    spriteName: Camino_18
+    sprite: {fileID: -1428331878, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: ffc4073e0d3170643ba60dc583346e30, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 304
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Corner_TR
+    allowedNorth: 00000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 00000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1.2
+  - id: 19
+    spriteName: Camino_Piedra_19
+    sprite: {fileID: 1182627869, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f299614953855fc45a7e38f77439cb43, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 304
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Trans_N
+    allowedNorth: 0f00000010000000120000001b0000001c0000001d0000001e00000029000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 20
+    spriteName: Camino_Piedra_20
+    sprite: {fileID: -1039804849, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c44fb75e1d4d3334093daa0e83953e66, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 304
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Corner_TL
+    allowedNorth: 00000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 21
+    spriteName: Camino_Piedra_21
+    sprite: {fileID: 1584728740, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: eb49e7db231c9a449ba97ea03a616af0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 304
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_T_Up
+    allowedNorth: 00000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1.2
+  - id: 22
+    spriteName: Camino_Piedra_22
+    sprite: {fileID: -563419166, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: bdf4dd72a64ab7f49afef752dd40ab63, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 304
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Corner_TR
+    allowedNorth: 00000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1.2
+  - id: 23
+    spriteName: Flores_23
+    sprite: {fileID: -331918703, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: ceb93de60ef682f40b6b79c241e00408, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 288
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 24
+    spriteName: Flores_24
+    sprite: {fileID: -1852132976, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0d39292adc434e3498b6f02deb3b9eae, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 288
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 25
+    spriteName: Flores_25
+    sprite: {fileID: -56299390, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c8058a7e30daf134bb7960393f62c3dc, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 288
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 26
+    spriteName: Flores_26
+    sprite: {fileID: 1165457764, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 813505bcb19e3e94380233cad121d4b2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 288
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 27
+    spriteName: Camino_27
+    sprite: {fileID: 747770516, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 9e653c899c7597c438dad8115dd3a0c7, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 288
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Straight_V
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 2
+  - id: 28
+    spriteName: Camino_28
+    sprite: {fileID: -1517388932, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 9ecb890b712051a42a431e58dcee94fb, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 288
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_T_Left
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 29
+    spriteName: Camino_29
+    sprite: {fileID: 2131365471, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5e3541befa5cf7d479b0f8f3c78ad171, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 288
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Cross
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1
+  - id: 30
+    spriteName: Camino_30
+    sprite: {fileID: -2073763806, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 039af450850ff0243997c84712c31542, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 288
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_T_Right
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 1c0000001d0000001e00000028000000290000002a0000001b000000270000001300000000000000i
+    allowedEast: 00000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1.2
+  - id: 31
+    spriteName: Camino_Piedra_31
+    sprite: {fileID: 794320910, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 34860000bcc5539499d9a4d3c26bead8, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 288
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Straight_V
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 2
+  - id: 32
+    spriteName: Camino_Piedra_32
+    sprite: {fileID: -614691699, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 84ae7631fe5e9924ca979e8176ad54dc, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 288
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_T_Left
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 33
+    spriteName: Camino_Piedra_33
+    sprite: {fileID: 821674236, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3ffebd57487e0ff419fea39bbc2635a5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 288
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Cross
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f0000002d000000i
+    allowedSouth: 20000000210000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1
+  - id: 34
+    spriteName: Camino_Piedra_34
+    sprite: {fileID: -213197952, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a406150a2f59826459cd5a5aa001bafb, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 288
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_T_Right
+    allowedNorth: 1400000015000000160000002000000022000000130000001f0000002d000000i
+    allowedSouth: 2000000021000000220000002c0000002d0000002e0000001f0000002b0000000800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1.2
+  - id: 35
+    spriteName: Flores_35
+    sprite: {fileID: -673941670, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a868c0ec37b22eb42abc081376e596c9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 272
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 36
+    spriteName: Flores_36
+    sprite: {fileID: -358663540, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 38a3224539ddb6a47bb47611e26a843f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 272
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 37
+    spriteName: Flores_37
+    sprite: {fileID: 289085955, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4fc3ece7550f75043934c0b3f16fa05b, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 272
+      width: 16
+      height: 16
+    category: Flores
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 38
+    spriteName: Flores_38
+    sprite: {fileID: -1602672530, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 56c528534a7dea146ac1369bf40b05d2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 272
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 39
+    spriteName: Camino_39
+    sprite: {fileID: -1276891000, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 47b05230ce354f1459cb52c63cf44756, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 272
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Cap_S
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 00000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 40
+    spriteName: Camino_40
+    sprite: {fileID: -172285903, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 526a0c084621bc74b9524d8da018bcce, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 272
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Corner_BL
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 00000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 41
+    spriteName: Camino_41
+    sprite: {fileID: -86499443, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 7aad2404176dfb94885e4b8b6f8b81a2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 272
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_T_Down
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b000000i
+    allowedSouth: 0000000013000000i
+    allowedEast: 11000000120000001d0000001e000000290000002a000000060000000700000008000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1.2
+  - id: 42
+    spriteName: Camino_42
+    sprite: {fileID: 899045568, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e0fc276b7a4c64a42b5e3acc81722084, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 272
+      width: 16
+      height: 16
+    category: Camino
+    role: Road_Corner_BR
+    allowedNorth: 1000000011000000120000001c0000001d0000001e0000000f0000001b0000002b000000i
+    allowedSouth: 00000000i
+    allowedEast: 00000000i
+    allowedWest: 10000000110000001c0000001d000000280000002900000005000000060000000a000000i
+    weight: 1.2
+  - id: 43
+    spriteName: Camino_Piedra_43
+    sprite: {fileID: -665668139, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 02aadee63affce54b85e86ead3ba3def, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 272
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Trans_S
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 110000001b0000001c0000001d0000001e00000027000000280000002a0000000800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 44
+    spriteName: Camino_Piedra_44
+    sprite: {fileID: 559582383, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f871a3c329377914fb1e67b06cf503d9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 272
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Corner_BL
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 0000000008000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 00000000i
+    weight: 1.2
+  - id: 45
+    spriteName: Camino_Piedra_45
+    sprite: {fileID: 1977838942, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4e1f8af409f67454cab8783d52547963, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 272
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_T_Down
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 00000000080000002100000022000000i
+    allowedEast: 150000001600000021000000220000002d0000002e000000090000000a000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1.2
+  - id: 46
+    spriteName: Camino_Piedra_46
+    sprite: {fileID: 2074333861, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8c45551f383b15c4e9628e092aa10922, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 272
+      width: 16
+      height: 16
+    category: Camino_Piedra
+    role: Road_Corner_BR
+    allowedNorth: 140000001500000016000000200000002100000022000000130000001f000000i
+    allowedSouth: 0000000008000000i
+    allowedEast: 00000000i
+    allowedWest: 140000001500000020000000210000002c0000002d0000000800000009000000i
+    weight: 1.2
+  - id: 47
+    spriteName: Agua_Clara_47
+    sprite: {fileID: 1238924224, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8682c756872607b4596aa113f38ebfff, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Outer_TL
+    allowedNorth: 00000000i
+    allowedSouth: 3b00000000000000i
+    allowedEast: 30000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 48
+    spriteName: Agua_Clara_48
+    sprite: {fileID: -1301623298, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d8358c4af6d2ce0439e14d3a3cb1b683, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Top
+    allowedNorth: 00000000i
+    allowedSouth: 3c00000000000000i
+    allowedEast: 31000000i
+    allowedWest: 2f000000i
+    weight: 1
+  - id: 49
+    spriteName: Agua_Clara_49
+    sprite: {fileID: -229780928, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d66e2ef569b15594da5f5c196cd1e7d8, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Outer_TR
+    allowedNorth: 00000000i
+    allowedSouth: 3d00000000000000i
+    allowedEast: 00000000i
+    allowedWest: 30000000i
+    weight: 1
+  - id: 50
+    spriteName: Agua_Turbia_50
+    sprite: {fileID: 1722197364, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 06b481e8f70406f41b354e3cacd46603, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 51
+    spriteName: Agua_Turbia_51
+    sprite: {fileID: 1496554264, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0081c04835b443047ab5c597e2f9400c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 52
+    spriteName: Agua_Turbia_52
+    sprite: {fileID: -1990169720, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e42da68524ab163409722c4308024ae0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 256
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 53
+    spriteName: Meseta_53
+    sprite: {fileID: -1400649853, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: decdce5616415534685205a321fe4b23, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 256
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 54
+    spriteName: Meseta_54
+    sprite: {fileID: -5200269, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 6ecccfc94c138c14093c0efae402955a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 256
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 55
+    spriteName: Meseta_55
+    sprite: {fileID: -888308801, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e98612cba4aca9f4da2bd0930097b258, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 56
+    spriteName: Bosque_56
+    sprite: {fileID: 1001449122, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 879f7023a8f582449bd3b142eb8aa583, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 256
+      width: 16
+      height: 16
+    category: Bosque
+    role: Outer_TL
+    allowedNorth: 
+    allowedSouth: 4300000000000000i
+    allowedEast: 39000000i
+    allowedWest: 
+    weight: 1
+  - id: 57
+    spriteName: Bosque_57
+    sprite: {fileID: 2076749488, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 518ea1e61b1f8db468d7ec69f968fd0d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 256
+      width: 16
+      height: 16
+    category: Bosque
+    role: Top
+    allowedNorth: 
+    allowedSouth: 4400000000000000i
+    allowedEast: 3a000000i
+    allowedWest: 38000000i
+    weight: 1
+  - id: 58
+    spriteName: Bosque_58
+    sprite: {fileID: -1564381680, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 671b30668f1b5a643b5ace84c87c097c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 256
+      width: 16
+      height: 16
+    category: Bosque
+    role: Outer_TR
+    allowedNorth: 
+    allowedSouth: 4500000000000000i
+    allowedEast: 
+    allowedWest: 39000000i
+    weight: 1
+  - id: 59
+    spriteName: Agua_Clara_59
+    sprite: {fileID: -1349417138, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4568e97c3449e854b8447ded56d23950, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Left
+    allowedNorth: 2f000000i
+    allowedSouth: 4600000000000000i
+    allowedEast: 3c000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 60
+    spriteName: Agua_Clara_60
+    sprite: {fileID: -1643138570, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5e3b78445c5b8954d87df93385bb12c0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Center
+    allowedNorth: 300000003c000000i
+    allowedSouth: 470000003c00000000000000i
+    allowedEast: 3d0000003c000000i
+    allowedWest: 3b0000003c000000i
+    weight: 2.5
+  - id: 61
+    spriteName: Agua_Clara_61
+    sprite: {fileID: 1862315758, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4fe37db1bdf76c345ab20d932c82c2c3, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Right
+    allowedNorth: 31000000i
+    allowedSouth: 4800000000000000i
+    allowedEast: 00000000i
+    allowedWest: 3c000000i
+    weight: 1
+  - id: 62
+    spriteName: Agua_Turbia_62
+    sprite: {fileID: -2128823848, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4bdd06269d1fc4b44817450df5378ca5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 63
+    spriteName: Agua_Turbia_63
+    sprite: {fileID: 174261317, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 58162a7870435cc4e8259ef1f6ff1077, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 64
+    spriteName: Agua_Turbia_64
+    sprite: {fileID: 1912564425, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: df45ca174df96504bb3b6cca6579a12e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 240
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 65
+    spriteName: Meseta_65
+    sprite: {fileID: 1240009305, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 43d6ddd4468c977478868df66d39f0b3, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 240
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 41000000i
+    allowedSouth: 4c00000041000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 66
+    spriteName: Meseta_66
+    sprite: {fileID: -1902023799, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c0d8ed82b48336444a97bf5d63ece73e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 240
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 67
+    spriteName: Bosque_67
+    sprite: {fileID: 1358572938, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: fbebc96f8ebfcd840a5a3d562cc4c55a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 240
+      width: 16
+      height: 16
+    category: Bosque
+    role: Left
+    allowedNorth: 38000000i
+    allowedSouth: 4f00000000000000i
+    allowedEast: 44000000i
+    allowedWest: 
+    weight: 1
+  - id: 68
+    spriteName: Bosque_68
+    sprite: {fileID: -972551968, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 236d451413428664687c134ce246d56f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 240
+      width: 16
+      height: 16
+    category: Bosque
+    role: Center
+    allowedNorth: 3900000044000000i
+    allowedSouth: 500000004400000000000000i
+    allowedEast: 4500000044000000i
+    allowedWest: 4300000044000000i
+    weight: 2.5
+  - id: 69
+    spriteName: Bosque_69
+    sprite: {fileID: -1912328672, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 17a426a91807a2e47a03e03bc88ae13f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 240
+      width: 16
+      height: 16
+    category: Bosque
+    role: Right
+    allowedNorth: 3a000000i
+    allowedSouth: 5100000000000000i
+    allowedEast: 
+    allowedWest: 44000000i
+    weight: 1
+  - id: 70
+    spriteName: Agua_Clara_70
+    sprite: {fileID: -1576940160, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 240026b3e849b4943a9d6d6b235c6bcf, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Outer_BL
+    allowedNorth: 3b000000i
+    allowedSouth: 00000000i
+    allowedEast: 47000000i
+    allowedWest: 00000000i
+    weight: 1
+  - id: 71
+    spriteName: Agua_Clara_71
+    sprite: {fileID: 1642531922, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 85a501152492944468a1b849bc0e3070, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Bottom
+    allowedNorth: 3c000000i
+    allowedSouth: 00000000i
+    allowedEast: 48000000i
+    allowedWest: 46000000i
+    weight: 1
+  - id: 72
+    spriteName: Agua_Clara_72
+    sprite: {fileID: 1043069523, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 29aca0a1eb5a33b4aa632ad816d64897, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Outer_BR
+    allowedNorth: 3d000000i
+    allowedSouth: 00000000i
+    allowedEast: 00000000i
+    allowedWest: 47000000i
+    weight: 1
+  - id: 73
+    spriteName: Agua_Turbia_73
+    sprite: {fileID: -897909428, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: cfd4f3da6211fda47a4e3def9a9c700c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 74
+    spriteName: Agua_Turbia_74
+    sprite: {fileID: 1035985395, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 71032cf25df69ca45bd9fde763cab491, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 75
+    spriteName: Agua_Turbia_75
+    sprite: {fileID: 603671857, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d9468e8630998c941a7c3abe591847e7, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 224
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 76
+    spriteName: Meseta_76
+    sprite: {fileID: 1690996471, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 27274cb2fd771ee44a1fb8067b9f0ae3, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 224
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 41000000i
+    allowedSouth: 
+    allowedEast: 4d000000i
+    allowedWest: 
+    weight: 0.03
+  - id: 77
+    spriteName: Meseta_77
+    sprite: {fileID: -751528886, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5bd59d88cb4ae764fb45126e1b27853d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 224
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 4c000000i
+    weight: 0.03
+  - id: 78
+    spriteName: Meseta_78
+    sprite: {fileID: 109381965, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4fb07eb048dc8fc4287d186cd7b06ac7, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 224
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 79
+    spriteName: Bosque_79
+    sprite: {fileID: -188483548, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: fc6cb59edb845bc4290fee4844e1b3ea, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 224
+      width: 16
+      height: 16
+    category: Bosque
+    role: Outer_BL
+    allowedNorth: 43000000i
+    allowedSouth: 00000000i
+    allowedEast: 50000000i
+    allowedWest: 
+    weight: 1
+  - id: 80
+    spriteName: Bosque_80
+    sprite: {fileID: -1743685080, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4c40d4df16a4bda498229a4eb8cc71d8, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 224
+      width: 16
+      height: 16
+    category: Bosque
+    role: Bottom
+    allowedNorth: 44000000i
+    allowedSouth: 00000000i
+    allowedEast: 51000000i
+    allowedWest: 4f000000i
+    weight: 1
+  - id: 81
+    spriteName: Bosque_81
+    sprite: {fileID: -1642844926, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 215f90e481f4b0c408b4cec8c1ca7426, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 224
+      width: 16
+      height: 16
+    category: Bosque
+    role: Outer_BR
+    allowedNorth: 45000000i
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 50000000i
+    weight: 1
+  - id: 82
+    spriteName: Agua_Clara_82
+    sprite: {fileID: 139307637, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b320d693d585aa749a4b849b6ae52537, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 208
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Inner_BR
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 83
+    spriteName: Agua_Clara_83
+    sprite: {fileID: -487265522, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a2d3e7f83cf06514a9e88073c9ab3322, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 208
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Inner_BL
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 84
+    spriteName: Decoracion_84
+    sprite: {fileID: -652083581, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: ace6dd3b648e86843b9e9729bad94654, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 208
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 85
+    spriteName: Agua_Turbia_85
+    sprite: {fileID: -1902231808, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: bddf2716b906e65498c1b89a030bf9fe, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 208
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 86
+    spriteName: Agua_Turbia_86
+    sprite: {fileID: -90550099, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 441802d4de8f72a4ea50dbd0428c050c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 208
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 87
+    spriteName: Agua_Turbia_87
+    sprite: {fileID: 410102144, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 03b900dc6dadc554a8c66a11022b90a2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 208
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 88
+    spriteName: Meseta_88
+    sprite: {fileID: -2111113429, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4c59e27eb7930b84da6a2f3d5e8f5515, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 208
+      width: 16
+      height: 16
+    category: Monticulo
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 89
+    spriteName: Meseta_89
+    sprite: {fileID: -168184110, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e07bcb0ebf8232c408c241faa0002b8e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 208
+      width: 16
+      height: 16
+    category: Monticulo
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 90
+    spriteName: Bosque_90
+    sprite: {fileID: -1063727561, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a28bea74788f675429960e95f8478622, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 208
+      width: 16
+      height: 16
+    category: Bosque
+    role: Inner_BR
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 91
+    spriteName: Bosque_91
+    sprite: {fileID: 1703762845, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 933d707f4406502429c2e85496ae7451, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 208
+      width: 16
+      height: 16
+    category: Bosque
+    role: Inner_BL
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 92
+    spriteName: Bosque_92
+    sprite: {fileID: 1477851318, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2fd3451e8b69b074281e0a778bf4aa04, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 208
+      width: 16
+      height: 16
+    category: Bosque
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 93
+    spriteName: Agua_Clara_93
+    sprite: {fileID: 863803448, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 42465e7161acf4646bcf86a141c660db, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 192
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Inner_TR
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 94
+    spriteName: Agua_Clara_94
+    sprite: {fileID: 1813029696, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 57f057af58b23994abf13feb63a4ba73, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 192
+      width: 16
+      height: 16
+    category: Agua_Clara
+    role: Inner_TL
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 95
+    spriteName: Decoracion_95
+    sprite: {fileID: -884207782, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 84900957e3ebcef4f9b301dbaa233cd2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 192
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 96
+    spriteName: Agua_Turbia_96
+    sprite: {fileID: 917024637, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 42b48d361bdafce4eb43bf1a61c274f0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 192
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 97
+    spriteName: Agua_Turbia_97
+    sprite: {fileID: -539052064, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5f71f4f352cae7a428d4f99b566135a4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 192
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 98
+    spriteName: Agua_Turbia_98
+    sprite: {fileID: -1329856971, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f2527a9ef24c803499d11a3011b7637b, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 192
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 99
+    spriteName: Meseta_99
+    sprite: {fileID: -447973795, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 860891c5858bedc41a9b410ec4f9ac10, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 192
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 100
+    spriteName: Meseta_100
+    sprite: {fileID: -171044675, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 18755252d23382c4d8e50a05af73a7a1, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 192
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 101
+    spriteName: Bosque_101
+    sprite: {fileID: 929705082, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f21dacb51b69df14c9f7e306a38d805f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 192
+      width: 16
+      height: 16
+    category: Bosque
+    role: Inner_TR
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 102
+    spriteName: Bosque_102
+    sprite: {fileID: -888980353, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 421d188d477d7144eaf39ea6f279b8ec, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 192
+      width: 16
+      height: 16
+    category: Bosque
+    role: Inner_TL
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 1
+  - id: 103
+    spriteName: Decoracion_103
+    sprite: {fileID: 1140886864, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 27400845dce11ec41a22acc33f5a4cbf, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 192
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 104
+    spriteName: Puente_104
+    sprite: {fileID: -1457058588, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e1fe1f9e64c58794898049528a06ee29, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 176
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.01
+  - id: 105
+    spriteName: Puente_105
+    sprite: {fileID: -1549993379, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2dac42b57dde59943aa63652228713f7, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 176
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 106
+    spriteName: Puente_106
+    sprite: {fileID: -161198284, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d55fac60f090b3248a01ca7c46bb4d25, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 176
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 107
+    spriteName: Agua_Turbia_107
+    sprite: {fileID: -1077994059, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4e73ea4f712976144815bfd3ef4d0b57, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 176
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 108
+    spriteName: Agua_Turbia_108
+    sprite: {fileID: -1283370383, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 03c28420e49386544ad79bc8095e5820, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 176
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 109
+    spriteName: Agua_Turbia_109
+    sprite: {fileID: -163307040, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8cd674c4d7f0b964e99cc44c342a54af, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 176
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 110
+    spriteName: Meseta_110
+    sprite: {fileID: 811989022, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: fbb0c6162f202fb46bbbcaee3dc0977e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 176
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 111
+    spriteName: Meseta_111
+    sprite: {fileID: 530989456, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 89d518ff8f667254c842730246feedb0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 176
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 112
+    spriteName: Decoracion_112
+    sprite: {fileID: 807168247, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 91ca8ad8a395fbb41a85015cdbb05fd7, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 176
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 113
+    spriteName: Puente_113
+    sprite: {fileID: -176701061, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 41bb72c76c0cf6e4b9f3b393ded571b4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 160
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 114
+    spriteName: Puente_114
+    sprite: {fileID: 430308033, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 41cd2a17ba2bd0243979e1ff61d9b8ce, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 160
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 115
+    spriteName: Puente_115
+    sprite: {fileID: -1029429990, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 326cc0e4c211a9141b18ef230d323336, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 160
+      width: 16
+      height: 16
+    category: Puente
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 116
+    spriteName: Agua_Turbia_116
+    sprite: {fileID: -1852636982, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4ca1a7591abe2ff4ca7a20ed1cbff88b, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 160
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 117
+    spriteName: Agua_Turbia_117
+    sprite: {fileID: -1262369948, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 47e67bd7ac1a0f04fa29c047775ea34f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 160
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 118
+    spriteName: Agua_Turbia_118
+    sprite: {fileID: -2071392946, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f46a0fde62925254d8b5fe532ef78dd2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 160
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 119
+    spriteName: Meseta_119
+    sprite: {fileID: 116829313, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 97d9fe743f5ff1941b41a55634a36b1c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 160
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 120
+    spriteName: Meseta_120
+    sprite: {fileID: -1121595377, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3057f08056a30e84fae97caead30b5a4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 160
+      width: 16
+      height: 16
+    category: Meseta
+    role: 
+    allowedNorth: 
+    allowedSouth: 
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 121
+    spriteName: Monticulo_121
+    sprite: {fileID: 764793493, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c51b7bd7d56c54448bd25571ffcbb6fa, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 160
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 122
+    spriteName: Monticulo_122
+    sprite: {fileID: -1531015801, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f793a45a3843c3b41a3898ce7c16b6f9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 160
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 123
+    spriteName: Monticulo_123
+    sprite: {fileID: -264252051, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 40bd06e9a17888a4084d462b244e3eb6, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 160
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 124
+    spriteName: Decoracion_124
+    sprite: {fileID: -1692423723, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 132ed3ad97633f24db743667f14a8ff9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 125
+    spriteName: Decoracion_125
+    sprite: {fileID: 794756668, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0797e1ba411ba8144970c2c35c34f40f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 126
+    spriteName: Decoracion_126
+    sprite: {fileID: -1139845385, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 6580feca83375db43a500a86446fc3ce, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 127
+    spriteName: Agua_Turbia_127
+    sprite: {fileID: 1283127659, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3db134b14a9c848439787e81effdf1f9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 144
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 128
+    spriteName: Agua_Turbia_128
+    sprite: {fileID: -2054909328, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: db383747c1acd6b438b163a594ea1578, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 144
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 129
+    spriteName: Agua_Turbia_129
+    sprite: {fileID: 638906848, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d862b8c46535fdf43973ee1b0a5947cd, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 144
+      width: 16
+      height: 16
+    category: Agua_Turbia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 130
+    spriteName: Cueva_130
+    sprite: {fileID: 74786083, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: baad1891d16c8d540b9cf919eefad3e1, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 144
+      width: 16
+      height: 16
+    category: Cueva
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 131
+    spriteName: Cueva_131
+    sprite: {fileID: 1564677283, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 12b51e2b79387774f93a5d5279de401f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 144
+      width: 16
+      height: 16
+    category: Cueva
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 132
+    spriteName: Cueva_132
+    sprite: {fileID: -1031791119, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5415a6197d5bc964dbfa50250f67ff1a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 144
+      width: 16
+      height: 16
+    category: Cueva
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 133
+    spriteName: Monticulo_133
+    sprite: {fileID: 162922402, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 7504baec9bc6c4647a0f96d66a0b7847, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 134
+    spriteName: Monticulo_134
+    sprite: {fileID: 1208226349, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 72d674cad81eaaf4294496fde040a587, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 135
+    spriteName: Monticulo_135
+    sprite: {fileID: 1683587215, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 94ec684c9d7755041884c5a9b6c5362e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 144
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 136
+    spriteName: Fuerte_136
+    sprite: {fileID: 256634695, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a6428281bac96cd4389914c69ed114e2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 137
+    spriteName: Fuerte_137
+    sprite: {fileID: -1598920833, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0048b923a8cf3ed459d6029184808d7f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 128
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 138
+    spriteName: Fuerte_138
+    sprite: {fileID: 332922524, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2fac92140cee7844f8a493c387fd7088, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 128
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 139
+    spriteName: Fuerte_139
+    sprite: {fileID: -175493831, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3d277d17a0a17c94498d7477d7faa055, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 128
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 140
+    spriteName: Iglesia_140
+    sprite: {fileID: 2098439682, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 085224c8ced3f1d45864ef6d8b78bc32, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 128
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 141
+    spriteName: Iglesia_141
+    sprite: {fileID: 1164681014, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2988ce18455c37b42a3a656a8c56cd94, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 128
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 142
+    spriteName: Torre_142
+    sprite: {fileID: -1137165399, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f4ac0e3a895ce6e438045c4862e8b825, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 128
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 143
+    spriteName: Torre_143
+    sprite: {fileID: 1128155941, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c536cf15d5b5e714da521c191365cadd, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 144
+    spriteName: Cultivo_144
+    sprite: {fileID: -1967139742, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: dd11fde95d55df6408ecba5d815a0b33, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 128
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 145
+    spriteName: Cultivo_145
+    sprite: {fileID: 1543284795, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a36344116bda51e47a263da72c4448ea, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 128
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 146
+    spriteName: Cultivo_146
+    sprite: {fileID: -820056919, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d355e73e59a9eec469fb6121cf317533, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 128
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 147
+    spriteName: Fuerte_147
+    sprite: {fileID: -303928376, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 500c0d64d02a3804c863a4a90e1774f1, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 112
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 148
+    spriteName: Fuerte_148
+    sprite: {fileID: 1460019969, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d148cd07bad81b04ba4ce4324b1bd659, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 112
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 149
+    spriteName: Fuerte_149
+    sprite: {fileID: 1968906326, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d87543356103ebc43823e449583980c4, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 112
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 150
+    spriteName: Fuerte_150
+    sprite: {fileID: -1461939171, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: fb3b9f0cb93bb4843a544bb5c79beafd, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 112
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 151
+    spriteName: Iglesia_151
+    sprite: {fileID: 20294800, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b75ee245571af5a48a4abb373af7a329, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 112
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 152
+    spriteName: Iglesia_152
+    sprite: {fileID: 446821891, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d2f0f682c5b915c458580281e940c41d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 112
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 153
+    spriteName: Iglesia_153
+    sprite: {fileID: -1713161874, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d4f7ee80beff11a48ba31f76b6eaba32, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 112
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 154
+    spriteName: Torre_154
+    sprite: {fileID: -1537692298, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c32f674ab7b62b34790b707447bf0f08, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 112
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 155
+    spriteName: Torre_155
+    sprite: {fileID: 1583941940, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 44862592466528943a02c961fdfa3b66, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 112
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 156
+    spriteName: Cultivo_156
+    sprite: {fileID: 337146995, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f73cc2a33f1bf804294d228a03b34805, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 112
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 157
+    spriteName: Cultivo_157
+    sprite: {fileID: -545128752, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e2ceb59527a8ab6468115ccb4c70d828, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 112
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 158
+    spriteName: Cultivo_158
+    sprite: {fileID: 1938413887, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 34a7c4cf718219c47a6ef10338a709e0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 112
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 159
+    spriteName: Fuerte_159
+    sprite: {fileID: 296194956, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a2e339bd87b20dd408f4696831c80034, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 96
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 160
+    spriteName: Fuerte_160
+    sprite: {fileID: -185038045, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 40e689a7818bc3d489cc96f0e9d25e83, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 96
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 161
+    spriteName: Fuerte_161
+    sprite: {fileID: 1816880119, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: c0dbc279ee64ee74ca28da2e4e6c3a39, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 96
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 162
+    spriteName: Fuerte_162
+    sprite: {fileID: -671080944, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3d07d22002071204aba1f338ed00ffe6, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 96
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 163
+    spriteName: Iglesia_163
+    sprite: {fileID: -649142169, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 36e387231fce1654b8939126604f3b8f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 164
+    spriteName: Iglesia_164
+    sprite: {fileID: -1222055397, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: f05c131b728b2074bb5c7fbc162ba088, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 96
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 165
+    spriteName: Iglesia_165
+    sprite: {fileID: 803407539, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 9b5fae6bc85cc2045a78b3ec2f678e68, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 96
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 166
+    spriteName: Torre_166
+    sprite: {fileID: 1772017595, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 364b55318733a134d91746573696de13, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 96
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 167
+    spriteName: Torre_167
+    sprite: {fileID: 833169925, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a8d5d3256cb18fb49b0db1e3b17f3fc5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 96
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 168
+    spriteName: Cultivo_168
+    sprite: {fileID: -462755677, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3847628f32e788941a6d253f69824cf2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 96
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 169
+    spriteName: Cultivo_169
+    sprite: {fileID: -532486820, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 84d1013a4d3b38949a3827b3de2733e9, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 160
+      y: 96
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 170
+    spriteName: Cultivo_170
+    sprite: {fileID: 1571398697, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2e93d975e0ff646479c825932620f527, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 96
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 171
+    spriteName: Fuerte_171
+    sprite: {fileID: -505715436, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 997273a11392709418ecfe44cf7521fb, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 80
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 172
+    spriteName: Fuerte_172
+    sprite: {fileID: 544941783, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 03f30ae013e9bd447a73970bbf02d6e5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 80
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 173
+    spriteName: Fuerte_173
+    sprite: {fileID: -386105549, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b9a11cb547743a2408d6c801b361d25c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 80
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 174
+    spriteName: Fuerte_174
+    sprite: {fileID: 606002624, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 64d43dd2432cef940a39e145986bdc6a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 80
+      width: 16
+      height: 16
+    category: Fuerte
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 175
+    spriteName: Iglesia_175
+    sprite: {fileID: -4432693, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: da30999aff5b603468c21ae5bdbb26d5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 80
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 176
+    spriteName: Iglesia_176
+    sprite: {fileID: 515152548, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 156a9f84157ea4f4bba8a3b72825796c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 80
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 177
+    spriteName: Iglesia_177
+    sprite: {fileID: 2080067984, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5ef1179e745350b4ba4ea590620892b5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 80
+      width: 16
+      height: 16
+    category: Iglesia
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 178
+    spriteName: Torre_178
+    sprite: {fileID: 1385402480, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 37961d30408a3a74e8771aba5f0db0ab, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 80
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 179
+    spriteName: Torre_179
+    sprite: {fileID: -214454899, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b1a54f24637bd8c42920433a5a315657, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 80
+      width: 16
+      height: 16
+    category: Torre
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 180
+    spriteName: Tumbas_180
+    sprite: {fileID: 1979267934, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 2251c574ccc62bf4ebffa6a5cd27f405, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 80
+      width: 16
+      height: 16
+    category: Tumbas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 181
+    spriteName: Cultivo_181
+    sprite: {fileID: -133203673, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8017d7ec0f4a2424eba3bdf555ba4538, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 80
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 182
+    spriteName: casitas_182
+    sprite: {fileID: -597621445, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 22e95a555002a2e429278a7d1760c723, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 183
+    spriteName: casitas_183
+    sprite: {fileID: 2089493769, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 74196eeb839b51f4d8f20cd57426a0ed, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 64
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 184
+    spriteName: casitas_184
+    sprite: {fileID: 305701458, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 211a8ea7052c9ae41b7cc584f2103818, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 185
+    spriteName: casitas_185
+    sprite: {fileID: 169385993, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 1b9190417486eee47b9c45bfdda16d6c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 64
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 186
+    spriteName: casitas_186
+    sprite: {fileID: 105305628, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 4d9f6fa184a80534cba05b5805bf03ae, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 187
+    spriteName: Decoracion_187
+    sprite: {fileID: 1019378890, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e13f2a94193b3fd4ab0d62efb472d130, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 80
+      y: 64
+      width: 16
+      height: 16
+    category: Decoracion
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 188
+    spriteName: Tumbas_188
+    sprite: {fileID: -1013889729, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: b66a3ca79ac3c46479f679188e558d7f, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 96
+      y: 64
+      width: 16
+      height: 16
+    category: Tumbas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 189
+    spriteName: Tumbas_189
+    sprite: {fileID: -101110541, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: aec14151ad7766c45a783e7f0cd32658, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 112
+      y: 64
+      width: 16
+      height: 16
+    category: Tumbas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 190
+    spriteName: Tumbas_190
+    sprite: {fileID: -175995496, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8d2b2498a54da6a4ba994b905da8391a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 128
+      y: 64
+      width: 16
+      height: 16
+    category: Tumbas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 191
+    spriteName: Tumbas_191
+    sprite: {fileID: -1302980149, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 86b583438fcbcee4ba157d31a248e0fa, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 144
+      y: 64
+      width: 16
+      height: 16
+    category: Tumbas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 192
+    spriteName: Cultivo_192
+    sprite: {fileID: 1292407037, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 0f02dfb3e17c3dc49be23b4f9764010d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 64
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 193
+    spriteName: casitas_193
+    sprite: {fileID: 1399751942, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 3fd23495916793945be9c9aa77e5d5c3, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 48
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 194
+    spriteName: casitas_194
+    sprite: {fileID: -895075144, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 8053403ac04d73b46812763ad78edca0, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 48
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 195
+    spriteName: casitas_195
+    sprite: {fileID: 813060098, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: d9a551f3d2637094da90139e49d873da, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 48
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 196
+    spriteName: casitas_196
+    sprite: {fileID: -1164658674, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 61a8328a3bbce4048a26478c80d8d060, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 48
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 197
+    spriteName: casitas_197
+    sprite: {fileID: 1242536527, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: a9a6f97768f79c34ea7d87eb1d53896d, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 48
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 198
+    spriteName: Cultivo_198
+    sprite: {fileID: -154167188, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 7faa1b1e34036b84c80215466f91d2cf, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 176
+      y: 48
+      width: 16
+      height: 16
+    category: Cultivo
+    role: 
+    allowedNorth: c6000000i
+    allowedSouth: 00000000c6000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 199
+    spriteName: casitas_199
+    sprite: {fileID: 1759094768, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 75fd344e20d97f74aaf7cc921408f0b2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 200
+    spriteName: casitas_200
+    sprite: {fileID: -535967473, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: fa72af45b3461414ba8fbf44f51848c5, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 32
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 201
+    spriteName: casitas_201
+    sprite: {fileID: 1074142565, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: ec12e37a31de72e42a08a93b22680e1e, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 202
+    spriteName: casitas_202
+    sprite: {fileID: 1204228715, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5ba36b7ca64a5234a997b81f502f11f2, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 48
+      y: 32
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 203
+    spriteName: casitas_203
+    sprite: {fileID: 681555965, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 620e07ea010dc5948a59e3ee1568889a, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 204
+    spriteName: casitas_204
+    sprite: {fileID: 622233466, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 622cad0666ded3b4395297ff2995f64c, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 16
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 205
+    spriteName: casitas_205
+    sprite: {fileID: 971002407, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: ec976c09502b7274f850be69221fa23b, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 16
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 206
+    spriteName: casitas_206
+    sprite: {fileID: 588903103, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: e1488c598e259db4cad151ca161434da, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 16
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 207
+    spriteName: casitas_207
+    sprite: {fileID: 1237279966, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 38feea0b046fc774694203c52695e606, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 208
+    spriteName: casitas_208
+    sprite: {fileID: 434965724, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 828c76749734af7418b6e7065f585192, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 16
+      y: 0
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  - id: 209
+    spriteName: casitas_209
+    sprite: {fileID: 449900977, guid: 460fc1da42b4c184999f19132d7ee8d8, type: 3}
+    tile: {fileID: 11400000, guid: 5e1592285f8335a4ca4b062538bb6ce6, type: 2}
+    rectInAtlas:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 16
+      height: 16
+    category: casitas
+    role: 
+    allowedNorth: 
+    allowedSouth: 00000000i
+    allowedEast: 
+    allowedWest: 
+    weight: 0.03
+  categories:
+  - Prado
+  - Camino
+  - Camino_Piedra
+  - Agua_Clara
+  - Agua_Turbia
+  - Bosque
+  - Cultivo
+  - Flores
+  - Monticulo
+  - Fuerte
+  - Iglesia
+  - Torre
+  - Cueva
+  - Meseta
+  - Decoracion
+  - casitas
+  - Tumbas
+  - Puente

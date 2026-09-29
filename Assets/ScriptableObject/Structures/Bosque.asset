@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc078f7bd46de549b828bbfde229022, type: 3}
+  m_Name: Bosque
+  m_EditorClassIdentifier: Assembly-CSharp::WorldGen.Data.StructureData
+  structureName: Bosque (Claro 2x2)
+  hasDoor: 0
+  size: {x: 4, y: 5}
+  doorOffset: {x: 0, y: 0}
+  tiles:
+  - {fileID: 11400000, guid: fc6cb59edb845bc4290fee4844e1b3ea, type: 2}
+  - {fileID: 11400000, guid: 46a1e15faee6bc141b4e5be3c37c153f, type: 2}
+  - {fileID: 11400000, guid: 4c40d4df16a4bda498229a4eb8cc71d8, type: 2}
+  - {fileID: 11400000, guid: 215f90e481f4b0c408b4cec8c1ca7426, type: 2}
+  - {fileID: 11400000, guid: fbebc96f8ebfcd840a5a3d562cc4c55a, type: 2}
+  - {fileID: 11400000, guid: f21dacb51b69df14c9f7e306a38d805f, type: 2}
+  - {fileID: 11400000, guid: 421d188d477d7144eaf39ea6f279b8ec, type: 2}
+  - {fileID: 11400000, guid: 17a426a91807a2e47a03e03bc88ae13f, type: 2}
+  - {fileID: 11400000, guid: fbebc96f8ebfcd840a5a3d562cc4c55a, type: 2}
+  - {fileID: 11400000, guid: a28bea74788f675429960e95f8478622, type: 2}
+  - {fileID: 11400000, guid: 933d707f4406502429c2e85496ae7451, type: 2}
+  - {fileID: 11400000, guid: 17a426a91807a2e47a03e03bc88ae13f, type: 2}
+  - {fileID: 11400000, guid: fbebc96f8ebfcd840a5a3d562cc4c55a, type: 2}
+  - {fileID: 11400000, guid: 236d451413428664687c134ce246d56f, type: 2}
+  - {fileID: 11400000, guid: 236d451413428664687c134ce246d56f, type: 2}
+  - {fileID: 11400000, guid: 17a426a91807a2e47a03e03bc88ae13f, type: 2}
+  - {fileID: 11400000, guid: 879f7023a8f582449bd3b142eb8aa583, type: 2}
+  - {fileID: 11400000, guid: 518ea1e61b1f8db468d7ec69f968fd0d, type: 2}
+  - {fileID: 11400000, guid: 518ea1e61b1f8db468d7ec69f968fd0d, type: 2}
+  - {fileID: 11400000, guid: 671b30668f1b5a643b5ace84c87c097c, type: 2}
