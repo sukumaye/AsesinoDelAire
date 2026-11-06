@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/0_BrandIntro.unity
+    guid: a1000000000000000000000000000001
+  - enabled: 1
+    path: Assets/Scenes/1_FactionSelection.unity
+    guid: a1000000000000000000000000000002
+  - enabled: 1
+    path: Assets/Scenes/2_StoryCinematic.unity
+    guid: a1000000000000000000000000000003
+  - enabled: 1
+    path: Assets/Scenes/3_TutorialMission.unity
+    guid: a1000000000000000000000000000004
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 492eb434b974d854fa83c946902bf433
+  - enabled: 1
+    path: Assets/Scenes/gameplay.unity
+    guid: 5a4359c1ff670c2429f4d3abbf232486
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

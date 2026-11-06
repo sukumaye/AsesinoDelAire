@@ -1,0 +1,97 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameFlow/GameFlow.uss" />
+
+    <ui:VisualElement name="flow-root" class="flow-root">
+
+        <!-- 1. PANTALLA: LOGO Y MARCA -->
+        <ui:VisualElement name="step-brand" class="brand-container" style="display: flex;">
+            <ui:VisualElement class="brand-ring">
+                <ui:VisualElement class="brand-diamond">
+                    <ui:VisualElement class="brand-inner-circle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label name="lbl-brand-subtitle" text="DIESELPUNK RETROFUTURISTA PRESENTA" class="brand-subtitle" />
+            <ui:Label name="lbl-brand-title" text="REIKO ESTUDIOS" class="brand-title" />
+            <ui:Label text="[ TOCA LA PANTALLA O ESPERA PARA CONTINUAR ]" class="brand-hint" />
+        </ui:VisualElement>
+
+        <!-- 2. PANTALLA: SELECCIÓN DE LAS 4 FACCIONES -->
+        <ui:VisualElement name="step-factions" class="faction-container" style="display: none;">
+            <ui:Label text="REGISTRO DE VUELO // SELECCIÓN DE VECTOR" class="faction-header-title" />
+
+            <ui:VisualElement name="plane-card-view" class="plane-viewport-card">
+                <!-- Imagen de la nave Ki-21 japonesa tintada por facción -->
+                <ui:VisualElement name="plane-sprite-display" class="plane-silhouette-sprite" />
+                <ui:Label name="lbl-plane-code" text="AURA PESADA TIPO-IV" class="plane-code-label" />
+                <ui:Label name="lbl-plane-slogan" text="«El peso del metal mantendrá el cauce fluvial»" class="plane-slogan-label" />
+            </ui:VisualElement>
+
+            <!-- 4 Tarjetas de Facciones -->
+            <ui:VisualElement class="faction-buttons-row">
+                <ui:Button name="btn-faction-0" class="btn-faction-card selected">
+                    <ui:Label text="01 // VANGUARDIA&#10;PESADA" class="btn-faction-title" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-faction-1" class="btn-faction-card">
+                    <ui:Label text="02 // BRISA-11&#10;CLANDESTINO" class="btn-faction-title" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-faction-2" class="btn-faction-card">
+                    <ui:Label text="03 // MARTILLO&#10;DE ARADO" class="btn-faction-title" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-faction-3" class="btn-faction-card">
+                    <ui:Label text="04 // ZÉNIT R-3&#10;ALA VOLANTE" class="btn-faction-title" picking-mode="Ignore" />
+                </ui:Button>
+            </ui:VisualElement>
+
+            <!-- Especificaciones Técnicas y Filosofía -->
+            <ui:VisualElement class="stats-box">
+                <ui:Label name="lbl-philosophy" text="Motor diésel de 24 cilindros en W con compresores axiales expuestos. Blindaje remachado en caliente capaz de atravesar cortinas balísticas pesadas." class="philosophy-text" />
+                <ui:VisualElement class="stats-grid">
+                    <ui:VisualElement class="stat-item">
+                        <ui:Label text="POTENCIA" class="stat-title" />
+                        <ui:Label name="val-stat-engine" text="7.0 / 10" class="stat-val" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-item">
+                        <ui:Label text="BLINDAJE" class="stat-title" />
+                        <ui:Label name="val-stat-armor" text="9.5 / 10" class="stat-val" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-item">
+                        <ui:Label text="AGILIDAD" class="stat-title" />
+                        <ui:Label name="val-stat-agility" text="3.5 / 10" class="stat-val" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="stat-item">
+                        <ui:Label text="DISPERSIÓN" class="stat-title" />
+                        <ui:Label name="val-stat-dispersion" text="6.0 / 10" class="stat-val" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Botón de Confirmación -->
+            <ui:Button name="btn-confirm-faction" class="btn-confirm-flow">
+                <ui:Label text="CONFIRMAR VECTOR DE VUELO ➔" class="btn-confirm-flow-text" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <!-- 3. PANTALLA: CINEMÁTICA CON TEXTO ASCENDENTE -->
+        <ui:VisualElement name="step-cinematic" class="cinematic-container" style="display: none;">
+            <ui:VisualElement name="cinematic-viewport-mask" class="cinematic-mask">
+                <ui:VisualElement name="cinematic-scroller" class="cinematic-scroll-content">
+                    <ui:Label name="lbl-cinematic-story" text="Historia de la facción..." class="cinematic-text" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Barra de Controles de la Cinemática -->
+            <ui:VisualElement class="cinematic-controls-bar">
+                <ui:Button name="btn-cinematic-pause" class="btn-cinematic-control">
+                    <ui:Label name="lbl-pause-text" text="⏸ PAUSAR" class="btn-cinematic-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-cinematic-ff" class="btn-cinematic-control">
+                    <ui:Label name="lbl-ff-text" text="⏩ ACELERAR" class="btn-cinematic-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-cinematic-skip" class="btn-cinematic-control">
+                    <ui:Label text="DESPLEGAR MISIÓN ➔" class="btn-cinematic-text" picking-mode="Ignore" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

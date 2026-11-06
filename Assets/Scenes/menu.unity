@@ -1,0 +1,2272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 2
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 2
+    m_PVRDenoiserTypeIndirect: 2
+    m_PVRDenoiserTypeAO: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &416756368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416756370}
+  - component: {fileID: 416756369}
+  - component: {fileID: 416756371}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &416756369
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416756368}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &416756370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416756368}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &416756371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416756368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!1 &1518830019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518830022}
+  - component: {fileID: 1518830021}
+  - component: {fileID: 1518830020}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1518830020
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518830019}
+  m_Enabled: 1
+--- !u!20 &1518830021
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518830019}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.04, g: 0.06, b: 0.05, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1518830022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518830019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1930608534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930608537}
+  - component: {fileID: 1930608536}
+  - component: {fileID: 1930608535}
+  m_Layer: 0
+  m_Name: MainMenu_UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1930608535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930608534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512b918349281a17fa06a3b819f074d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldGen.UI.MainMenuController
+  gameplaySceneName: gameplay
+  activeFaction: 1
+  radioSprite: {fileID: 0}
+  knobButtonSprite: {fileID: 0}
+  currentStationIndex: 1
+  currentSubMissionIndex: 2
+  enableProceduralAudio: 1
+  factions:
+  - factionType: 0
+    factionDisplayName: ANARQUISTAS
+    slogan: VANGUARDIA CLANDESTINA // LIBERTAD O CENIZAS
+    radioSprite: {fileID: 2298540618534914771, guid: ee476d6d36bbd064c9c2d193c9989565, type: 3}
+    backgroundSprite: {fileID: -2913714721334961182, guid: 5ea51302083e86144b144a91ba532389, type: 3}
+    logoSprite: {fileID: 3842055644812981600, guid: f738b59a66e657b4bb40b4351117cca0, type: 3}
+    frameVertical: {fileID: 293278343845867680, guid: 2465eb109f3ea9c4eac5caa2a9781b60, type: 3}
+    frameHorizontal: {fileID: 1533144357384648911, guid: 66ccd73e1fccfb349af40294a185cef5, type: 3}
+    factionCover: {fileID: -7210842322550515282, guid: 351713b59731cf44ebaded6c61d2e1d2, type: 3}
+    themeColor: {r: 0.85, g: 0.25, b: 0.25, a: 1}
+    accentColor: {r: 1, g: 1, b: 1, a: 1}
+    stations:
+    - baseFrequency: 86
+      stationCallsign: EMISORA #86 // SECTOR 1
+      subMissions:
+      - subFrequency: 86.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 86-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,10 MHz
+        mapZone:
+          zoneId: ZONA-01-1
+          zoneName: Sector ANARQUISTAS #1
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 20, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 407949
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 86-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,30 MHz
+        mapZone:
+          zoneId: ZONA-01-2
+          zoneName: Sector ANARQUISTAS #1
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 25, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 407956
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 86-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,60 MHz
+        mapZone:
+          zoneId: ZONA-01-3
+          zoneName: Sector ANARQUISTAS #1
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 30, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 407963
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 86-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,90 MHz
+        mapZone:
+          zoneId: ZONA-01-4
+          zoneName: Sector ANARQUISTAS #1
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 35, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 407970
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 89
+      stationCallsign: EMISORA #89 // SECTOR 2
+      subMissions:
+      - subFrequency: 89.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 89-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,10 MHz
+        mapZone:
+          zoneId: ZONA-02-1
+          zoneName: Sector ANARQUISTAS #2
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 32, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 407999
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 89-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,30 MHz
+        mapZone:
+          zoneId: ZONA-02-2
+          zoneName: Sector ANARQUISTAS #2
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 37, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408006
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 89-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,60 MHz
+        mapZone:
+          zoneId: ZONA-02-3
+          zoneName: Sector ANARQUISTAS #2
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 42, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408013
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 89-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,90 MHz
+        mapZone:
+          zoneId: ZONA-02-4
+          zoneName: Sector ANARQUISTAS #2
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 47, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408020
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 92
+      stationCallsign: EMISORA #92 // SECTOR 3
+      subMissions:
+      - subFrequency: 92.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 92-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,10 MHz
+        mapZone:
+          zoneId: ZONA-03-1
+          zoneName: Sector ANARQUISTAS #3
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 44, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408049
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 92-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,30 MHz
+        mapZone:
+          zoneId: ZONA-03-2
+          zoneName: Sector ANARQUISTAS #3
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 49, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408056
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 92-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,60 MHz
+        mapZone:
+          zoneId: ZONA-03-3
+          zoneName: Sector ANARQUISTAS #3
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 54, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408063
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 92-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,90 MHz
+        mapZone:
+          zoneId: ZONA-03-4
+          zoneName: Sector ANARQUISTAS #3
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 59, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408070
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 95
+      stationCallsign: EMISORA #95 // SECTOR 4
+      subMissions:
+      - subFrequency: 95.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 95-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,10 MHz
+        mapZone:
+          zoneId: ZONA-04-1
+          zoneName: Sector ANARQUISTAS #4
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 56, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408099
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 95-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,30 MHz
+        mapZone:
+          zoneId: ZONA-04-2
+          zoneName: Sector ANARQUISTAS #4
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 61, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408106
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 95-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,60 MHz
+        mapZone:
+          zoneId: ZONA-04-3
+          zoneName: Sector ANARQUISTAS #4
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 66, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408113
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 95-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,90 MHz
+        mapZone:
+          zoneId: ZONA-04-4
+          zoneName: Sector ANARQUISTAS #4
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 71, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408120
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 98
+      stationCallsign: EMISORA #98 // SECTOR 5
+      subMissions:
+      - subFrequency: 98.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 98-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,10 MHz
+        mapZone:
+          zoneId: ZONA-05-1
+          zoneName: Sector ANARQUISTAS #5
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 68, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408149
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 98-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,30 MHz
+        mapZone:
+          zoneId: ZONA-05-2
+          zoneName: Sector ANARQUISTAS #5
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 73, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408156
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 98-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,60 MHz
+        mapZone:
+          zoneId: ZONA-05-3
+          zoneName: Sector ANARQUISTAS #5
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 78, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408163
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 98-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,90 MHz
+        mapZone:
+          zoneId: ZONA-05-4
+          zoneName: Sector ANARQUISTAS #5
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 83, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408170
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 101
+      stationCallsign: EMISORA #101 // SECTOR 6
+      subMissions:
+      - subFrequency: 101.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 101-1"
+        missionTitle: Emboscada en el Estuario
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,10 MHz
+        mapZone:
+          zoneId: ZONA-06-1
+          zoneName: Sector ANARQUISTAS #6
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 80, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408199
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 101-2"
+        missionTitle: Ruptura del Bloqueo Estatal
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,30 MHz
+        mapZone:
+          zoneId: ZONA-06-2
+          zoneName: Sector ANARQUISTAS #6
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 85, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408206
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 101-3"
+        missionTitle: "Infiltraci\xF3n en el Hangar Central"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,60 MHz
+        mapZone:
+          zoneId: ZONA-06-3
+          zoneName: Sector ANARQUISTAS #6
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 90, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408213
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 101-4"
+        missionTitle: Sabotaje de la Red de Radar
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,90 MHz
+        mapZone:
+          zoneId: ZONA-06-4
+          zoneName: Sector ANARQUISTAS #6
+          mapName: "MAPA T\xC1CTICO ANARQUISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 95, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408220
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+  - factionType: 1
+    factionDisplayName: CAPITALISTAS
+    slogan: "CONSORCIO MONETARIO // SUPREMAC\xCDA INDUSTRIAL"
+    radioSprite: {fileID: -4299163816840072276, guid: 8ec9fbf522c1b46448df327a83ea41cc, type: 3}
+    backgroundSprite: {fileID: 7323428603382008625, guid: 46ee3c72b5bd3f442b21ace22928300d, type: 3}
+    logoSprite: {fileID: 8701188984039195418, guid: d86b1843166e54144bb849e83ee9602d, type: 3}
+    frameVertical: {fileID: 5845531913827290065, guid: 2d6d9761af990034a9479e8aaabcbf0f, type: 3}
+    frameHorizontal: {fileID: -7732917656503803402, guid: 9293d9635e80a464bac3e3ed63849c21, type: 3}
+    factionCover: {fileID: -6711998849080582018, guid: a3d6ce9f7afe651479ba5cc472651970, type: 3}
+    themeColor: {r: 0.85, g: 0.72, b: 0.25, a: 1}
+    accentColor: {r: 1, g: 1, b: 1, a: 1}
+    stations:
+    - baseFrequency: 86
+      stationCallsign: EMISORA #86 // SECTOR 1
+      subMissions:
+      - subFrequency: 86.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 86-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,10 MHz
+        mapZone:
+          zoneId: ZONA-01-1
+          zoneName: Sector CAPITALISTAS #1
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 20, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 408949
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 86-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,30 MHz
+        mapZone:
+          zoneId: ZONA-01-2
+          zoneName: Sector CAPITALISTAS #1
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 25, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408956
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 86-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,60 MHz
+        mapZone:
+          zoneId: ZONA-01-3
+          zoneName: Sector CAPITALISTAS #1
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 30, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 408963
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 86-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,90 MHz
+        mapZone:
+          zoneId: ZONA-01-4
+          zoneName: Sector CAPITALISTAS #1
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 35, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 408970
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 89
+      stationCallsign: EMISORA #89 // SECTOR 2
+      subMissions:
+      - subFrequency: 89.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 89-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,10 MHz
+        mapZone:
+          zoneId: ZONA-02-1
+          zoneName: Sector CAPITALISTAS #2
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 32, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 408999
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 89-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,30 MHz
+        mapZone:
+          zoneId: ZONA-02-2
+          zoneName: Sector CAPITALISTAS #2
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 37, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409006
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 89-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,60 MHz
+        mapZone:
+          zoneId: ZONA-02-3
+          zoneName: Sector CAPITALISTAS #2
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 42, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409013
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 89-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,90 MHz
+        mapZone:
+          zoneId: ZONA-02-4
+          zoneName: Sector CAPITALISTAS #2
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 47, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409020
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 92
+      stationCallsign: EMISORA #92 // SECTOR 3
+      subMissions:
+      - subFrequency: 92.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 92-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,10 MHz
+        mapZone:
+          zoneId: ZONA-03-1
+          zoneName: Sector CAPITALISTAS #3
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 44, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409049
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 92-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,30 MHz
+        mapZone:
+          zoneId: ZONA-03-2
+          zoneName: Sector CAPITALISTAS #3
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 49, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409056
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 92-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,60 MHz
+        mapZone:
+          zoneId: ZONA-03-3
+          zoneName: Sector CAPITALISTAS #3
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 54, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409063
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 92-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,90 MHz
+        mapZone:
+          zoneId: ZONA-03-4
+          zoneName: Sector CAPITALISTAS #3
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 59, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409070
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 95
+      stationCallsign: EMISORA #95 // SECTOR 4
+      subMissions:
+      - subFrequency: 95.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 95-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,10 MHz
+        mapZone:
+          zoneId: ZONA-04-1
+          zoneName: Sector CAPITALISTAS #4
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 56, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409099
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 95-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,30 MHz
+        mapZone:
+          zoneId: ZONA-04-2
+          zoneName: Sector CAPITALISTAS #4
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 61, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409106
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 95-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,60 MHz
+        mapZone:
+          zoneId: ZONA-04-3
+          zoneName: Sector CAPITALISTAS #4
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 66, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409113
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 95-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,90 MHz
+        mapZone:
+          zoneId: ZONA-04-4
+          zoneName: Sector CAPITALISTAS #4
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 71, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409120
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 98
+      stationCallsign: EMISORA #98 // SECTOR 5
+      subMissions:
+      - subFrequency: 98.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 98-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,10 MHz
+        mapZone:
+          zoneId: ZONA-05-1
+          zoneName: Sector CAPITALISTAS #5
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 68, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409149
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 98-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,30 MHz
+        mapZone:
+          zoneId: ZONA-05-2
+          zoneName: Sector CAPITALISTAS #5
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 73, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409156
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 98-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,60 MHz
+        mapZone:
+          zoneId: ZONA-05-3
+          zoneName: Sector CAPITALISTAS #5
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 78, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409163
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 98-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,90 MHz
+        mapZone:
+          zoneId: ZONA-05-4
+          zoneName: Sector CAPITALISTAS #5
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 83, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409170
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 101
+      stationCallsign: EMISORA #101 // SECTOR 6
+      subMissions:
+      - subFrequency: 101.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 101-1"
+        missionTitle: Custodia de Convoy Petrolero
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,10 MHz
+        mapZone:
+          zoneId: ZONA-06-1
+          zoneName: Sector CAPITALISTAS #6
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 80, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409199
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 101-2"
+        missionTitle: "Operaci\xF3n Escudo de Refiner\xEDa"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,30 MHz
+        mapZone:
+          zoneId: ZONA-06-2
+          zoneName: Sector CAPITALISTAS #6
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 85, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409206
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 101-3"
+        missionTitle: "Contrato de Supresi\xF3n A\xE9rea"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,60 MHz
+        mapZone:
+          zoneId: ZONA-06-3
+          zoneName: Sector CAPITALISTAS #6
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 90, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409213
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 101-4"
+        missionTitle: "Recuperaci\xF3n de Cargamento Estrat\xE9gico"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,90 MHz
+        mapZone:
+          zoneId: ZONA-06-4
+          zoneName: Sector CAPITALISTAS #6
+          mapName: "MAPA T\xC1CTICO CAPITALISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 95, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409220
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+  - factionType: 2
+    factionDisplayName: COMUNISTAS
+    slogan: COLECTIVO ROJO // MAQUINARIA DEL PUEBLO
+    radioSprite: {fileID: -2491064583730273929, guid: 29d0e346ff8d6f849abace93d3078e43, type: 3}
+    backgroundSprite: {fileID: -8179682795298691854, guid: 1090678b83db7fa4a80d3e2e86601d48, type: 3}
+    logoSprite: {fileID: -7433857279487144217, guid: 2a43bcbb2ae551647942b4734652cf35, type: 3}
+    frameVertical: {fileID: 775890509543077574, guid: fa67eabf627560f48a6eac5b743bed96, type: 3}
+    frameHorizontal: {fileID: -1315256479591461873, guid: 60cf5c52c0ec0174fab40a19e4531376, type: 3}
+    factionCover: {fileID: -4841816924979043809, guid: 8e7a4806a0149f349b6622eda0062a70, type: 3}
+    themeColor: {r: 0.95, g: 0.2, b: 0.2, a: 1}
+    accentColor: {r: 1, g: 1, b: 1, a: 1}
+    stations:
+    - baseFrequency: 86
+      stationCallsign: EMISORA #86 // SECTOR 1
+      subMissions:
+      - subFrequency: 86.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 86-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,10 MHz
+        mapZone:
+          zoneId: ZONA-01-1
+          zoneName: Sector COMUNISTAS #1
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 20, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 409949
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 86-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,30 MHz
+        mapZone:
+          zoneId: ZONA-01-2
+          zoneName: Sector COMUNISTAS #1
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 25, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409956
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 86-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,60 MHz
+        mapZone:
+          zoneId: ZONA-01-3
+          zoneName: Sector COMUNISTAS #1
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 30, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 409963
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 86-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,90 MHz
+        mapZone:
+          zoneId: ZONA-01-4
+          zoneName: Sector COMUNISTAS #1
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 35, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 409970
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 89
+      stationCallsign: EMISORA #89 // SECTOR 2
+      subMissions:
+      - subFrequency: 89.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 89-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,10 MHz
+        mapZone:
+          zoneId: ZONA-02-1
+          zoneName: Sector COMUNISTAS #2
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 32, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 409999
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 89-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,30 MHz
+        mapZone:
+          zoneId: ZONA-02-2
+          zoneName: Sector COMUNISTAS #2
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 37, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410006
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 89-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,60 MHz
+        mapZone:
+          zoneId: ZONA-02-3
+          zoneName: Sector COMUNISTAS #2
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 42, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410013
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 89-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,90 MHz
+        mapZone:
+          zoneId: ZONA-02-4
+          zoneName: Sector COMUNISTAS #2
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 47, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410020
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 92
+      stationCallsign: EMISORA #92 // SECTOR 3
+      subMissions:
+      - subFrequency: 92.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 92-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,10 MHz
+        mapZone:
+          zoneId: ZONA-03-1
+          zoneName: Sector COMUNISTAS #3
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 44, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410049
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 92-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,30 MHz
+        mapZone:
+          zoneId: ZONA-03-2
+          zoneName: Sector COMUNISTAS #3
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 49, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410056
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 92-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,60 MHz
+        mapZone:
+          zoneId: ZONA-03-3
+          zoneName: Sector COMUNISTAS #3
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 54, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410063
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 92-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,90 MHz
+        mapZone:
+          zoneId: ZONA-03-4
+          zoneName: Sector COMUNISTAS #3
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 59, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410070
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 95
+      stationCallsign: EMISORA #95 // SECTOR 4
+      subMissions:
+      - subFrequency: 95.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 95-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,10 MHz
+        mapZone:
+          zoneId: ZONA-04-1
+          zoneName: Sector COMUNISTAS #4
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 56, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410099
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 95-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,30 MHz
+        mapZone:
+          zoneId: ZONA-04-2
+          zoneName: Sector COMUNISTAS #4
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 61, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410106
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 95-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,60 MHz
+        mapZone:
+          zoneId: ZONA-04-3
+          zoneName: Sector COMUNISTAS #4
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 66, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410113
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 95-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,90 MHz
+        mapZone:
+          zoneId: ZONA-04-4
+          zoneName: Sector COMUNISTAS #4
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 71, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410120
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 98
+      stationCallsign: EMISORA #98 // SECTOR 5
+      subMissions:
+      - subFrequency: 98.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 98-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,10 MHz
+        mapZone:
+          zoneId: ZONA-05-1
+          zoneName: Sector COMUNISTAS #5
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 68, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410149
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 98-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,30 MHz
+        mapZone:
+          zoneId: ZONA-05-2
+          zoneName: Sector COMUNISTAS #5
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 73, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410156
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 98-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,60 MHz
+        mapZone:
+          zoneId: ZONA-05-3
+          zoneName: Sector COMUNISTAS #5
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 78, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410163
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 98-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,90 MHz
+        mapZone:
+          zoneId: ZONA-05-4
+          zoneName: Sector COMUNISTAS #5
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 83, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410170
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 101
+      stationCallsign: EMISORA #101 // SECTOR 6
+      subMissions:
+      - subFrequency: 101.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 101-1"
+        missionTitle: Vanguardia de la Columna Roja
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,10 MHz
+        mapZone:
+          zoneId: ZONA-06-1
+          zoneName: Sector COMUNISTAS #6
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 80, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410199
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 101-2"
+        missionTitle: "Defensa de la F\xE1brica Colectiva"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,30 MHz
+        mapZone:
+          zoneId: ZONA-06-2
+          zoneName: Sector COMUNISTAS #6
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 85, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410206
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 101-3"
+        missionTitle: Barrido de Cazas Enemigos
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,60 MHz
+        mapZone:
+          zoneId: ZONA-06-3
+          zoneName: Sector COMUNISTAS #6
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 90, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410213
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 101-4"
+        missionTitle: Asalto al Complejo Industrial
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,90 MHz
+        mapZone:
+          zoneId: ZONA-06-4
+          zoneName: Sector COMUNISTAS #6
+          mapName: "MAPA T\xC1CTICO COMUNISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 95, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410220
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+  - factionType: 3
+    factionDisplayName: FASCISTAS
+    slogan: DOCTRINA ZENIT // ORDEN DE ACERO
+    radioSprite: {fileID: 4192083885413714108, guid: a93e718c22ba7a84eacf2258da001e9e, type: 3}
+    backgroundSprite: {fileID: 113898180692995160, guid: a0a6975945704d9459518a6b362987ec, type: 3}
+    logoSprite: {fileID: 7389881636711212391, guid: a42961910a070fa448dcad1a7201a8f2, type: 3}
+    frameVertical: {fileID: 8493764339472587838, guid: c01005d8556438740bbe73c3e2af540a, type: 3}
+    frameHorizontal: {fileID: -1652829227022666407, guid: 1708c9c37db37af4c927635f56ab766a, type: 3}
+    factionCover: {fileID: 4849271722410257399, guid: 5fb33ffd1dc0bde4fa20c8a6d3eed912, type: 3}
+    themeColor: {r: 0.4, g: 0.65, b: 0.85, a: 1}
+    accentColor: {r: 1, g: 1, b: 1, a: 1}
+    stations:
+    - baseFrequency: 86
+      stationCallsign: EMISORA #86 // SECTOR 1
+      subMissions:
+      - subFrequency: 86.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 86-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,10 MHz
+        mapZone:
+          zoneId: ZONA-01-1
+          zoneName: Sector FASCISTAS #1
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 20, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 410949
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 86-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,30 MHz
+        mapZone:
+          zoneId: ZONA-01-2
+          zoneName: Sector FASCISTAS #1
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 25, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410956
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 86-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,60 MHz
+        mapZone:
+          zoneId: ZONA-01-3
+          zoneName: Sector FASCISTAS #1
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 30, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 410963
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 86.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 86-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 86,90 MHz
+        mapZone:
+          zoneId: ZONA-01-4
+          zoneName: Sector FASCISTAS #1
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 35, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 410970
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 89
+      stationCallsign: EMISORA #89 // SECTOR 2
+      subMissions:
+      - subFrequency: 89.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 89-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,10 MHz
+        mapZone:
+          zoneId: ZONA-02-1
+          zoneName: Sector FASCISTAS #2
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 32, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 410999
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 89-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,30 MHz
+        mapZone:
+          zoneId: ZONA-02-2
+          zoneName: Sector FASCISTAS #2
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 37, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 411006
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 89-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,60 MHz
+        mapZone:
+          zoneId: ZONA-02-3
+          zoneName: Sector FASCISTAS #2
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 42, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 411013
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 89.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 89-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 89,90 MHz
+        mapZone:
+          zoneId: ZONA-02-4
+          zoneName: Sector FASCISTAS #2
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 47, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 411020
+        terrainStyle: 1
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 92
+      stationCallsign: EMISORA #92 // SECTOR 3
+      subMissions:
+      - subFrequency: 92.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 92-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,10 MHz
+        mapZone:
+          zoneId: ZONA-03-1
+          zoneName: Sector FASCISTAS #3
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 44, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 411049
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 92-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,30 MHz
+        mapZone:
+          zoneId: ZONA-03-2
+          zoneName: Sector FASCISTAS #3
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 49, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 411056
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 92-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,60 MHz
+        mapZone:
+          zoneId: ZONA-03-3
+          zoneName: Sector FASCISTAS #3
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 54, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 411063
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 92.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 92-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 92,90 MHz
+        mapZone:
+          zoneId: ZONA-03-4
+          zoneName: Sector FASCISTAS #3
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 59, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 411070
+        terrainStyle: 2
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 95
+      stationCallsign: EMISORA #95 // SECTOR 4
+      subMissions:
+      - subFrequency: 95.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 95-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,10 MHz
+        mapZone:
+          zoneId: ZONA-04-1
+          zoneName: Sector FASCISTAS #4
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 56, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 411099
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 95-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,30 MHz
+        mapZone:
+          zoneId: ZONA-04-2
+          zoneName: Sector FASCISTAS #4
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 61, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 411106
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 95-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,60 MHz
+        mapZone:
+          zoneId: ZONA-04-3
+          zoneName: Sector FASCISTAS #4
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 66, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 411113
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 95.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 95-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 95,90 MHz
+        mapZone:
+          zoneId: ZONA-04-4
+          zoneName: Sector FASCISTAS #4
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 71, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 411120
+        terrainStyle: 3
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 98
+      stationCallsign: EMISORA #98 // SECTOR 5
+      subMissions:
+      - subFrequency: 98.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 98-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,10 MHz
+        mapZone:
+          zoneId: ZONA-05-1
+          zoneName: Sector FASCISTAS #5
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 68, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 411149
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 98-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,30 MHz
+        mapZone:
+          zoneId: ZONA-05-2
+          zoneName: Sector FASCISTAS #5
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 73, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 411156
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 98-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,60 MHz
+        mapZone:
+          zoneId: ZONA-05-3
+          zoneName: Sector FASCISTAS #5
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 78, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 411163
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 98.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 98-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 98,90 MHz
+        mapZone:
+          zoneId: ZONA-05-4
+          zoneName: Sector FASCISTAS #5
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 83, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 411170
+        terrainStyle: 4
+        worldWidth: 100
+        worldHeight: 300
+    - baseFrequency: 101
+      stationCallsign: EMISORA #101 // SECTOR 6
+      subMissions:
+      - subFrequency: 101.1
+        stateName: 'STATE: ALERTA TEMPRANA'
+        missionId: "MISI\xD3N 101-1"
+        missionTitle: Patrulla del Muro de Hierro
+        terrainDescription: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,10 MHz
+        mapZone:
+          zoneId: ZONA-06-1
+          zoneName: Sector FASCISTAS #6
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 80, y: 15}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Valle fluvial inundado con densa vegetaci\xF3n de manglar y lluvias torrenciales. Visibilidad reducida a baja altitud."
+        seed: 411199
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.3
+        stateName: 'STATE: PATRULLA DE RECONOCIMIENTO'
+        missionId: "MISI\xD3N 101-2"
+        missionTitle: "Supremac\xEDa A\xE9rea en la Frontera"
+        terrainDescription: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,30 MHz
+        mapZone:
+          zoneId: ZONA-06-2
+          zoneName: Sector FASCISTAS #6
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 85, y: 35}
+          threatLevel: 'AMENAZA: MODERADA'
+          zoneDetails: "Mesetas bas\xE1lticas elevadas sobre un mar embravecido. Fuertes corrientes t\xE9rmicas ascendentes y riesgo de tormenta el\xE9ctrica."
+        seed: 411206
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.6
+        stateName: "STATE: VANGUARDIA A\xC9REA"
+        missionId: "MISI\xD3N 101-3"
+        missionTitle: "Ataque Quir\xFArgico a la Costa"
+        terrainDescription: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,60 MHz
+        mapZone:
+          zoneId: ZONA-06-3
+          zoneName: Sector FASCISTAS #6
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 90, y: 55}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Estrecho mar\xEDtimo fortificado con bancos de arena traicioneros y plataformas artilladas costeras de gran calibre."
+        seed: 411213
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+      - subFrequency: 101.9
+        stateName: "STATE: ASALTO A LA REFINER\xCDA"
+        missionId: "MISI\xD3N 101-4"
+        missionTitle: "Operaci\xF3n Dominio Absoluto"
+        terrainDescription: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        tacticalObjective: NEUTRALIZAR AMENAZA EN FRECUENCIA 101,90 MHz
+        mapZone:
+          zoneId: ZONA-06-4
+          zoneName: Sector FASCISTAS #6
+          mapName: "MAPA T\xC1CTICO FASCISTAS"
+          mapSprite: {fileID: 0}
+          zoneCoordinates: {x: 95, y: 75}
+          threatLevel: "AMENAZA: CR\xCDTICA"
+          zoneDetails: "Archipi\xE9lago fractal k\xE1rstico con ca\xF1ones escarpados, niebla espesa y vientos cruzados de 35 nudos. Emplazamientos antia\xE9reos en las crestas."
+        seed: 411220
+        terrainStyle: 0
+        worldWidth: 100
+        worldHeight: 300
+  currentActiveTab: 2
+--- !u!114 &1930608536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930608534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 8f4a1329c21b4478a5b290dfc10972aa, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: eda14abdbf3471146939f072ef5bcda7, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1930608537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930608534}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1518830022}
+  - {fileID: 416756370}
+  - {fileID: 1930608537}

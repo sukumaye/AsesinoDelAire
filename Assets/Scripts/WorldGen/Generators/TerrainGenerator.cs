@@ -67,7 +67,43 @@ namespace WorldGen.Generators
             float usableW = width - 2f * margin;
             float usableH = height - 2f * margin;
 
-            if (largeIslands)
+            if (height >= width * 1.35f)
+            {
+                // MODO RECTÁNGULO VERTICAL SHOOT 'EM UP (100 ancho x 300 alto):
+                // Cadena continua de islas más juntas entre sí ("un poco más juntos")
+                int corridorCount = Mathf.Clamp(Mathf.RoundToInt(height / 45f), 5, 8);
+                float baseRadius = usableW * 0.32f;
+
+                for (int i = 0; i < corridorCount; i++)
+                {
+                    float t = (float)(i + 0.5f) / corridorCount;
+                    float xOsc = Mathf.Sin(i * 1.75f + seed * 0.17f) * 0.18f;
+                    float cx = margin + (0.50f + xOsc) * usableW;
+                    float cy = margin + t * usableH + Random.Range(-usableH * 0.02f, usableH * 0.02f);
+
+                    float radiusMultiplier = (i == 0 || i == corridorCount - 1) ? 1.20f : Random.Range(0.95f, 1.15f);
+                    float radius = baseRadius * radiusMultiplier;
+                    float angle = Random.Range(0f, Mathf.PI * 2f);
+                    float aspect = Random.Range(0.85f, 1.25f);
+                    float strength = 1.25f;
+
+                    islands.Add(new IslandSeed(cx, cy, radius, angle, aspect, strength));
+
+                    // Islote puente entre islas consecutivas para mantener la masa de tierra cercana
+                    if (i < corridorCount - 1)
+                    {
+                        float bridgeT = (float)(i + 1.0f) / corridorCount;
+                        float satX = margin + (0.50f - xOsc * 0.55f) * usableW;
+                        float satY = margin + bridgeT * usableH;
+                        float satRadius = baseRadius * Random.Range(0.38f, 0.52f);
+                        islands.Add(new IslandSeed(satX, satY, satRadius, Random.Range(0f, Mathf.PI * 2f), 1.0f, 1.05f));
+                    }
+                }
+
+                // Isla de inicio y aeródromo al sur
+                islands.Add(new IslandSeed(width * 0.5f, margin + 14f, baseRadius * 1.05f, 0f, 1.4f, 1.35f));
+            }
+            else if (largeIslands)
             {
                 // Modo Archipiélago Mayor: Islas amplias y habitables con radios generosos
                 int count = Mathf.Clamp(targetIslandCount, 2, 4);
@@ -197,15 +233,16 @@ namespace WorldGen.Generators
                         }
                     }
 
-                    // Penalización de estrecho: cuando dos islas compiten, tallar un canal navegable
+                    // Penalización de estrecho: cuando dos islas compiten, tallar un canal navegable estrecho
                     float straitPenalty = 0f;
-                    if (largeIslands && secondInfluence > 0.22f)
+                    float straitThresh = (height >= width * 1.35f) ? 0.36f : 0.22f;
+                    if ((largeIslands || height >= width * 1.35f) && secondInfluence > straitThresh)
                     {
-                        straitPenalty = (secondInfluence - 0.22f) * 0.85f;
+                        straitPenalty = (secondInfluence - straitThresh) * 0.70f;
                     }
 
                     float fractal = FractalNoise(x, y, 0.06f, 3, seed);
-                    float elevation = largeIslands 
+                    float elevation = (largeIslands || height >= width * 1.35f) 
                         ? ((firstInfluence - straitPenalty) * 0.74f) + (fractal * 0.26f) 
                         : (firstInfluence * 0.68f) + (fractal * 0.38f);
 
@@ -322,6 +359,63 @@ namespace WorldGen.Generators
         #region 2. Continente (Golfos, Penínsulas, Cabos y Lagunas)
         private static void GenerateContinent(CellType[,] grid, int width, int height, float waterLevel, int seed)
         {
+            if (height >= width * 1.35f)
+            {
+                // MODO CONTINENTE VERTICAL (100x300):
+                // Masa continental continua a lo largo del eje de vuelo vertical con penínsulas e islas más juntas
+                int steps = Mathf.Clamp(Mathf.RoundToInt(height / 45f), 5, 8);
+                List<Vector2> spinePoints = new List<Vector2>();
+                for (int i = 0; i < steps; i++)
+                {
+                    float t = (float)(i + 0.5f) / steps;
+                    float xPos = width * (0.50f + Mathf.Sin(i * 1.6f + seed * 0.25f) * 0.16f);
+                    float yPos = height * t;
+                    spinePoints.Add(new Vector2(xPos, yPos));
+                }
+
+                float continentRadius = width * 0.38f;
+
+                for (int x = 0; x < width; x++)
+                {
+                    for (int y = 0; y < height; y++)
+                    {
+                        float warpX = x + Mathf.Sin(y * 0.08f + seed * 0.2f) * 4.5f;
+                        float warpY = y + Mathf.Cos(x * 0.08f + seed * 0.4f) * 4.5f;
+                        Vector2 pt = new Vector2(warpX, warpY);
+
+                        float minDist = float.MaxValue;
+                        for (int i = 0; i < spinePoints.Count; i++)
+                        {
+                            float d = Vector2.Distance(pt, spinePoints[i]);
+                            if (d < minDist) minDist = d;
+                        }
+
+                        float baseContinent = Mathf.Clamp01(1.0f - (minDist / continentRadius));
+                        float fractal = FractalNoise(x, y, 0.05f, 3, seed);
+                        float elevation = (baseContinent * 0.85f) + (fractal * 0.28f);
+
+                        float borderDistX = Mathf.Min(x, width - 1 - x);
+                        float borderDistY = Mathf.Min(y, height - 1 - y);
+                        float minBorderDist = Mathf.Min(borderDistX, borderDistY);
+                        float topDist = height - 1 - y;
+
+                        if (topDist < 8 || minBorderDist < 4)
+                        {
+                            grid[x, y] = CellType.Water;
+                            continue;
+                        }
+
+                        float topFalloff = Mathf.Clamp01((topDist - 4f) / Mathf.Max(12f, height * 0.10f));
+                        float sideFalloff = Mathf.Clamp01(minBorderDist / Mathf.Max(6f, width * 0.08f));
+                        float borderFalloff = Mathf.Min(topFalloff, sideFalloff);
+                        elevation *= (borderFalloff * borderFalloff);
+
+                        grid[x, y] = (elevation < waterLevel) ? CellType.Water : CellType.Grass;
+                    }
+                }
+                return;
+            }
+
             // Un continente cubre 65-75% de la tierra con golfos profundos y penínsulas
             float centerX = width * 0.5f;
             float centerY = height * 0.5f;
@@ -681,6 +775,22 @@ namespace WorldGen.Generators
                     {
                         // En lagos y ríos (estilo puramente interior):
                         if (x <= 1 || x >= width - 2 || y <= 1 || y >= height - 2)
+                        {
+                            grid[x, y] = CellType.Grass;
+                        }
+                    }
+                }
+            }
+
+            // 1.5. Garantizar pista de despegue y base de lanzamiento al sur en mapas verticales
+            if (height >= width * 1.35f)
+            {
+                int midX = width / 2;
+                for (int x = midX - 8; x <= midX + 8; x++)
+                {
+                    for (int y = 6; y <= 24; y++)
+                    {
+                        if (x >= sideMargin && x < width - sideMargin)
                         {
                             grid[x, y] = CellType.Grass;
                         }

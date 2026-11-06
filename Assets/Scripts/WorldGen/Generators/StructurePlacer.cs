@@ -5,8 +5,16 @@ using WorldGen.Data;
 
 namespace WorldGen.Generators
 {
+    /// <summary>
+    /// Algoritmo de colocación espacial y análisis topográfico de estructuras militares y naturales.
+    /// Valida que bases militares, radares, casamatas y pistas de aterrizaje se sitúen exclusivamente
+    /// en terreno firme (Grass), respetando accesos despejados para puertas y caminos.
+    /// </summary>
     public static class StructurePlacer
     {
+        /// <summary>
+        /// Intenta colocar una estructura dentro de una franja vertical específica del mapa.
+        /// </summary>
         public static bool TryPlaceStructureInZone(StructureData data, CellType[,] grid, int width, int height, int minY, int maxY, out Vector2Int placedOrigin, int maxAttempts = 300)
         {
             placedOrigin = Vector2Int.zero;
@@ -31,6 +39,9 @@ namespace WorldGen.Generators
             return TryPlaceStructure(data, grid, width, height, out placedOrigin, maxAttempts);
         }
 
+        /// <summary>
+        /// Intenta situar una estructura dentro de una isla consolidada del archipiélago.
+        /// </summary>
         public static bool TryPlaceStructureInIsland(StructureData data, CellType[,] grid, int width, int height, IslandData island, out Vector2Int placedOrigin, int maxAttempts = 200)
         {
             placedOrigin = Vector2Int.zero;
@@ -57,6 +68,9 @@ namespace WorldGen.Generators
             return false;
         }
 
+        /// <summary>
+        /// Coloca una estructura dentro de un cuadrante geográfico determinado (NW, NE, SW, SE).
+        /// </summary>
         public static bool TryPlaceStructureInQuadrant(StructureData data, CellType[,] grid, int width, int height, int quadrantIndex, out Vector2Int placedOrigin, int maxAttempts = 300)
         {
             placedOrigin = Vector2Int.zero;
@@ -110,6 +124,9 @@ namespace WorldGen.Generators
             return false;
         }
 
+        /// <summary>
+        /// Busca aleatoriamente cualquier ubicación apta en toda la superficie del mapa.
+        /// </summary>
         public static bool TryPlaceStructure(StructureData data, CellType[,] grid, int width, int height, out Vector2Int placedOrigin, int maxAttempts = 300)
         {
             placedOrigin = Vector2Int.zero;
@@ -129,6 +146,9 @@ namespace WorldGen.Generators
             return false;
         }
 
+        /// <summary>
+        /// Registra en la matriz física del mapa las celdas ocupadas por la estructura para evitar solapamientos.
+        /// </summary>
         private static void MarkStructureCells(StructureData data, int rx, int ry, CellType[,] grid)
         {
             for (int x = 0; x < data.size.x; x++)
@@ -153,6 +173,9 @@ namespace WorldGen.Generators
             }
         }
 
+        /// <summary>
+        /// Comprueba si todas las celdas necesarias están despejadas y sobre pasto firme sin agua.
+        /// </summary>
         private static bool CanPlaceAt(StructureData data, int originX, int originY, CellType[,] grid, int width, int height)
         {
             for (int x = 0; x < data.size.x; x++)

@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Flow/FlowStyles.uss" />
+
+    <ui:VisualElement name="tutorial-root" class="flow-root">
+        <ui:VisualElement name="step-tutorial" class="tutorial-container">
+            <ui:Label name="lbl-tutorial-instruction" text="FASE DE CALIBRACIÓN BALÍSTICA // ARRASTRA O TOCA PARA DISPARAR A LOS 3 OBJETIVOS" class="tutorial-instruction" />
+
+            <!-- Área de Vuelo y Disparo Interactivo -->
+            <ui:VisualElement name="tutorial-game-area" class="tutorial-game-area">
+                <ui:VisualElement name="tutorial-plane" class="tutorial-plane" />
+            </ui:VisualElement>
+
+            <!-- Barra Inferior -->
+            <ui:Button name="btn-skip-tutorial" class="btn-skip-tutorial">
+                <ui:Label text="SALTAR TUTORIAL AL HANGAR ➔" class="btn-skip-tutorial-text" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

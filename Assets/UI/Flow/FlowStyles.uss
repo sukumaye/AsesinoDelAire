@@ -1,0 +1,546 @@
+/* =========================================================================
+   AK-47 FLOW STYLES (UI TOOLKIT USS) - DIESELPUNK RETROFUTURISTA v2
+   ========================================================================= */
+
+.flow-root {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.solid-black-bg {
+    background-color: #000000;
+}
+
+/* =========================================================================
+   1. PANTALLA DE LOGO Y MARCA (0_BrandIntro)
+   ========================================================================= */
+.brand-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.brand-ram-logo {
+    width: 65%;
+    height: 38%;
+    max-width: 400px;
+    max-height: 400px;
+    align-self: center;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.brand-title {
+    color: #ffffff;
+    font-size: 52px;
+    -unity-font-style: bold;
+    letter-spacing: 4px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    margin-top: 3%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.brand-hint {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 3.5%;
+}
+
+/* =========================================================================
+   2. SELECCIÓN DE FACCIÓN (1_FactionSelection) - 100% PORCENTAJES Y RELACIÓN DE ASPECTO
+   ========================================================================= */
+.carousel-full-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.faction-full-page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+/* MARCO GRANDE EXTERIOR (941x1671 - Se ajusta por porcentaje manteniendo relación de aspecto) */
+.faction-bg-frame {
+    position: relative;
+    width: 94%;
+    height: 92%;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: #000000;
+    opacity: 1;
+    transform-origin: center center;
+    overflow: hidden;
+}
+
+/* ZONA SEGURA INTERIOR DEL MARCO GRANDE (100% Porcentaje para encajar dentro del cuadrado negro exterior) */
+.faction-safe-zone {
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 11.5%;
+    bottom: 11.5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border-width: 0;
+    overflow: hidden;
+}
+
+/* 1. FRAGMENTO VERTICAL: LA NAVE (Proporción exacta 2:3 en porcentaje, encaja dentro del cuadro negro superior) */
+.fragment-vertical-box {
+    position: relative;
+    width: 52.5%;
+    height: 43.2%;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-width: 0;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+/* Cuadro negro interior del marco vertical (despeja bordes y adornos en porcentaje) */
+.vertical-safe-zone {
+    position: absolute;
+    left: 13%;
+    right: 13%;
+    top: 13%;
+    bottom: 15%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.plane-silhouette-sprite {
+    width: 82%;
+    height: 75%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.plane-code-badge {
+    width: 100%;
+    height: 22%;
+    color: #ffd073;
+    font-size: 16px;
+    -unity-font-style: bold;
+    letter-spacing: 1.5px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+/* 2. DESCRIPCIÓN DE LA NAVE Y FACCIÓN (Centro, en porcentaje dentro de las columnas laterales) */
+.fragment-desc-box {
+    width: 92%;
+    height: 17%;
+    background-color: rgba(0, 0, 0, 0.78);
+    border-width: 0;
+    border-radius: 6px;
+    padding: 1.5% 3%;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    overflow: hidden;
+}
+
+.faction-title-badge {
+    width: 100%;
+    font-size: 22px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    color: #ffd073;
+    -unity-text-align: middle-center;
+    margin-bottom: 1%;
+}
+
+.faction-slogan-text {
+    width: 100%;
+    font-size: 13px;
+    color: #e0b868;
+    -unity-font-style: italic;
+    -unity-text-align: middle-center;
+    margin-bottom: 1%;
+    white-space: normal;
+}
+
+.faction-desc-text {
+    width: 100%;
+    font-size: 12px;
+    color: #cfdbe3;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    letter-spacing: 0.4px;
+}
+
+/* 3. FRAGMENTO HORIZONTAL: LAS ESTADÍSTICAS (Proporción exacta 2:1 en porcentaje, encaja sin pisar las columnas) */
+.fragment-horizontal-box {
+    position: relative;
+    width: 94%;
+    height: 25.8%;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-width: 0;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+/* Cuadro negro interior del marco horizontal (despeja adornos superiores, inferiores y laterales en %) */
+.horizontal-safe-zone {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 19%;
+    bottom: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.stat-block {
+    width: 100%;
+    height: 22%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-label-row {
+    width: 100%;
+    height: 54%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-name-label {
+    color: #cfdbe3;
+    font-size: 13px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.stat-num-label {
+    color: #ffffff;
+    font-size: 13px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+}
+
+.stat-bar-track {
+    width: 100%;
+    height: 38%;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 5px;
+    overflow: hidden;
+    border-width: 0;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease-out;
+}
+
+.speed-fill {
+    background-color: #00d2ff;
+}
+
+.firepower-fill {
+    background-color: #ff3838;
+}
+
+.armor-fill {
+    background-color: #e6a02d;
+}
+
+.upgrades-fill {
+    background-color: #2ed573;
+}
+
+/* 4. BOTÓN ELEGIR NAVE (En porcentaje dentro del cuadro negro inferior) */
+.btn-confirm-inside {
+    width: 72%;
+    height: 7.5%;
+    background-color: #d18d1f;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    transition: scale 0.1s ease-out;
+}
+
+.btn-confirm-inside:hover {
+    scale: 1.03 1.03;
+    background-color: #e69c24;
+}
+
+.btn-confirm-inside:active {
+    scale: 0.97 0.97;
+    background-color: #b37312;
+}
+
+.btn-confirm-inside-text {
+    color: #000000;
+    font-size: 20px;
+    -unity-font-style: bold;
+    letter-spacing: 2.5px;
+    -unity-text-align: middle-center;
+}
+
+/* Puntos de Navegación */
+.carousel-dots-row.compact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.floating-dots {
+    position: absolute;
+    bottom: 2%;
+    align-self: center;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 6px;
+    transition: background-color 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.carousel-dot.active {
+    background-color: #e6a02d;
+    scale: 1.25 1.25;
+}
+
+/* Botón de Confirmación */
+.btn-confirm-flow {
+    width: 100%;
+    max-width: 500px;
+    height: 56px;
+    background-color: #d18d1f;
+    border-width: 2px;
+    border-color: #ffd073;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.1s ease-out;
+}
+
+.btn-confirm-flow:hover {
+    scale: 1.03 1.03;
+    background-color: #e69c24;
+}
+
+.btn-confirm-flow-text {
+    color: #000000;
+    font-size: 20px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+/* =========================================================================
+   3. CINEMÁTICA NARRATIVA ASCENDENTE (2_StoryCinematic)
+   ========================================================================= */
+.cinematic-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #050709;
+}
+
+.cinematic-mask {
+    width: 100%;
+    max-width: 860px;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(10, 15, 20, 0.6);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.cinematic-scroll-content {
+    width: 100%;
+    position: absolute;
+    top: 600px;
+    align-items: center;
+}
+
+.cinematic-text {
+    color: #f0ede1;
+    font-size: 22px;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    letter-spacing: 1px;
+}
+
+.cinematic-controls-bar {
+    flex-direction: row;
+    width: 100%;
+    max-width: 860px;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cinematic-control {
+    flex-grow: 1;
+    height: 100%;
+    margin: 0 8px;
+    background-color: #1a2530;
+    border-width: 2px;
+    border-color: #3b4e60;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cinematic-control:hover {
+    background-color: #273747;
+    border-color: #e6a02d;
+}
+
+.btn-cinematic-text {
+    color: #ffffff;
+    font-size: 17px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+/* =========================================================================
+   4. MISIÓN TUTORIAL BALÍSTICA (3_TutorialMission)
+   ========================================================================= */
+.tutorial-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #060a08;
+}
+
+.tutorial-instruction {
+    color: #ffe680;
+    font-size: 22px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    -unity-text-align: middle-center;
+    padding: 12px 24px;
+    background-color: rgba(20, 30, 25, 0.7);
+    border-width: 1px;
+    border-color: rgba(230, 200, 80, 0.3);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 960px;
+}
+
+.tutorial-game-area {
+    width: 100%;
+    max-width: 960px;
+    flex-grow: 1;
+    position: relative;
+    margin: 16px 0;
+    background-color: #080f0c;
+    border-width: 2px;
+    border-color: #1e3328;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tutorial-plane {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 60px;
+    left: 435px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.tutorial-target {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #d93838;
+    border-width: 3px;
+    border-color: #ff8080;
+}
+
+.tutorial-bullet {
+    position: absolute;
+    width: 14px;
+    height: 36px;
+    border-radius: 7px;
+    background-color: #ffdf40;
+}
+
+.btn-skip-tutorial {
+    width: 100%;
+    max-width: 460px;
+    height: 55px;
+    background-color: #1a2822;
+    border-width: 2px;
+    border-color: #3b5749;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.1s ease-out;
+}
+
+.btn-skip-tutorial:hover {
+    background-color: #273d33;
+    border-color: #55a075;
+    scale: 1.02 1.02;
+}
+
+.btn-skip-tutorial-text {
+    color: #e0f2e9;
+    font-size: 18px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}

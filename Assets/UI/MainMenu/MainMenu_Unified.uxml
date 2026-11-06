@@ -1,0 +1,335 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=6a3b819f074d445ebc4059cb4a2340cc&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="main-screen" class="main-screen">
+        <ui:VisualElement name="top-resource-bar" class="top-resource-bar">
+            <ui:VisualElement class="top-bar-left">
+                <ui:VisualElement class="top-bar-faction-logo"/>
+                <ui:Label name="lbl-top-faction" text="" class="lbl-top-faction-name"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="top-bar-right">
+                <ui:VisualElement class="resource-badge">
+                    <ui:VisualElement class="res-icon res-icon-gold"/>
+                    <ui:Label name="lbl-res-gold" text="1,250 ORO" class="res-val-text"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="resource-badge">
+                    <ui:VisualElement class="res-icon res-icon-fuel"/>
+                    <ui:Label name="lbl-res-fuel" text="85/100" class="res-val-text"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="content-viewport" class="content-viewport">
+            <ui:VisualElement name="view-misiones" class="screen-view-panel full-view-missions" style="display: flex; -unity-background-scale-mode: scale-to-fit;">
+                <ui:VisualElement name="radio-cabinet" class="radio-cabinet" style="color: rgb(57, 49, 49); background-color: rgba(0, 0, 0, 0); -unity-background-scale-mode: scale-to-fit; background-size: 100% 100%; -unity-slice-type: tiled; width: 100%; position: absolute; top: auto; right: auto; left: auto; bottom: auto; height: 100%; background-image: none; align-items: center; justify-content: center; align-self: center;">
+                    <ui:VisualElement name="radio-cabinet-skin" picking-mode="Ignore" class="radio-cabinet-skin" style="display: flex;"/>
+                    <ui:VisualElement name="crt-screen-container" class="crt-screen-container" style="-unity-background-scale-mode: scale-to-fit; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;">
+                        <ui:VisualElement picking-mode="Ignore" class="crt-glass-reflection"/>
+                        <ui:VisualElement picking-mode="Ignore" class="crt-scanlines"/>
+                        <ui:VisualElement picking-mode="Ignore" class="crt-glow-overlay"/>
+                        <ui:VisualElement name="tactical-map" class="tactical-map-main-box">
+                            <ui:VisualElement name="map-sprite-element" picking-mode="Ignore" class="tactical-map-sprite"/>
+                            <ui:VisualElement picking-mode="Ignore" class="tactical-grid-overlay"/>
+                            <ui:VisualElement picking-mode="Ignore" class="tactical-range-rings"/>
+                            <ui:VisualElement picking-mode="Ignore" class="tactical-radar-sweep"/>
+                            <ui:VisualElement name="map-zone-target" class="map-zone-target">
+                                <ui:VisualElement class="zone-target-crosshair"/>
+                                <ui:VisualElement class="zone-target-ping"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="tactical-header-row">
+                                <ui:VisualElement class="tactical-header-left">
+                                    <ui:VisualElement class="map-icon-compass"/>
+                                    <ui:Label name="lbl-map-name" text="" class="lbl-tactical-map-name"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="tactical-header-right">
+                                    <ui:Label name="lbl-radio-frequency" text="" class="badge-freq-val"/>
+                                    <ui:Label name="lbl-threat-level" text="" class="lbl-threat-level"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="world-map-corner-box" class="world-map-corner-box">
+                                <ui:VisualElement class="world-corner-header">
+                                    <ui:VisualElement class="hud-tag-live">
+                                        <ui:VisualElement class="hud-blip-pulse"/>
+                                        <ui:Label text="EN DIRECTO" class="hud-live-text"/>
+                                    </ui:VisualElement>
+                                    <ui:Label text="VISTA PREVIA DEL TEATRO" class="hud-theater-label"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="world-preview-display" class="world-preview-display">
+                                    <ui:VisualElement picking-mode="Ignore" class="world-preview-grid"/>
+                                    <ui:VisualElement picking-mode="Ignore" class="world-preview-sweep"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="world-corner-footer">
+                                    <ui:Label name="lbl-world-coords" text="SECTOR: [100x300]" class="hud-coords-text"/>
+                                    <ui:Label name="lbl-world-seed" text="SEED: #407949" class="hud-seed-text"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="tactical-description-rect" class="tactical-description-rect">
+                                <ui:VisualElement class="desc-row-status">
+                                    <ui:VisualElement class="desc-badge-state">
+                                        <ui:VisualElement class="hud-blip-pulse"/>
+                                        <ui:Label name="lbl-radio-state" text="STATE: VANGUARDIA AÉREA" class="lbl-radio-state"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="desc-mission-title-box">
+                                        <ui:Label name="lbl-mission-id" text="MISIÓN 89-3" class="lbl-mission-id"/>
+                                        <ui:Label name="lbl-mission-title" text="Infiltración en el Hangar Central" class="lbl-mission-title"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="desc-box-objective">
+                                    <ui:Label text="OBJETIVO TÁCTICO:" class="lbl-desc-tag"/>
+                                    <ui:Label name="lbl-tactical-objective" text="DESTRUIR GENERADOR DE RADAR COSTEIRO" class="lbl-tactical-objective"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="desc-box-terrain">
+                                    <ui:Label text="CONDICIONES // CLIMA:" class="lbl-desc-tag"/>
+                                    <ui:Label name="lbl-terrain-description" text="Relieve kárstico con cañones submarinos, niebla espesa y vientos cruzados de 35 nudos." class="lbl-terrain-description"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="desc-footer-zone">
+                                    <ui:Label name="lbl-zone-name" text="ZONA: BAHÍA DE LOS HEREJES [34, 18]" class="lbl-zone-name"/>
+                                    <ui:Label name="lbl-zone-id" text="ID: ZONA-01" class="lbl-zone-id"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="tactical-bottom-deploy-row">
+                                <ui:Button name="btn-deploy-mission" class="btn-deploy-mission">
+                                    <ui:Label text="INICIAR INCURSIÓN TÁCTICA" class="btn-deploy-text"/>
+                                </ui:Button>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Button name="btn-subdial" tooltip="Dial Izquierdo: Pulsa para cambiar submenú / Estado operativo" class="radio-dial-knob"/>
+                    <ui:Button name="btn-maindial" tooltip="Dial Derecho: Pulsa para cambiar emisora principal (intervalo 3x3)" class="radio-dial-knob"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="view-periodico" class="screen-view-panel full-view-periodico" style="display: none;">
+                <ui:VisualElement class="newspaper-view-container">
+                    <ui:VisualElement class="newspaper-header-box">
+                        <ui:Label text="★ EL DIARIO MILITAR ★" class="newspaper-masthead"/>
+                        <ui:Label text="CRÓNICAS Y PARTES OFICIALES DEL FRENTE // 1944" class="newspaper-submasthead"/>
+                        <ui:VisualElement class="newspaper-meta-bar">
+                            <ui:Label name="lbl-news-date" text="14 DE OCTUBRE, 1944" class="lbl-news-date"/>
+                            <ui:VisualElement class="stamp-classified">
+                                <ui:Label text="CLASIFICADO" style="color: rgb(255, 112, 112); font-size: 7.5px; -unity-font-style: bold; margin: 0; padding: 0;"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-news-edition" text="EDICIÓN N° 47" class="lbl-news-edition"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="newspaper-headline-box">
+                        <ui:Label name="lbl-news-headline" text="¡VICTORIA EN EL ESTUARIO: 16 CAZAS DERRIBADOS!" class="lbl-news-headline"/>
+                        <ui:Label name="lbl-news-subtitle" text="La vanguardia aérea neutraliza los radares enemigos tras feroz combate en la niebla." class="lbl-news-subtitle"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="newspaper-content-columns">
+                        <ui:VisualElement class="newspaper-col-left">
+                            <ui:VisualElement class="news-photo-frame">
+                                <ui:VisualElement name="news-photo-image" class="news-photo-image"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-news-photo-caption" text="Formación de combate en patrulla sobre los cañones costeros." class="lbl-news-photo-caption"/>
+                            <ui:Label name="lbl-news-article-text" text="Durante las primeras horas del amanecer, las unidades aéreas rompieron el bloqueo del canal. Los depósitos de combustible quedaron asegurados bajo nuestro pabellón." class="lbl-news-article-text"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="newspaper-col-right">
+                            <ui:VisualElement class="newspaper-stats-card">
+                                <ui:Label text="PARTE DE COMBATE" class="news-stat-title"/>
+                                <ui:VisualElement class="news-stat-row">
+                                    <ui:Label text="DERRIBOS:" class="lbl-news-stat-tag"/>
+                                    <ui:Label name="lbl-news-kills" text="16 CAZAS" class="lbl-news-stat-val"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="news-stat-row">
+                                    <ui:Label text="BAJAS PROPIAS:" class="lbl-news-stat-tag"/>
+                                    <ui:Label name="lbl-news-losses" text="2 AVIONES" class="lbl-news-stat-val"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="news-stat-row">
+                                    <ui:Label text="PRECISIÓN:" class="lbl-news-stat-tag"/>
+                                    <ui:Label name="lbl-news-accuracy" text="84%" class="lbl-news-stat-val"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="news-stat-row">
+                                    <ui:Label text="SECTOR:" class="lbl-news-stat-tag"/>
+                                    <ui:Label name="lbl-news-sector" text="ESTUARIO" class="lbl-news-stat-val"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="newspaper-ads-box">
+                                <ui:Label text="TALLER RADIAL" class="lbl-news-ad-title"/>
+                                <ui:Label text="Ajuste de bujías y hélices de paso variable." class="lbl-news-ad-text"/>
+                                <ui:Label text="CHATARRA BÉLICA" class="lbl-news-ad-title"/>
+                                <ui:Label text="Compramos restos de duraluminio al mejor precio." class="lbl-news-ad-text"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="newspaper-paging-footer">
+                        <ui:Button name="btn-news-prev" text="◄ ANTERIOR" class="btn-news-paging"/>
+                        <ui:Label name="lbl-news-page-indicator" text="CRÓNICA 1 / 3" class="lbl-news-page-indicator"/>
+                        <ui:Button name="btn-news-next" text="SIGUIENTE ►" class="btn-news-paging"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="view-hangar" class="screen-view-panel full-view-hangar" style="display: flex;">
+                <ui:VisualElement class="hangar-view-container">
+                    <ui:VisualElement class="hangar-header-bar">
+                        <ui:Label text="HANGAR MILITAR // ESCUADRILLA" class="lbl-hangar-title"/>
+                        <ui:Label name="lbl-hangar-wallet" text="COMB: 90/100 | ORO: 18,940 | GEMAS: 17" class="hangar-resource-pill"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="hangar-carousel-bg" class="hangar-carousel-bg">
+                        <ui:VisualElement name="hangar-carousel-backdrop" picking-mode="Ignore" class="hangar-carousel-backdrop"/>
+                        <ui:VisualElement picking-mode="Ignore" class="hangar-carousel-overlay"/>
+                        <ui:VisualElement class="hangar-carousel-content">
+                            <ui:VisualElement name="hangar-carousel-stage" class="hangar-carousel-stage" style="background-image: url(&quot;project://database/Assets/Samples/Cinemachine/6.6.0/Shared%20Assets/Textures/Cameron_Material_Base_Color.png?fileID=2800000&amp;guid=dd51f70f8cca0ad4aa4f456152e87037&amp;type=3#Cameron_Material_Base_Color&quot;);">
+                                <ui:VisualElement name="hangar-slide-0" class="hangar-carousel-slide hangar-slide-active">
+                                    <ui:VisualElement class="hangar-bay-card hangar-bay-active hangar-carousel-card" style="-unity-background-scale-mode: scale-to-fit; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 100%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgba(14, 42, 24, 0);">
+                                        <ui:VisualElement name="hangar-plane-display" class="hangar-active-plane-box"/>
+                                        <ui:VisualElement name="VisualElement" class="hangar-wingmen-row">
+                                            <ui:VisualElement class="hangar-wingman-mini"/>
+                                            <ui:VisualElement class="hangar-wingman-mini"/>
+                                        </ui:VisualElement>
+                                        <ui:Label name="lbl-hangar-tier" text="NIVEL 1 // CAZA ACTIVO" class="hangar-tier-badge"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="hangar-slide-1" class="hangar-carousel-slide">
+                                    <ui:VisualElement class="hangar-bay-card hangar-carousel-card">
+                                        <ui:VisualElement class="hangar-padlock-icon"/>
+                                        <ui:Label text="BLOQUEADO (NVL 5)" class="lbl-hangar-locked"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="hangar-slide-2" class="hangar-carousel-slide">
+                                    <ui:VisualElement class="hangar-bay-card hangar-carousel-card">
+                                        <ui:VisualElement class="hangar-padlock-icon"/>
+                                        <ui:Label text="BLOQUEADO (NVL 10)" class="lbl-hangar-locked"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="hangar-slide-3" class="hangar-carousel-slide">
+                                    <ui:VisualElement class="hangar-bay-card hangar-carousel-card">
+                                        <ui:VisualElement class="hangar-padlock-icon"/>
+                                        <ui:Label text="BOMBARDEO PESADO" class="lbl-hangar-locked"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="hangar-carousel-dots" class="hangar-carousel-dots">
+                            <ui:VisualElement name="hangar-dot-0" class="hangar-carousel-dot hangar-dot-active"/>
+                            <ui:VisualElement name="hangar-dot-1" class="hangar-carousel-dot"/>
+                            <ui:VisualElement name="hangar-dot-2" class="hangar-carousel-dot"/>
+                            <ui:VisualElement name="hangar-dot-3" class="hangar-carousel-dot"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="hangar-stats-card">
+                        <ui:VisualElement class="hangar-stat-row">
+                            <ui:Label text="POTENCIA DE DISPARO:" class="lbl-hstat-name"/>
+                            <ui:VisualElement class="hstat-bar-bg">
+                                <ui:VisualElement name="bar-hstat-firepower" class="hstat-bar-fill" style="width: 70%;"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-hstat-firepower" text="NVL 7" class="lbl-hstat-val"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="hangar-stat-row">
+                            <ui:Label text="BLINDAJE FUSELAJE:" class="lbl-hstat-name"/>
+                            <ui:VisualElement class="hstat-bar-bg">
+                                <ui:VisualElement name="bar-hstat-armor" class="hstat-bar-fill" style="width: 50%;"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-hstat-armor" text="NVL 5" class="lbl-hstat-val"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="hangar-stat-row">
+                            <ui:Label text="VELOCIDAD / MOTOR:" class="lbl-hstat-name"/>
+                            <ui:VisualElement class="hstat-bar-bg">
+                                <ui:VisualElement name="bar-hstat-speed" class="hstat-bar-fill" style="width: 80%;"/>
+                            </ui:VisualElement>
+                            <ui:Label name="lbl-hstat-speed" text="NVL 8" class="lbl-hstat-val"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="hangar-action-footer">
+                        <ui:Button name="btn-hangar-upgrade" text="▲ MEJORAR (250 ORO)" class="btn-hangar-action"/>
+                        <ui:Button name="btn-hangar-armor" text="BLINDAJE (200 ORO)" class="btn-hangar-action"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="view-pasaporte" class="screen-view-panel full-view-pasaporte" style="display: none;">
+                <ui:VisualElement class="passport-view-container">
+                    <ui:VisualElement class="passport-header-bar">
+                        <ui:Label text="★ PASAPORTE MILITAR DE VUELO ★" class="lbl-passport-title"/>
+                        <ui:Label text="EXPEDIENTE OFICIAL DE COMBATE // 1944" class="lbl-passport-subtitle"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="passport-dossier-card">
+                        <ui:VisualElement class="passport-photo-box">
+                            <ui:VisualElement class="passport-photo-img"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="passport-info-col">
+                            <ui:Label text="ALEXANDER // &apos;HALCÓN&apos;" class="lbl-pass-pilot-name"/>
+                            <ui:Label text="AS DE LA AVIACIÓN // GRADO III" class="lbl-pass-pilot-rank"/>
+                            <ui:Label name="lbl-pass-pilot-faction" text="" class="lbl-pass-pilot-faction"/>
+                            <ui:Label text="MATRÍCULA #189361826" class="lbl-pass-pilot-id"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="passport-stats-grid">
+                        <ui:VisualElement class="passport-stats-row">
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="MISIONES" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-missions" text="0" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="DERRIBOS" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-kills" text="0" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="PRECISIÓN" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-accuracy" text="0%" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="passport-stats-row">
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="HORAS VUELO" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-hours" text="0h" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="BAJAS" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-losses" text="0" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="passport-stat-cell">
+                                <ui:Label text="K/D" class="lbl-pstat-tag"/>
+                                <ui:Label name="lbl-pstat-kd" text="0.0" class="lbl-pstat-val"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="view-casino" class="screen-view-panel full-view-casino" style="display: none;">
+                <ui:VisualElement class="casino-view-container">
+                    <ui:VisualElement class="casino-header-bar">
+                        <ui:Label text="♠ CASINO CLANDESTINO 1944 ♠" class="lbl-casino-title"/>
+                        <ui:Label name="lbl-casino-wallet" text="ORO: 18,940 | GEMAS: 17" class="casino-wallet-pill"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="casino-roulette-section">
+                        <ui:VisualElement name="casino-roulette-wheel" class="casino-roulette-wheel"/>
+                        <ui:Label name="lbl-casino-status" text="¡GIRA LA RULETA PARA GANAR RECURSOS!" class="lbl-casino-status"/>
+                        <ui:Button name="btn-casino-spin" text="▶ GIRAR RULETA (50 ORO)" class="btn-casino-spin"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="casino-shop-section">
+                        <ui:Label text="MERCADO NEGRO // SUMINISTROS" class="lbl-casino-shop-title"/>
+                        <ui:VisualElement class="casino-shop-row">
+                            <ui:Button name="btn-buy-fuel" text="⛽ COMBUSTIBLE +25 (100 ORO)" class="btn-casino-buy"/>
+                            <ui:Button name="btn-buy-ammo" text="🔹 MUNICIÓN +10 (75 ORO)" class="btn-casino-buy"/>
+                            <ui:Button name="btn-buy-engine" text="⚙ PIEZA MOTOR (200 ORO)" class="btn-casino-buy"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom-navigation-bar" class="bottom-navigation-bar">
+            <ui:Button name="btn-nav-casino" tooltip="Casino Clandestino de los Años 40" class="nav-tab-btn">
+                <ui:VisualElement class="nav-tab-led"/>
+                <ui:VisualElement class="nav-tab-icon nav-icon-casino"/>
+                <ui:Label text="CASINO" class="nav-tab-label"/>
+            </ui:Button>
+            <ui:Button name="btn-nav-periodico" tooltip="El Diario Militar - Crónicas de Guerra" class="nav-tab-btn">
+                <ui:VisualElement class="nav-tab-led"/>
+                <ui:VisualElement class="nav-tab-icon nav-icon-newspaper"/>
+                <ui:Label text="DIARIO" class="nav-tab-label"/>
+            </ui:Button>
+            <ui:Button name="btn-nav-misiones" tooltip="Centro de Misiones y Frecuencias" class="nav-tab-btn nav-tab-missions-btn nav-tab-active">
+                <ui:VisualElement class="nav-tab-led"/>
+                <ui:VisualElement class="nav-tab-icon nav-icon-missions"/>
+                <ui:Label text="MISIÓN" class="nav-tab-label"/>
+            </ui:Button>
+            <ui:Button name="btn-nav-hangar" tooltip="Hangar de Cazas y Mantenimiento" class="nav-tab-btn">
+                <ui:VisualElement class="nav-tab-led"/>
+                <ui:VisualElement class="nav-tab-icon nav-icon-hangar"/>
+                <ui:Label text="HANGAR" class="nav-tab-label"/>
+            </ui:Button>
+            <ui:Button name="btn-nav-pasaporte" tooltip="Pasaporte y Estadísticas de Vuelo" class="nav-tab-btn">
+                <ui:VisualElement class="nav-tab-led"/>
+                <ui:VisualElement class="nav-tab-icon nav-icon-passport"/>
+                <ui:Label text="PERFIL" class="nav-tab-label"/>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

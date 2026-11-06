@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Flow/FlowStyles.uss?fileID=7433441132597879392&amp;guid=d1000000000000000000000000000002&amp;type=3#FlowStyles"/>
+    <ui:VisualElement name="brand-root" class="flow-root" style="position: absolute;">
+        <ui:VisualElement name="step-brand" class="brand-container" style="position: absolute; top: auto;">
+            <ui:VisualElement name="brand-ram-logo" class="brand-ram-logo" style="background-image: url(&quot;project://database/Assets/Art/Estudio/Calavera%20de%20carnero%20g%C3%B3tica%20pixelada.png?fileID=-3225369367928116092&amp;guid=8f04dd5e5296bcf4a878e1eb524e4745&amp;type=3#Calavera de carnero gótica pixelada_0&quot;); width: 79%; height: 401%; -unity-background-scale-mode: scale-to-fit; -unity-slice-type: tiled; max-width: 100%; max-height: 100%; position: absolute; top: 0%;"/>
+            <ui:Label name="lbl-brand-title" text="Qu&lt;color=#FF0000&gt;art&lt;/color&gt;er&#10;Games" enable-rich-text="true" class="brand-title" style="-unity-font: url(&quot;project://database/Assets/UI/Fonts/carnivalee-freakshow.regular%20(1).ttf?fileID=12800000&amp;guid=25c16b294aec92f47b35d8a69c888f6d&amp;type=3#carnivalee-freakshow.regular (1)&quot;); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/carnivalee-freakshow.regular%20(1).ttf?fileID=12800000&amp;guid=25c16b294aec92f47b35d8a69c888f6d&amp;type=3#carnivalee-freakshow.regular (1)&quot;); height: 23%; width: 100%; font-size: 149px; position: absolute; top: 76%;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

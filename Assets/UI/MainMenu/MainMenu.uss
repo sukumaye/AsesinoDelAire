@@ -1,0 +1,2013 @@
+/* ==========================================================================
+   AK-47: MENÚ PRINCIPAL MILITAR - TERMINAL DE RADIO ANALÓGICA POR FACCIÓN
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. PANTALLA PRINCIPAL: FONDO LIMPIO Y OSCURO (1080 x 1920 REF)
+   -------------------------------------------------------------------------- */
+.main-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    background-color: #060907;
+}
+
+/* --------------------------------------------------------------------------
+   1.1 BARRA SUPERIOR DE RECURSOS / ESTADO
+   -------------------------------------------------------------------------- */
+.top-resource-bar {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(9, 15, 11, 0.96);
+    border-bottom-width: 1.5px;
+    border-bottom-color: rgba(45, 80, 55, 0.7);
+    padding: 0 16px;
+    z-index: 50;
+}
+
+.top-bar-anarquista {
+    border-bottom-color: rgba(160, 45, 45, 0.85);
+}
+
+.top-bar-capitalista {
+    border-bottom-color: rgba(180, 140, 40, 0.85);
+}
+
+.top-bar-comunista {
+    border-bottom-color: rgba(190, 35, 35, 0.85);
+}
+
+.top-bar-fascista {
+    border-bottom-color: rgba(45, 110, 170, 0.85);
+}
+
+.top-bar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top-bar-faction-logo {
+    width: 22px;
+    height: 22px;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/pilot_avatar.png');
+    -unity-background-scale-mode: scale-to-fit;
+    margin-right: 8px;
+}
+
+.lbl-top-faction-name {
+    color: #e0f0e4;
+    font-size: 11px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.top-bar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.resource-badge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(14, 25, 18, 0.9);
+    border-width: 1px;
+    border-color: rgba(60, 110, 80, 0.6);
+    border-radius: 12px;
+    padding: 3px 10px;
+    margin-left: 8px;
+}
+
+.res-icon {
+    width: 16px;
+    height: 16px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-right: 5px;
+}
+
+.res-icon-gold {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_coin.png');
+}
+
+.res-icon-fuel {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_energy.png');
+}
+
+.res-val-text {
+    color: #ffd740;
+    font-size: 10px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   1.2 VIEWPORT CENTRAL (CONTIENE LAS 5 VISTAS ADYACENTES)
+   -------------------------------------------------------------------------- */
+.content-viewport {
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-view-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.full-view-missions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-view-periodico,
+.full-view-hangar,
+.full-view-pasaporte,
+.full-view-casino {
+    padding: 8px 12px;
+}
+
+/* --------------------------------------------------------------------------
+   2. GABINETE DE TELEVISOR / RADIO VINTAGE (841 x 1870)
+   -------------------------------------------------------------------------- */
+.radio-cabinet {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.radio-cabinet-skin {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: stretch-to-fill;
+    pointer-events: none;
+}
+
+/* Fallbacks de texturas de radio para el UI Builder */
+.radio-skin-anarquista {
+    background-image: url('project://database/Assets/Art/Interfaces/Anarquista/menu/radio_menu_final_2.png');
+}
+
+.radio-skin-capitalista {
+    background-image: url('project://database/Assets/Art/Interfaces/Capitalista/menu/radio_menu_final_1.png');
+}
+
+.radio-skin-comunista {
+    background-image: url('project://database/Assets/Art/Interfaces/Comunista/menu/radio_menu_final_4.png');
+}
+
+.radio-skin-fascista {
+    background-image: url('project://database/Assets/Art/Interfaces/Facista/menu/radio_menu_final_3.png');
+}
+
+/* --------------------------------------------------------------------------
+   3. PANTALLA CRT: ESTILO Y GEOMETRÍA EXACTA POR FACCIÓN
+   -------------------------------------------------------------------------- */
+.crt-screen-container {
+    position: absolute;
+    background-color: #030805;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-width: 2px;
+    border-color: rgba(35, 70, 45, 0.4);
+}
+
+/* Posiciones exactas del hueco transparente en cada radio (841 x 1870) */
+.crt-screen-anarquista {
+    left: 14.39%;
+    top: 6.90%;
+    width: 71.22%;
+    height: 43.53%;
+}
+
+.crt-screen-capitalista {
+    left: 14.39%;
+    top: 7.38%;
+    width: 71.22%;
+    height: 38.13%;
+}
+
+.crt-screen-comunista {
+    left: 16.65%;
+    top: 7.91%;
+    width: 66.35%;
+    height: 38.56%;
+}
+
+.crt-screen-fascista {
+    left: 11.77%;
+    top: 7.49%;
+    width: 76.34%;
+    height: 41.98%;
+}
+
+/* EFECTOS SHADER CRT (Líneas de barrido de fósforo y reflejo de vidrio) */
+.crt-glass-reflection {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(160, 255, 200, 0.025);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    pointer-events: none;
+}
+
+.crt-scanlines {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.14);
+    pointer-events: none;
+}
+
+.crt-glow-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-width: 1px;
+    border-color: rgba(60, 220, 120, 0.35);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. EL MAPA TÁCTICO ES LA CAJA GRANDE (DE FONDO, OCUPA TODA LA PANTALLA)
+   -------------------------------------------------------------------------- */
+.tactical-map-main-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #030a06;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tactical-map-sprite {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    opacity: 0.35;
+}
+
+.tactical-grid-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 80, 40, 0.08);
+    border-width: 1px;
+    border-color: rgba(50, 180, 90, 0.18);
+}
+
+.tactical-range-rings {
+    position: absolute;
+    left: 8%;
+    top: 6%;
+    width: 84%;
+    height: 84%;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: rgba(60, 200, 100, 0.12);
+}
+
+.tactical-radar-sweep {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(40, 255, 120, 0.02);
+}
+
+.map-zone-target {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    margin-top: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zone-target-crosshair {
+    width: 20px;
+    height: 20px;
+    border-width: 1.5px;
+    border-color: #ff3b30;
+    border-radius: 10px;
+}
+
+.zone-target-ping {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ffff40;
+}
+
+/* --------------------------------------------------------------------------
+   5. ENCABEZADO SUPERIOR DENTRO DEL MAPA TÁCTICO
+   -------------------------------------------------------------------------- */
+.tactical-header-row {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    background-color: rgba(3, 14, 8, 0.88);
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(45, 170, 95, 0.50);
+}
+
+.tactical-header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.map-icon-compass {
+    width: 10px;
+    height: 10px;
+    background-color: #50f080;
+    border-radius: 5px;
+    margin-right: 6px;
+}
+
+.lbl-tactical-map-name {
+    color: #60ff90;
+    font-size: 11px;
+    -unity-font-style: bold;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+.tactical-header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.badge-freq-val {
+    color: #40ff80;
+    font-size: 11px;
+    -unity-font-style: bold;
+    margin-right: 8px;
+    margin: 0;
+}
+
+.lbl-threat-level {
+    color: #ff5540;
+    font-size: 10px;
+    -unity-font-style: bold;
+    background-color: rgba(70, 15, 10, 0.7);
+    padding: 1px 6px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgba(255, 80, 60, 0.4);
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. HIJO DEL MAPA TÁCTICO: MAPA DEL MUNDO GENERADO (ESQUINA SUPERIOR DERECHA)
+   -------------------------------------------------------------------------- */
+.world-map-corner-box {
+    position: absolute;
+    right: 8px;
+    top: 38px;
+    width: 44%;
+    height: 44%;
+    max-width: 250px;
+    background-color: rgba(2, 10, 6, 0.92);
+    border-width: 1.5px;
+    border-color: rgba(60, 220, 120, 0.70);
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.world-corner-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.hud-tag-live {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(5, 20, 10, 0.85);
+    padding: 1px 4px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(60, 255, 120, 0.45);
+}
+
+.hud-blip-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #40ff60;
+    margin-right: 4px;
+}
+
+.hud-tag-text {
+    color: #40ff60;
+    font-size: 9px;
+    -unity-font-style: bold;
+    letter-spacing: 0.8px;
+    margin: 0;
+}
+
+.hud-style-tag {
+    color: #ffd860;
+    font-size: 9px;
+    -unity-font-style: bold;
+    background-color: rgba(20, 20, 10, 0.85);
+    padding: 1px 4px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(240, 200, 60, 0.45);
+    margin: 0;
+}
+
+.world-preview-display {
+    width: 100%;
+    flex-grow: 1;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: #020704;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(40, 150, 80, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.world-preview-grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 120, 60, 0.08);
+}
+
+.world-preview-sweep {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(80, 255, 140, 0.65);
+}
+
+.world-corner-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.hud-coords-text {
+    color: #70d890;
+    font-size: 9px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.hud-seed-text {
+    color: #c0c080;
+    font-size: 9px;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. HIJO DEL MAPA TÁCTICO: RECTÁNGULO DE DESCRIPCIÓN CON LAS LETRAS (ABAJO)
+   -------------------------------------------------------------------------- */
+.tactical-description-rect {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 44px;
+    height: 42%;
+    background-color: rgba(2, 10, 6, 0.88);
+    border-width: 1px;
+    border-color: rgba(45, 170, 95, 0.50);
+    border-radius: 4px;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desc-row-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.desc-badge-state {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(15, 35, 20, 0.85);
+    padding: 1px 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgba(220, 180, 50, 0.45);
+}
+
+.lbl-radio-state {
+    color: #f0c840;
+    font-size: 9.5px;
+    -unity-font-style: bold;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.desc-mission-title-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lbl-mission-id {
+    color: #ff9030;
+    font-size: 10.5px;
+    -unity-font-style: bold;
+    margin-right: 5px;
+    margin: 0;
+}
+
+.lbl-mission-title {
+    color: #ffffff;
+    font-size: 11px;
+    -unity-font-style: bold;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.desc-box-objective {
+    background-color: rgba(5, 20, 10, 0.70);
+    padding: 3px 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgba(40, 120, 70, 0.35);
+    margin-bottom: 2px;
+}
+
+.lbl-desc-tag {
+    color: #70d890;
+    font-size: 8px;
+    -unity-font-style: bold;
+    letter-spacing: 0.5px;
+    margin: 0 0 1px 0;
+}
+
+.lbl-tactical-objective {
+    color: #ffd860;
+    font-size: 9px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.desc-box-terrain {
+    flex-grow: 1;
+    background-color: rgba(2, 8, 4, 0.65);
+    padding: 4px 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgba(30, 80, 50, 0.30);
+    margin-bottom: 2px;
+}
+
+.lbl-terrain-description {
+    color: #d0e0d0;
+    font-size: 9.5px;
+    white-space: normal;
+    margin: 0;
+}
+
+.desc-footer-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-color: rgba(45, 120, 70, 0.30);
+    padding-top: 2px;
+}
+
+.lbl-zone-name {
+    color: #ebdcb0;
+    font-size: 8.5px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.lbl-zone-id {
+    color: #80c890;
+    font-size: 8px;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. BARRA INFERIOR: BOTÓN INICIAR INCURSIÓN TÁCTICA
+   -------------------------------------------------------------------------- */
+.tactical-bottom-deploy-row {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 38px;
+    padding: 2px 6px;
+    background-color: rgba(3, 14, 8, 0.90);
+    border-top-width: 1.5px;
+    border-top-color: rgba(45, 170, 95, 0.60);
+}
+
+.btn-deploy-mission {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 95, 45, 0.95);
+    border-width: 1.5px;
+    border-color: #50ff80;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+.btn-deploy-mission:hover {
+    background-color: rgba(45, 150, 75, 0.98);
+    border-color: #ffffff;
+}
+
+.btn-deploy-mission:active {
+    scale: 0.96;
+}
+
+.btn-deploy-text {
+    color: #ffffff;
+    font-size: 11px;
+    -unity-font-style: bold;
+    letter-spacing: 1.5px;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES GIRATORIOS DE LOS DIALES DE CADA FACCIÓN
+   -------------------------------------------------------------------------- */
+.radio-dial-knob {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 50%;
+    cursor: link;
+    transform-origin: 50% 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    transition: scale 0.1s;
+}
+
+.radio-dial-knob:hover {
+    scale: 1.06;
+}
+
+.radio-dial-knob:active {
+    scale: 0.94;
+}
+
+/* Compatibilidad con clase anterior */
+.btn-invisible-dial {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 50%;
+    cursor: link;
+    transform-origin: 50% 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    transition: scale 0.1s;
+}
+
+.btn-invisible-dial:hover {
+    scale: 1.06;
+}
+
+.btn-invisible-dial:active {
+    scale: 0.94;
+}
+
+/* FONDOS CON TEXTURA DE BOTÓN/DIAL SEGÚN CADA FACCIÓN */
+.knob-skin-anarquista {
+    background-image: url('project://database/Assets/Art/Interfaces/Anarquista/botones/botones (2).png');
+}
+
+.knob-skin-capitalista {
+    background-image: url('project://database/Assets/Art/Interfaces/Capitalista/botones/botones (4).png');
+}
+
+.knob-skin-comunista {
+    background-image: url('project://database/Assets/Art/Interfaces/Comunista/botones/botones (1).png');
+}
+
+.knob-skin-fascista {
+    background-image: url('project://database/Assets/Art/Interfaces/Facista/botones/botones (2).png');
+}
+
+/* COORDENADAS EXACTAS DE LOS BOTONES/DIALES SOBRE CADA RADIO (841 x 1870): */
+
+/* A. ANARQUISTA (Flanqueando el dial en abanico central de 86 a 110 MHz) */
+.knob-btn-anarquista-left {
+    left: 9.5%;
+    top: 76.0%;
+    width: 14.5%;
+    height: 6.5%;
+}
+
+.knob-btn-anarquista-right {
+    left: 76.0%;
+    top: 76.0%;
+    width: 14.5%;
+    height: 6.5%;
+}
+
+/* B. CAPITALISTA */
+.knob-btn-capitalista-left {
+    left: 19.5%;
+    top: 80.0%;
+    width: 14.0%;
+    height: 6.3%;
+}
+
+.knob-btn-capitalista-right {
+    left: 66.5%;
+    top: 80.0%;
+    width: 14.0%;
+    height: 6.3%;
+}
+
+/* C. COMUNISTA */
+.knob-btn-comunista-left {
+    left: 19.5%;
+    top: 78.5%;
+    width: 15.0%;
+    height: 6.75%;
+}
+
+.knob-btn-comunista-right {
+    left: 65.5%;
+    top: 78.5%;
+    width: 15.0%;
+    height: 6.75%;
+}
+
+/* D. FASCISTA */
+.knob-btn-fascista-left {
+    left: 13.5%;
+    top: 82.0%;
+    width: 14.0%;
+    height: 6.3%;
+}
+
+.knob-btn-fascista-right {
+    left: 72.5%;
+    top: 82.0%;
+    width: 14.0%;
+    height: 6.3%;
+}
+
+/* ==========================================================================
+   9. BARRA INFERIOR DE NAVEGACIÓN Y SUBMENÚS (5 BOTONES MILITARES)
+   ========================================================================== */
+.bottom-navigation-bar {
+    width: 100%;
+    height: 78px;
+    min-height: 78px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(10, 16, 12, 0.98);
+    border-top-width: 2px;
+    border-top-color: rgba(45, 80, 55, 0.75);
+    padding: 6px 8px 8px 8px;
+    z-index: 100;
+}
+
+.nav-bar-anarquista {
+    border-top-color: rgba(160, 45, 45, 0.85);
+    background-color: rgba(18, 10, 10, 0.98);
+}
+
+.nav-bar-capitalista {
+    border-top-color: rgba(180, 140, 40, 0.85);
+    background-color: rgba(18, 16, 10, 0.98);
+}
+
+.nav-bar-comunista {
+    border-top-color: rgba(190, 35, 35, 0.85);
+    background-color: rgba(20, 8, 8, 0.98);
+}
+
+.nav-bar-fascista {
+    border-top-color: rgba(45, 110, 170, 0.85);
+    background-color: rgba(8, 14, 20, 0.98);
+}
+
+.nav-tab-btn {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 100%;
+    margin: 0 2px;
+    background-color: rgba(18, 28, 22, 0.92);
+    border-width: 1.5px;
+    border-color: rgba(38, 58, 44, 0.8);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 1px 2px 1px;
+    cursor: link;
+    transition: background-color 0.15s, border-color 0.15s, scale 0.12s;
+}
+
+.nav-tab-btn:hover {
+    background-color: rgba(28, 48, 34, 0.96);
+    border-color: rgba(70, 120, 85, 0.9);
+    scale: 1.03;
+}
+
+.nav-tab-btn:active {
+    scale: 0.96;
+}
+
+.nav-tab-led {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1e2e24;
+    border-width: 1px;
+    border-color: #121c16;
+    margin-bottom: 2px;
+    transition: background-color 0.2s;
+}
+
+.nav-tab-icon {
+    width: 28px;
+    height: 28px;
+    -unity-background-scale-mode: scale-to-fit;
+    opacity: 0.55;
+    margin-bottom: 2px;
+    transition: opacity 0.15s, scale 0.12s;
+}
+
+.nav-tab-label {
+    color: #6d8875;
+    font-size: 8px;
+    -unity-font-style: bold;
+    letter-spacing: 0.8px;
+    margin: 0;
+    padding: 0;
+    transition: color 0.15s;
+}
+
+.nav-tab-active {
+    background-color: rgba(30, 95, 52, 0.65);
+    border-color: #55ff88;
+    scale: 1.05;
+}
+
+.nav-tab-active .nav-tab-led {
+    background-color: #40ff70;
+    border-color: #a0ffc0;
+}
+
+.nav-tab-active .nav-tab-icon {
+    opacity: 1.0;
+    scale: 1.1;
+}
+
+.nav-tab-active .nav-tab-label {
+    color: #ffffff;
+}
+
+.nav-tab-missions-btn {
+    border-width: 2px;
+    border-color: rgba(65, 130, 80, 0.9);
+    flex-grow: 1.15;
+    background-color: rgba(22, 38, 28, 0.96);
+}
+
+.nav-tab-missions-btn .nav-tab-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-tab-missions-btn.nav-tab-active {
+    background-color: rgba(35, 120, 60, 0.85);
+    border-color: #60ff90;
+    scale: 1.06;
+}
+
+.nav-icon-casino {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_casino.png');
+}
+
+.nav-icon-newspaper {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_newspaper.png');
+}
+
+.nav-icon-missions {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_plane.png');
+}
+
+.nav-icon-hangar {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_hangar.png');
+}
+
+.nav-icon-passport {
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_passport.png');
+}
+
+/* ==========================================================================
+   10. PANELES DE VISTA DE CADA SUBMENÚ (PANTALLA CRT)
+   ========================================================================== */
+.screen-view-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   VISTA 2: PERIÓDICO HISTÓRICO // HEMEROTECA DE GUERRA (1944)
+   -------------------------------------------------------------------------- */
+.newspaper-view-container {
+    width: 100%;
+    height: 100%;
+    background-color: #040d07;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    color: #d0f0d8;
+}
+
+.newspaper-header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(60, 180, 100, 0.6);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.newspaper-masthead {
+    color: #f0fff0;
+    font-size: 15px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(60, 255, 120, 0.4);
+}
+
+.newspaper-submasthead {
+    color: #88c898;
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin: 1px 0;
+}
+
+.newspaper-meta-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-color: rgba(40, 100, 60, 0.5);
+    padding-top: 2px;
+    margin-top: 2px;
+}
+
+.lbl-news-date {
+    color: #e0f0a0;
+    font-size: 8px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.lbl-news-edition {
+    color: #80d090;
+    font-size: 8px;
+    margin: 0;
+}
+
+.stamp-classified {
+    background-color: rgba(180, 30, 30, 0.25);
+    border-width: 1px;
+    border-color: #ff5050;
+    border-radius: 3px;
+    padding: 1px 4px;
+    color: #ff7070;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+}
+
+.newspaper-headline-box {
+    background-color: rgba(10, 30, 18, 0.7);
+    border-width: 1px;
+    border-color: rgba(60, 150, 90, 0.4);
+    border-radius: 4px;
+    padding: 4px 7px;
+    margin-bottom: 5px;
+}
+
+.lbl-news-headline {
+    color: #ffffff;
+    font-size: 11px;
+    -unity-font-style: bold;
+    white-space: normal;
+    margin: 0 0 2px 0;
+}
+
+.lbl-news-subtitle {
+    color: #98e0a8;
+    font-size: 8.5px;
+    white-space: normal;
+    margin: 0;
+}
+
+.newspaper-content-columns {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.newspaper-col-left {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 6px;
+    border-right-width: 1px;
+    border-right-color: rgba(40, 100, 60, 0.4);
+}
+
+.newspaper-col-right {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6px;
+}
+
+.news-photo-frame {
+    height: 90px;
+    background-color: #020804;
+    border-width: 1px;
+    border-color: rgba(60, 160, 90, 0.5);
+    border-radius: 3px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-photo-image {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+    opacity: 0.85;
+}
+
+.lbl-news-photo-caption {
+    color: #78a888;
+    font-size: 7px;
+    margin: 0 0 3px 0;
+    white-space: normal;
+}
+
+.lbl-news-article-text {
+    flex-grow: 1;
+    color: #c4e4cc;
+    font-size: 8.5px;
+    white-space: normal;
+    margin: 0;
+}
+
+.newspaper-stats-card {
+    background-color: rgba(6, 20, 12, 0.85);
+    border-width: 1px;
+    border-color: rgba(60, 150, 90, 0.45);
+    border-radius: 4px;
+    padding: 4px 5px;
+    margin-bottom: 4px;
+}
+
+.news-stat-title {
+    color: #e0f0a0;
+    font-size: 8px;
+    -unity-font-style: bold;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(50, 120, 70, 0.4);
+    padding-bottom: 1px;
+    margin-bottom: 3px;
+}
+
+.news-stat-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.lbl-news-stat-tag {
+    color: #80b090;
+    font-size: 7.5px;
+    margin: 0;
+}
+
+.lbl-news-stat-val {
+    color: #ffffff;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.newspaper-ads-box {
+    flex-grow: 1;
+    background-color: rgba(12, 16, 10, 0.6);
+    border-width: 1px;
+    border-color: rgba(60, 90, 70, 0.35);
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.lbl-news-ad-title {
+    color: #e8d080;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    margin: 0 0 1px 0;
+}
+
+.lbl-news-ad-text {
+    color: #9cb4a0;
+    font-size: 7px;
+    white-space: normal;
+    margin: 0 0 2px 0;
+}
+
+.newspaper-paging-footer {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top-width: 1px;
+    border-top-color: rgba(50, 120, 70, 0.5);
+    padding-top: 2px;
+}
+
+.btn-news-paging {
+    background-color: rgba(20, 60, 35, 0.85);
+    border-width: 1px;
+    border-color: #40d070;
+    border-radius: 3px;
+    padding: 2px 8px;
+    color: #ffffff;
+    font-size: 8px;
+    -unity-font-style: bold;
+    cursor: link;
+    transition: background-color 0.15s;
+}
+
+.btn-news-paging:hover {
+    background-color: rgba(35, 100, 55, 0.95);
+}
+
+.lbl-news-page-indicator {
+    color: #a0f0b0;
+    font-size: 8.5px;
+    -unity-font-style: bold;
+}
+
+/* --------------------------------------------------------------------------
+   VISTA 3: HANGAR DE AVIONES Y TALLER (COMO EN LA IMAGEN)
+   -------------------------------------------------------------------------- */
+.hangar-view-container {
+    width: 100%;
+    height: 100%;
+    background-color: #030b06;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+}
+
+.hangar-header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1.5px;
+    border-bottom-color: rgba(50, 150, 80, 0.5);
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.lbl-hangar-title {
+    color: #ffffff;
+    font-size: 12px;
+    -unity-font-style: bold;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.hangar-resource-pill {
+    background-color: rgba(8, 25, 14, 0.9);
+    border-width: 1px;
+    border-color: rgba(60, 180, 100, 0.5);
+    border-radius: 12px;
+    padding: 2px 7px;
+    color: #f0e080;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+}
+
+.hangar-grid-2x2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   CARRUSEL DE NAVES DEL HANGAR (CON SOPORTE PARA IMAGEN DE FONDO)
+   -------------------------------------------------------------------------- */
+.hangar-carousel-bg {
+    flex-grow: 1;
+    position: relative;
+    border-radius: 6px;
+    border-width: 1.5px;
+    border-color: rgba(50, 150, 80, 0.45);
+    background-color: #040c07;
+    /* =========================================================================
+       FONDO DEL CARRUSEL:
+       Para asignar una imagen de fondo al carrusel, descomenta la siguiente
+       línea y coloca la ruta de tu imagen, o asígnala en .hangar-carousel-backdrop:
+       ========================================================================= */
+    /* background-image: url('project://database/Assets/...'); */
+    -unity-background-scale-mode: scale-and-crop;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 8px 6px;
+    margin-bottom: 6px;
+}
+
+.hangar-carousel-anarquista {
+    border-color: rgba(160, 45, 45, 0.6);
+}
+
+.hangar-carousel-capitalista {
+    border-color: rgba(180, 140, 40, 0.6);
+}
+
+.hangar-carousel-comunista {
+    border-color: rgba(190, 35, 35, 0.6);
+}
+
+.hangar-carousel-fascista {
+    border-color: rgba(45, 110, 170, 0.6);
+}
+
+.hangar-carousel-backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* Capa dedicada para la imagen de fondo: */
+    /* background-image: url('project://database/Assets/...'); */
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.hangar-carousel-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 10, 6, 0.35);
+}
+
+.hangar-carousel-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.hangar-carousel-stage {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hangar-carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+.hangar-carousel-slide.hangar-slide-active {
+    display: flex;
+    opacity: 1;
+}
+
+.hangar-carousel-card {
+    width: 88%;
+    max-width: 260px;
+    height: 94%;
+    background-color: rgba(8, 22, 14, 0.55);
+    border-width: 1.5px;
+    border-color: rgba(45, 105, 65, 0.65);
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hangar-carousel-card.hangar-bay-active {
+    border-color: #50ff80;
+    background-color: rgba(14, 42, 24, 0.68);
+}
+
+.hangar-carousel-card .hangar-active-plane-box {
+    width: 90px;
+    height: 90px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_plane.png');
+    margin-bottom: 6px;
+}
+
+.hangar-carousel-card .hangar-padlock-icon {
+    width: 44px;
+    height: 44px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_padlock.png');
+    opacity: 0.75;
+    margin-bottom: 6px;
+}
+
+.hangar-carousel-card .lbl-hangar-locked {
+    font-size: 8.5px;
+    letter-spacing: 0.5px;
+}
+
+.hangar-carousel-arrow {
+    width: 28px;
+    height: 52px;
+    background-color: rgba(14, 40, 24, 0.8);
+    border-width: 1.5px;
+    border-color: rgba(50, 160, 85, 0.65);
+    border-radius: 4px;
+    color: #50ff80;
+    font-size: 14px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0 4px;
+    cursor: link;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+.hangar-carousel-arrow:hover {
+    background-color: rgba(28, 95, 48, 0.95);
+    border-color: #6eff94;
+    color: #ffffff;
+}
+
+.hangar-carousel-arrow:active {
+    scale: 0.92;
+}
+
+.hangar-carousel-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.hangar-carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    background-color: rgba(40, 90, 55, 0.6);
+    margin: 0 3px;
+    transition: background-color 0.2s, width 0.2s;
+}
+
+.hangar-carousel-dot.hangar-dot-active {
+    width: 20px;
+    background-color: #50ff80;
+}
+
+.hangar-grid-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+
+.hangar-bay-card {
+    flex: 1;
+    height: 100%;
+    margin: 0 3px;
+    background-color: rgba(10, 22, 14, 0.85);
+    border-width: 1.5px;
+    border-color: rgba(40, 75, 52, 0.7);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.hangar-bay-active {
+    border-color: #50ff80;
+    background-color: rgba(14, 38, 22, 0.9);
+}
+
+.hangar-active-plane-box {
+    width: 65px;
+    height: 65px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_plane.png');
+    margin-bottom: 3px;
+}
+
+.hangar-wingmen-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.hangar-wingman-mini {
+    width: 18px;
+    height: 18px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_wingman.png');
+    margin: 0 3px;
+    opacity: 0.85;
+}
+
+.hangar-tier-badge {
+    background-color: rgba(25, 80, 42, 0.9);
+    border-width: 1px;
+    border-color: #50ff80;
+    border-radius: 3px;
+    padding: 1px 5px;
+    color: #ffffff;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    margin-top: 1px;
+}
+
+.hangar-padlock-icon {
+    width: 32px;
+    height: 32px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_padlock.png');
+    opacity: 0.65;
+    margin-bottom: 3px;
+}
+
+.lbl-hangar-locked {
+    color: #6a8874;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.hangar-stats-card {
+    background-color: rgba(8, 20, 12, 0.8);
+    border-width: 1px;
+    border-color: rgba(45, 110, 65, 0.45);
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+}
+
+.hangar-stat-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.lbl-hstat-name {
+    color: #98d0a8;
+    font-size: 7.5px;
+    width: 100px;
+    margin: 0;
+}
+
+.hstat-bar-bg {
+    flex-grow: 1;
+    height: 5px;
+    background-color: #0b1a10;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 5px;
+    border-width: 1px;
+    border-color: rgba(40, 90, 55, 0.5);
+}
+
+.hstat-bar-fill {
+    height: 100%;
+    background-color: #40ff70;
+    border-radius: 2px;
+}
+
+.lbl-hstat-val {
+    color: #ffffff;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    width: 45px;
+    -unity-text-align: middle-right;
+    margin: 0;
+}
+
+.hangar-action-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 32px;
+}
+
+.btn-hangar-action {
+    flex: 1;
+    margin: 0 2px;
+    background-color: rgba(25, 95, 45, 0.95);
+    border-width: 1.5px;
+    border-color: #50ff80;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 9px;
+    -unity-font-style: bold;
+    letter-spacing: 0.5px;
+    cursor: link;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+.btn-hangar-action:hover {
+    background-color: rgba(40, 140, 70, 0.98);
+}
+
+.btn-hangar-action:active {
+    scale: 0.96;
+}
+
+/* --------------------------------------------------------------------------
+   VISTA 4: PASAPORTE MILITAR // ESTADÍSTICAS DEL JUGADOR
+   -------------------------------------------------------------------------- */
+.passport-view-container {
+    width: 100%;
+    height: 100%;
+    background-color: #050c07;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+}
+
+.passport-header-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-width: 1.5px;
+    border-bottom-color: rgba(60, 180, 100, 0.5);
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+}
+
+.lbl-passport-title {
+    color: #f0fff0;
+    font-size: 13px;
+    -unity-font-style: bold;
+    letter-spacing: 1.6px;
+    margin: 0;
+}
+
+.lbl-passport-subtitle {
+    color: #88c898;
+    font-size: 7.5px;
+    letter-spacing: 1px;
+    margin: 1px 0;
+}
+
+.passport-dossier-card {
+    background-color: rgba(10, 24, 15, 0.85);
+    border-width: 1.5px;
+    border-color: rgba(60, 140, 85, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 6px;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.passport-photo-box {
+    width: 52px;
+    height: 52px;
+    background-color: #030804;
+    border-width: 1.5px;
+    border-color: #50ff80;
+    border-radius: 4px;
+    margin-right: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passport-photo-img {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/pilot_avatar.png');
+}
+
+.passport-info-col {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl-pass-pilot-name {
+    color: #ffffff;
+    font-size: 11px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+    margin: 0 0 1px 0;
+}
+
+.lbl-pass-pilot-rank {
+    color: #e0f090;
+    font-size: 8px;
+    -unity-font-style: bold;
+    margin: 0 0 1px 0;
+}
+
+.lbl-pass-pilot-faction {
+    color: #80e0a0;
+    font-size: 7.5px;
+    margin: 0 0 1px 0;
+}
+
+.lbl-pass-pilot-id {
+    color: #55956a;
+    font-size: 7px;
+    margin: 0;
+}
+
+.passport-stats-grid {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.passport-stats-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3px;
+}
+
+.passport-stat-badge {
+    flex: 1;
+    margin: 0 2px;
+    background-color: rgba(8, 20, 12, 0.85);
+    border-width: 1px;
+    border-color: rgba(50, 115, 70, 0.45);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+.lbl-pbadge-tag {
+    color: #7aa886;
+    font-size: 7px;
+    margin: 0 0 1px 0;
+    -unity-text-align: middle-center;
+}
+
+.lbl-pbadge-val {
+    color: #50ff80;
+    font-size: 12px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+.passport-medals-box {
+    background-color: rgba(8, 20, 12, 0.8);
+    border-width: 1px;
+    border-color: rgba(50, 115, 70, 0.4);
+    border-radius: 4px;
+    padding: 3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl-medals-title {
+    color: #e8d080;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+}
+
+.passport-medals-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.medal-badge-item {
+    width: 24px;
+    height: 24px;
+    background-color: rgba(20, 45, 28, 0.9);
+    border-width: 1px;
+    border-color: #ffd740;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medal-icon-trophy {
+    width: 15px;
+    height: 15px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_trophy.png');
+}
+
+/* --------------------------------------------------------------------------
+   VISTA 5: CASINO CLANDESTINO // TIENDA RETRO DE LOS AÑOS 40
+   -------------------------------------------------------------------------- */
+.casino-view-container {
+    width: 100%;
+    height: 100%;
+    background-color: #070d08;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+}
+
+.casino-header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1.5px;
+    border-bottom-color: rgba(180, 140, 50, 0.6);
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+}
+
+.lbl-casino-title {
+    color: #ffd740;
+    font-size: 12px;
+    -unity-font-style: bold;
+    letter-spacing: 1.4px;
+    margin: 0;
+    text-shadow: 0 0 6px rgba(255, 215, 64, 0.4);
+}
+
+.casino-wallet-pill {
+    background-color: rgba(30, 24, 10, 0.9);
+    border-width: 1px;
+    border-color: #ffd740;
+    border-radius: 12px;
+    padding: 2px 7px;
+    color: #ffffff;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+}
+
+.casino-game-section {
+    background-color: rgba(14, 24, 16, 0.85);
+    border-width: 1.5px;
+    border-color: rgba(70, 130, 85, 0.5);
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.casino-section-title {
+    color: #f0e080;
+    font-size: 8.5px;
+    -unity-font-style: bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 3px;
+}
+
+.casino-roulette-display {
+    width: 60px;
+    height: 60px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/UI/MainMenu/Sprites/icon_tab_wheel.png');
+    margin: 2px 0;
+    transition: rotate 0.1s;
+}
+
+.lbl-casino-status {
+    color: #a8e8b8;
+    font-size: 8px;
+    -unity-font-style: bold;
+    margin: 2px 0 4px 0;
+    -unity-text-align: middle-center;
+}
+
+.btn-casino-action {
+    background-color: rgba(140, 100, 25, 0.95);
+    border-width: 1.5px;
+    border-color: #ffd740;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 8.5px;
+    -unity-font-style: bold;
+    padding: 3px 12px;
+    cursor: link;
+    transition: background-color 0.15s, scale 0.1s;
+}
+
+.btn-casino-action:hover {
+    background-color: rgba(180, 130, 35, 0.98);
+}
+
+.btn-casino-action:active {
+    scale: 0.96;
+}
+
+.casino-shop-section {
+    flex-grow: 1;
+    background-color: rgba(10, 18, 12, 0.8);
+    border-width: 1px;
+    border-color: rgba(50, 100, 65, 0.4);
+    border-radius: 4px;
+    padding: 4px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.casino-shop-grid {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.casino-shop-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(6, 14, 9, 0.7);
+    border-width: 1px;
+    border-color: rgba(40, 80, 50, 0.35);
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin: 1px 0;
+}
+
+.lbl-citem-name {
+    color: #d0f0d8;
+    font-size: 8px;
+    margin: 0;
+}
+
+.btn-citem-buy {
+    background-color: rgba(25, 80, 42, 0.9);
+    border-width: 1px;
+    border-color: #50ff80;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 7.5px;
+    -unity-font-style: bold;
+    padding: 2px 6px;
+    cursor: link;
+}
+
+.btn-citem-buy:hover {
+    background-color: rgba(40, 120, 65, 0.95);
+}

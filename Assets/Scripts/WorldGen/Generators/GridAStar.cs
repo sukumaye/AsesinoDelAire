@@ -4,8 +4,24 @@ using WorldGen.Core;
 
 namespace WorldGen.Generators
 {
+    /// <summary>
+    /// Motor de búsqueda de caminos óptimos mediante el algoritmo A* (A-Star) en cuadrícula 2D.
+    /// Diseñado para el trazado de carreteras, puentes sobre estrechos acuáticos y cálculo
+    /// de la trayectoria troncal de vuelo (spine path) que guía la cámara y el caza en AK-47.
+    /// </summary>
     public static class GridAStar
     {
+        /// <summary>
+        /// Encuentra un camino óptimo entre dos celdas del mapa considerando costes de terreno y puentes.
+        /// </summary>
+        /// <param name="start">Coordenadas del punto de inicio.</param>
+        /// <param name="target">Coordenadas del punto de destino.</param>
+        /// <param name="map">Matriz bidimensional de celdas del mundo (CellType).</param>
+        /// <param name="width">Ancho de la cuadrícula en tiles.</param>
+        /// <param name="height">Alto de la cuadrícula en tiles.</param>
+        /// <param name="allowBridges">Permite cruzar agua construyendo puentes si es true.</param>
+        /// <param name="bridgeCost">Penalización de coste para celdas de agua (fuerza a buscar estrechos).</param>
+        /// <returns>Lista secuencial de celdas desde el inicio hasta el objetivo.</returns>
         public static List<Vector2Int> FindPath(
             Vector2Int start, 
             Vector2Int target, 
@@ -104,6 +120,12 @@ namespace WorldGen.Generators
         /// eligiendo en cada intersección la bifurcación más directa hacia el destino norte
         /// y penalizando giros bruscos y retrocesos.
         /// </summary>
+        /// <param name="start">Punto de inicio en el sur de la calzada.</param>
+        /// <param name="target">Punto de llegada en el extremo norte.</param>
+        /// <param name="map">Matriz de celdas del mundo.</param>
+        /// <param name="width">Ancho del mapa en tiles.</param>
+        /// <param name="height">Largo del mapa en tiles.</param>
+        /// <returns>Ruta óptima sin zigzag ni retrocesos para navegación de cámara.</returns>
         public static List<Vector2Int> FindOptimalSpinePath(
             Vector2Int start,
             Vector2Int target,

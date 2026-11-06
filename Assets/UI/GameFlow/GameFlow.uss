@@ -1,0 +1,321 @@
+/* =========================================================================
+   GAME FLOW STYLES (UI TOOLKIT USS) - DIESELPUNK RETROFUTURISTA
+   ========================================================================= */
+
+.flow-root {
+    width: 100%;
+    height: 100%;
+    background-color: #07090b;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 1. LOGO Y MARCA */
+.brand-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #060809;
+}
+
+.brand-ring {
+    width: 380px;
+    height: 380px;
+    border-radius: 190px;
+    border-width: 4px;
+    border-color: rgba(230, 160, 45, 0.25);
+    background-color: rgba(230, 160, 45, 0.04);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.brand-diamond {
+    width: 140px;
+    height: 140px;
+    background-color: #e6a02d;
+    rotate: 45deg;
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-color: #ffdf80;
+}
+
+.brand-inner-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #0d1217;
+}
+
+.brand-subtitle {
+    color: #8c9fa8;
+    font-size: 18px;
+    letter-spacing: 4px;
+    -unity-text-align: middle-center;
+    margin-top: 12px;
+}
+
+.brand-title {
+    color: #e6a02d;
+    font-size: 46px;
+    -unity-font-style: bold;
+    letter-spacing: 6px;
+    -unity-text-align: middle-center;
+    margin-top: 6px;
+}
+
+.brand-hint {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 40px;
+}
+
+/* 2. SELECCIÓN DE FACCIÓN */
+.faction-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    background-color: #0a0d10;
+}
+
+.faction-header-title {
+    color: #cfdbe3;
+    font-size: 26px;
+    -unity-font-style: bold;
+    letter-spacing: 3px;
+    -unity-text-align: middle-center;
+    margin-top: 10px;
+    border-bottom-width: 2px;
+    border-bottom-color: rgba(230, 160, 45, 0.4);
+    padding-bottom: 8px;
+}
+
+.plane-viewport-card {
+    width: 100%;
+    max-width: 900px;
+    height: 380px;
+    border-width: 3px;
+    border-color: #e6a02d;
+    background-color: #0f161c;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.plane-silhouette-sprite {
+    width: 260px;
+    height: 260px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-bottom: 20px;
+}
+
+.plane-code-label {
+    position: absolute;
+    bottom: 50px;
+    color: #ffffff;
+    font-size: 32px;
+    -unity-font-style: bold;
+    letter-spacing: 3px;
+    -unity-text-align: middle-center;
+}
+
+.plane-slogan-label {
+    position: absolute;
+    bottom: 20px;
+    color: #d1c19b;
+    font-size: 18px;
+    -unity-font-style: italic;
+    -unity-text-align: middle-center;
+}
+
+/* Fila de 4 Facción Buttons */
+.faction-buttons-row {
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.btn-faction-card {
+    flex-grow: 1;
+    height: 75px;
+    margin: 0 6px;
+    background-color: #151e26;
+    border-width: 2px;
+    border-color: #2b3945;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.1s ease-out, border-color 0.15s ease-out;
+}
+
+.btn-faction-card:hover {
+    scale: 1.04 1.04;
+    border-color: #e6a02d;
+}
+
+.btn-faction-card.selected {
+    border-color: #e6a02d;
+    background-color: #243340;
+}
+
+.btn-faction-title {
+    color: #ffffff;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+/* Caja de especificaciones técnicas */
+.stats-box {
+    width: 100%;
+    max-width: 900px;
+    background-color: #0f161d;
+    border-width: 2px;
+    border-color: #2e3e4d;
+    border-radius: 8px;
+    padding: 18px 24px;
+    flex-direction: column;
+}
+
+.philosophy-text {
+    color: #b0c2cc;
+    font-size: 16px;
+    margin-bottom: 14px;
+    white-space: normal;
+}
+
+.stats-grid {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-top-width: 1px;
+    border-top-color: #23313d;
+    padding-top: 10px;
+}
+
+.stat-item {
+    align-items: center;
+}
+
+.stat-title {
+    color: #728a96;
+    font-size: 13px;
+    -unity-font-style: bold;
+}
+
+.stat-val {
+    color: #ffffff;
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-top: 2px;
+}
+
+/* Botón Desplegar a Cinemática */
+.btn-confirm-flow {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    background-color: #d18d1f;
+    border-width: 2px;
+    border-color: #ffd073;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: scale 0.1s ease-out;
+}
+
+.btn-confirm-flow:hover {
+    scale: 1.03 1.03;
+    background-color: #e69c24;
+}
+
+.btn-confirm-flow-text {
+    color: #000000;
+    font-size: 22px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+/* 3. CINEMÁTICA VERTICAL */
+.cinematic-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background-color: #050608;
+}
+
+.cinematic-mask {
+    width: 100%;
+    max-width: 840px;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-color: rgba(230, 160, 45, 0.2);
+}
+
+.cinematic-scroll-content {
+    width: 100%;
+    position: absolute;
+    top: 600px;
+    align-items: center;
+}
+
+.cinematic-text {
+    color: #f0ede1;
+    font-size: 22px;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    letter-spacing: 1px;
+}
+
+.cinematic-controls-bar {
+    flex-direction: row;
+    width: 100%;
+    max-width: 840px;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.btn-cinematic-control {
+    flex-grow: 1;
+    margin: 0 8px;
+    background-color: #172129;
+    border-width: 1px;
+    border-color: #384a59;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cinematic-control:hover {
+    border-color: #e6a02d;
+}
+
+.btn-cinematic-text {
+    color: #ffffff;
+    font-size: 15px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}

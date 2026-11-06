@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using WorldGen.Core;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -70,13 +71,39 @@ namespace WorldGen.Shmup
         public float bulletSpeed = 24f;
         public GameObject bulletPrefab;
 
+        [Header("📱 Control Móvil / Táctil 100%")]
+        [Tooltip("Habilitar detección de gestos táctiles en pantalla completa para móviles, Unity Remote y ratón en Editor.")]
+        public bool enableTouchControls = true;
+        [Tooltip("Multiplicador de respuesta del arrastre táctil (1.0 = 1:1 directo al movimiento del dedo).")]
+        [Range(0.5f, 2.5f)]
+        public float touchDragMultiplier = 1.0f;
+        [Tooltip("Velocidad de seguimiento suave al dedo (valores altos = respuesta instantánea sin retraso).")]
+        [Range(20f, 100f)]
+        public float touchFollowSpeed = 60f;
+        [Tooltip("Disparar automáticamente al mantener el dedo en la pantalla (estándar Shmup arcade).")]
+        public bool autoFireOnTouch = true;
+
+        // Estado táctil interno
+        private bool isTouchDragging = false;
+        private Vector2 lastTouchCamSpace = Vector2.zero;
+        private Vector2 touchVirtualVelocity = Vector2.zero;
+
+        // Soporte de Inyección de Input (Local, Bluetooth Multijugador, Bots)
+        private IPlaneInputProvider customInputProvider;
+        public IPlaneInputProvider CurrentInputProvider => customInputProvider;
+        public void SetInputProvider(IPlaneInputProvider provider) => customInputProvider = provider;
+
+        // Estado expuesto para Bluetooth / Sincronización en red
+        public Vector2 CurrentMoveInput { get; private set; }
+        public bool IsFiring { get; private set; }
+
         // Estado interno en pantalla (offset respecto al centro de la cámara)
         [SerializeField]
         private Vector2 screenOffset = new Vector2(0f, -5f);
         private Vector2 currentMoveVelocity = Vector2.zero;
         private float currentBankAngle = 0f;
         private float currentFacingAngle = 0f;
-        private bool hasInitializedOffset = false;
+        public bool hasInitializedOffset { get; private set; } = false;
 
         // Estado interno del autopiloto
         private float currentPathDist = 0f;
@@ -89,17 +116,24 @@ namespace WorldGen.Shmup
 
         private void Awake()
         {
+            enableTouchControls = true;
+            autoFireOnTouch = true;
             spriteRenderer = GetComponent<SpriteRenderer>();
             EnsureTargetCamera();
+            MobileTouchInput.InitializeTouchSubsystem();
         }
 
         private void Start()
         {
             EnsureTargetCamera();
             ComputePathLengths();
-            if (!hasInitializedOffset)
+            // Aplicar personalización de facción seleccionada (recoloreo del caza japonés y ajustes)
+            if (WorldGen.Flow.GameFlowDataStore.SelectedFaction != null && spriteRenderer != null)
             {
-                InitializeScreenOffset();
+                var f = WorldGen.Flow.GameFlowDataStore.SelectedFaction;
+                spriteRenderer.color = f.primaryColor;
+                freeMoveSpeed = Mathf.Lerp(8f, 16f, f.agilityHandling / 10f);
+                fireRate = Mathf.Lerp(0.22f, 0.08f, f.fireDispersion / 10f);
             }
         }
 
@@ -113,8 +147,44 @@ namespace WorldGen.Shmup
 
         private void EnsureTargetCamera()
         {
-            if (targetCamera == null) targetCamera = Camera.main;
-            if (targetCamera == null) targetCamera = FindAnyObjectByType<Camera>();
+            if (targetCamera != null && targetCamera.gameObject.scene == gameObject.scene && targetCamera.gameObject.activeInHierarchy) return;
+
+            targetCamera = null;
+            if (gameObject.scene.isLoaded)
+            {
+                var roots = gameObject.scene.GetRootGameObjects();
+                foreach (var r in roots)
+                {
+                    var cam = r.GetComponentInChildren<Camera>(true);
+                    if (cam != null && cam.CompareTag("MainCamera"))
+                    {
+                        targetCamera = cam;
+                        break;
+                    }
+                    if (cam != null && targetCamera == null && !cam.name.Contains("Preview"))
+                    {
+                        targetCamera = cam;
+                    }
+                }
+            }
+
+            if (targetCamera == null)
+            {
+                var allCams = FindObjectsByType<Camera>(FindObjectsInactive.Include);
+                foreach (var cam in allCams)
+                {
+                    if (cam != null && cam.gameObject.scene == gameObject.scene && !cam.name.Contains("Preview"))
+                    {
+                        targetCamera = cam;
+                        break;
+                    }
+                }
+            }
+
+            if (targetCamera == null)
+            {
+                targetCamera = Camera.main;
+            }
         }
 
         public void InitializeScreenOffset()
@@ -128,7 +198,7 @@ namespace WorldGen.Shmup
 
                 if (!followFlightPath)
                 {
-                    if (transform.parent != targetCamera.transform)
+                    if (targetCamera.gameObject.scene == gameObject.scene && transform.parent != targetCamera.transform)
                     {
                         transform.SetParent(targetCamera.transform, false);
                     }
@@ -142,6 +212,8 @@ namespace WorldGen.Shmup
         private void Update()
         {
             Vector2 input = ReadMovementInput();
+            CurrentMoveInput = input;
+            IsFiring = ReadFireInput();
 
             if (followFlightPath && flightPath != null && flightPath.Count >= 2)
             {
@@ -161,32 +233,61 @@ namespace WorldGen.Shmup
             EnsureTargetCamera();
             if (targetCamera == null) return;
 
-            // Emparentar directamente a la cámara para eliminar 100% cualquier latencia de frame o vibración
-            if (transform.parent != targetCamera.transform)
+            // Emparentar directamente a la cámara de su propia escena para eliminar latencia y vibraciones
+            if (targetCamera.gameObject.scene == gameObject.scene && transform.parent != targetCamera.transform)
             {
                 transform.SetParent(targetCamera.transform, false);
             }
 
-            // 1. Manejo de velocidad limpio, directo y reactivo (cero patinaje ni rebotes)
-            if (input.sqrMagnitude > 0.01f)
-            {
-                currentMoveVelocity = input * freeMoveSpeed;
-            }
-            else
-            {
-                currentMoveVelocity = Vector2.MoveTowards(currentMoveVelocity, Vector2.zero, freeDeceleration * Time.deltaTime);
-            }
-
-            // 2. Aplicar movimiento al offset relativo de la pantalla
-            screenOffset += currentMoveVelocity * Time.deltaTime;
-
-            // 3. Confinamiento matemático exacto en la vista de la cámara
             float halfHeight = targetCamera.orthographicSize;
             float halfWidth = halfHeight * targetCamera.aspect;
-
             float limitX = Mathf.Max(0.5f, halfWidth * (1f - viewportMargin.x));
             float limitY = Mathf.Max(0.5f, halfHeight * (1f - viewportMargin.y));
 
+            // 1. Control Táctil Directo 1:1 e Instantáneo (Móvil / Unity Remote / Ratón)
+            if (enableTouchControls && MobileTouchInput.IsTouching)
+            {
+                Vector2 touchScreenPos = MobileTouchInput.PrimaryTouchPosition;
+                Vector3 worldPoint = targetCamera.ScreenToWorldPoint(new Vector3(touchScreenPos.x, touchScreenPos.y, 10f));
+                Vector2 camLocalTouch = (Vector2)(worldPoint - targetCamera.transform.position);
+
+                if (!isTouchDragging)
+                {
+                    isTouchDragging = true;
+                    lastTouchCamSpace = camLocalTouch;
+                    touchVirtualVelocity = Vector2.zero;
+                }
+                else
+                {
+                    Vector2 delta = (camLocalTouch - lastTouchCamSpace) * touchDragMultiplier;
+                    lastTouchCamSpace = camLocalTouch;
+
+                    screenOffset += delta;
+                    touchVirtualVelocity = delta / Mathf.Max(0.0001f, Time.deltaTime);
+                    currentMoveVelocity = touchVirtualVelocity;
+                }
+            }
+            else
+            {
+                if (isTouchDragging)
+                {
+                    isTouchDragging = false;
+                }
+
+                // 2. Control con Teclado (WASD), Mando o Dispositivos Externos
+                if (input.sqrMagnitude > 0.01f)
+                {
+                    currentMoveVelocity = input * freeMoveSpeed;
+                }
+                else
+                {
+                    currentMoveVelocity = Vector2.MoveTowards(currentMoveVelocity, Vector2.zero, freeDeceleration * Time.deltaTime);
+                }
+
+                screenOffset += currentMoveVelocity * Time.deltaTime;
+            }
+
+            // 3. Confinamiento matemático exacto en la vista de la cámara
             screenOffset.x = Mathf.Clamp(screenOffset.x, -limitX, limitX);
             screenOffset.y = Mathf.Clamp(screenOffset.y, -limitY, limitY);
 
@@ -202,21 +303,28 @@ namespace WorldGen.Shmup
 
         private void HandleRotation(Vector2 input)
         {
+            float horizontalEffort = input.x;
+            if (isTouchDragging && Mathf.Abs(touchVirtualVelocity.x) > 0.1f)
+            {
+                horizontalEffort = Mathf.Clamp(touchVirtualVelocity.x / freeMoveSpeed, -1f, 1f);
+            }
+
             switch (rotationMode)
             {
                 case PlaneRotationMode.FixedUp:
                 default:
                 {
-                    float targetBank = -input.x * maxBankAngle;
+                    float targetBank = -horizontalEffort * maxBankAngle;
                     currentBankAngle = Mathf.MoveTowards(currentBankAngle, targetBank, Time.deltaTime * bankSpeed);
                     transform.localRotation = Quaternion.Euler(0f, 0f, currentBankAngle);
                     break;
                 }
                 case PlaneRotationMode.OmnidirectionalWASD:
                 {
-                    if (input.sqrMagnitude > 0.04f)
+                    Vector2 dir = isTouchDragging ? touchVirtualVelocity : input;
+                    if (dir.sqrMagnitude > 0.04f)
                     {
-                        float targetAngle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg - 90f;
+                        float targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
                         currentFacingAngle = Mathf.MoveTowardsAngle(currentFacingAngle, targetAngle, Time.deltaTime * 360f);
                     }
                     transform.localRotation = Quaternion.Euler(0f, 0f, currentFacingAngle);
@@ -226,7 +334,7 @@ namespace WorldGen.Shmup
                 {
                     Vector3 forwardDir = GetRoadDirectionAtPosition();
                     float baseAngle = Mathf.Atan2(forwardDir.y, forwardDir.x) * Mathf.Rad2Deg - 90f;
-                    float targetBank = -input.x * maxBankAngle;
+                    float targetBank = -horizontalEffort * maxBankAngle;
                     currentBankAngle = Mathf.MoveTowards(currentBankAngle, targetBank, Time.deltaTime * bankSpeed);
                     transform.localRotation = Quaternion.Euler(0f, 0f, baseAngle + currentBankAngle);
                     break;
@@ -407,6 +515,16 @@ namespace WorldGen.Shmup
 
         private Vector2 ReadMovementInput()
         {
+            if (customInputProvider != null)
+            {
+                return Vector2.ClampMagnitude(customInputProvider.ReadMovement(), 1f);
+            }
+
+            if (isTouchDragging)
+            {
+                return Vector2.ClampMagnitude(touchVirtualVelocity / Mathf.Max(1f, freeMoveSpeed), 1f);
+            }
+
             Vector2 move = Vector2.zero;
 
 #if ENABLE_INPUT_SYSTEM
@@ -429,9 +547,15 @@ namespace WorldGen.Shmup
                 if (gamepad.dpad.left.isPressed) move.x -= 1f;
                 if (gamepad.dpad.right.isPressed) move.x += 1f;
             }
-#elif ENABLE_LEGACY_INPUT_MANAGER
-            move.x = Input.GetAxisRaw("Horizontal");
-            move.y = Input.GetAxisRaw("Vertical");
+#endif
+
+#if ENABLE_LEGACY_INPUT_MANAGER
+            try
+            {
+                move.x += Input.GetAxisRaw("Horizontal");
+                move.y += Input.GetAxisRaw("Vertical");
+            }
+            catch { }
 #endif
 
             return Vector2.ClampMagnitude(move, 1f);
@@ -439,6 +563,17 @@ namespace WorldGen.Shmup
 
         private bool ReadFireInput()
         {
+            if (customInputProvider != null)
+            {
+                return customInputProvider.ReadFire();
+            }
+
+            // Disparo táctil 100% prioritario: mientras cualquier dedo toque la pantalla (Unity Remote o Móvil), dispara ráfagas
+            if (enableTouchControls && autoFireOnTouch && MobileTouchInput.IsTouching)
+            {
+                return true;
+            }
+
 #if ENABLE_INPUT_SYSTEM
             var keyboard = Keyboard.current;
             if (keyboard != null)
@@ -460,12 +595,18 @@ namespace WorldGen.Shmup
                 if (gamepad.buttonSouth.isPressed || gamepad.rightTrigger.isPressed)
                     return true;
             }
-            return false;
-#elif ENABLE_LEGACY_INPUT_MANAGER
-            return Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.J);
-#else
-            return false;
 #endif
+
+#if ENABLE_LEGACY_INPUT_MANAGER
+            try
+            {
+                if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.J))
+                    return true;
+            }
+            catch { }
+#endif
+
+            return false;
         }
 
         private void HandleShooting()

@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Flow/FlowStyles.uss?fileID=7433441132597879392&amp;guid=d1000000000000000000000000000002&amp;type=3#FlowStyles"/>
+    <ui:VisualElement name="cinematic-root" class="flow-root">
+        <ui:VisualElement name="step-cinematic" class="cinematic-container">
+            <ui:VisualElement name="cinematic-viewport-mask" class="cinematic-mask">
+                <ui:VisualElement name="cinematic-scroller" class="cinematic-scroll-content">
+                    <ui:Label name="lbl-cinematic-story" text="AIR  &#10;KLiller" class="cinematic-text" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Air_Killer_Ornamental.otf?fileID=12800000&amp;guid=a7f6db8f00dbf554ea905d62968fbf07&amp;type=3#Air_Killer_Ornamental&quot;); width: 648px; height: 426px; font-size: 84px;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="cinematic-controls-bar">
+                <ui:Button name="btn-cinematic-pause" class="btn-cinematic-control">
+                    <ui:Label name="lbl-pause-text" text="⏸ PAUSAR" picking-mode="Ignore" class="btn-cinematic-text"/>
+                </ui:Button>
+                <ui:Button name="btn-cinematic-ff" class="btn-cinematic-control">
+                    <ui:Label name="lbl-ff-text" text="⏩ ACELERAR" picking-mode="Ignore" class="btn-cinematic-text"/>
+                </ui:Button>
+                <ui:Button name="btn-cinematic-skip" class="btn-cinematic-control">
+                    <ui:Label text="CONTINUAR AL TUTORIAL ➔" picking-mode="Ignore" class="btn-cinematic-text"/>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

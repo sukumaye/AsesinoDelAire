@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flujo de Trabajo: De Imágenes IA a Modelos Editables en Blockbench</title>
+  <style>
+    :root {
+      --bg: #090d16;
+      --surface: #111827;
+      --surface-card: #162035;
+      --surface-border: #1f2f4e;
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --primary-glow: rgba(56, 189, 248, 0.2);
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.2);
+      --purple: #a855f7;
+      --warning: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --code-bg: #060911;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #132145 0%, #0d1527 100%);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: -60%;
+      right: -20%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+
+    h1 span.gradient {
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 820px;
+    }
+
+    /* DIAGRAMA RESUMEN PIPELINE */
+    .pipeline-overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .pipeline-step {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pipeline-step:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+    }
+
+    .pipeline-step .step-num {
+      width: 32px;
+      height: 32px;
+      background: var(--surface-card);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin: 0 auto 0.75rem auto;
+    }
+
+    .pipeline-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .pipeline-step p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* SECCIONES PRINCIPALES */
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 18px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .section-header .tag {
+      margin-left: auto;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .tag-blue { background: rgba(56, 189, 248, 0.15); color: var(--primary); border: 1px solid rgba(56, 189, 248, 0.3); }
+    .tag-green { background: rgba(16, 185, 129, 0.15); color: var(--accent); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .tag-purple { background: rgba(168, 85, 247, 0.15); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+
+    /* GRID DE HERRAMIENTAS */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.25rem 0;
+    }
+
+    .tool-box {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tool-box h4 {
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .tool-link:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+
+    /* BLOQUES DE PROMPT Y CÓDIGO */
+    .prompt-container {
+      background: var(--code-bg);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .prompt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .prompt-text {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: #7dd3fc;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .copy-btn {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      color: var(--text);
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .copy-btn:hover {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+    }
+
+    /* MÉTODOS DE CONVERSIÓN COMPARATIVA */
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .method-card {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .method-card.featured {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .method-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .method-card .method-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .step-list {
+      list-style: none;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .step-list li {
+      font-size: 0.88rem;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .step-list li strong {
+      color: #e2e8f0;
+    }
+
+    .step-bullet {
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--primary);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* CONSEJOS / ALERTAS */
+    .alert {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .alert-success {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .alert-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--surface-border);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="badge-top">⚡ Flujo Oficial de Producción 3D</div>
+      <h1>De Imágenes IA a Modelos Editables en <span class="gradient">Blockbench</span></h1>
+      <p>Guía paso a paso para transformar bocetos, planos ortográficos (turnaround sheets) y artes generados por IA en modelos 3D y cubos editables listos para Unity.</p>
+    </header>
+
+    <!-- RESUMEN EN 4 PASOS -->
+    <div class="pipeline-overview">
+      <div class="pipeline-step">
+        <div class="step-num">1</div>
+        <h3>Generar Planos IA</h3>
+        <p>Crear "turnarounds" o planos ortográficos (frente, perfil, trasera) con prompts específicos.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">2</div>
+        <h3>Preparar Vistas</h3>
+        <p>Quitar fondos y recortar las vistas de referencia (frontal y lateral) en PNG.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">3</div>
+        <h3>Conversión a 3D</h3>
+        <p>Pasar por herramientas de reconstrucción 3D (IA $\rightarrow$ OBJ) o usar los planos en Blockbench.</p>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">4</div>
+        <h3>Edición & Unity</h3>
+        <p>Modificar cubos, huesos y texturas en Blockbench y exportar a tu proyecto Unity.</p>
+      </div>
+    </div>
+
+    <!-- PASO 1: HERRAMIENTAS Y PROMPTS PARA PLANOS IA -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🎨</div>
+        <div>
+          <h2>Paso 1: Generar "Platos de Construcción" (Turnaround Sheets)</h2>
+          <small style="color: var(--text-muted)">El secreto de un buen modelo 3D es tener proyecciones ortográficas exactas</small>
+        </div>
+        <span class="tag tag-blue">Generación 2D</span>
+      </div>
+
+      <p>Un "plato de construcción" o <em>turnaround sheet</em> es una imagen que muestra el mismo objeto o personaje desde varios ángulos (Frente, Lateral y Trasera) con perspectiva plana (ortográfica, sin distorsión de lente). Esto permite calcular el volumen en 3D con precisión.</p>
+
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h4>Midjourney / Flux.1 <span>💎</span></h4>
+          <p>La mayor calidad artística y consistencia geométrica. Ideal para personajes low-poly y armas complejas.</p>
+          <a class="tool-link" href="https://www.midjourney.com" target="_blank">Visitar Midjourney &rarr;</a>
+        </div>
+        <div class="tool-box">
+          <h4>ChatGPT / DALL-E 3 <span>🤖</span></h4>
+          <p>Excelente entendiendo descripciones exactas de vistas ("front view, side view in same canvas"). Muy fácil de usar.</p>
+          <a class="tool-link" href="https://chatgpt.com" target="_blank">Visitar ChatGPT &rarr;</a>
+        </div>
+        <div class="tool-box">
+          <h4>Leonardo.ai <span>🎮</span></h4>
+          <p>Modos específicos para arte conceptual de videojuegos y generación gratuita de créditos diarios.</p>
+          <a class="tool-link" href="https://leonardo.ai" target="_blank">Visitar Leonardo.ai &rarr;</a>
+        </div>
+      </div>
+
+      <!-- PROMPT 1: PERSONAJES -->
+      <div class="prompt-container">
+        <div class="prompt-header">
+          <span>Prompt Recomendado: Personajes / Enemigos Low-Poly</span>
+          <button class="copy-btn" onclick="copyPrompt('prompt-character', this)">📋 Copiar Prompt</button>
+        </div>
+        <div class="prompt-text" id="prompt-character">Full body character turnaround sheet, front view, side view, back view, orthographic projection, low poly blocky style, minecraft style pixel art textures, T-pose, neutral lighting, isolated on solid clean white background, game asset blueprint reference sheet --no shadows, depth of field</div>
+      </div>
+
+      <!-- PROMPT 2: ARMAS / OBJETOS -->
+      <div class="prompt-container">
+        <div class="prompt-header">
+          <span>Prompt Recomendado: Armas (Ej. AK-47 / Props)</span>
+          <button class="copy-btn" onclick="copyPrompt('prompt-weapon', this)">📋 Copiar Prompt</button>
+        </div>
+        <div class="prompt-text" id="prompt-weapon">Weapon blueprint turnaround sheet, side profile elevation view, top-down view, front view, isometric view, clean orthographic projection, low poly 3D blocky aesthetic, flat colors, clean solid white background, video game weapon concept asset --no perspective distortion</div>
+      </div>
+    </div>
+
+    <!-- PASO 2: LIMPIEZA Y RECORTE -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">✂️</div>
+        <div>
+          <h2>Paso 2: Aislamiento y Separación de Vistas</h2>
+          <small style="color: var(--text-muted)">Tener las vistas en archivos individuales garantiza que encajen al milímetro</small>
+        </div>
+        <span class="tag tag-purple">Preparación</span>
+      </div>
+
+      <p>Una vez tengas la imagen generada por IA:</p>
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h4>Remove.bg / Clipdrop <span>🪄</span></h4>
+          <p>Quita el fondo blanco de la IA con un clic para dejar solo el objeto con transparencia PNG.</p>
+          <a class="tool-link" href="https://clipdrop.co/remove-background" target="_blank">Visitar Clipdrop &rarr;</a>
+        </div>
+        <div class="tool-box">
+          <h4>Photopea (Photoshop Web Gratis) <span>🖼️</span></h4>
+          <p>Abre la imagen y recorta 2 archivos separados con la misma altura:<br>
+          1. <code>vista_frontal.png</code><br>
+          2. <code>vista_lateral.png</code></p>
+          <a class="tool-link" href="https://www.photopea.com" target="_blank">Abrir Photopea &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 3: MÉTODOS PARA LLEGAR A BLOCKBENCH -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🧊</div>
+        <div>
+          <h2>Paso 3: Métodos de Conversión a Blockbench</h2>
+          <small style="color: var(--text-muted)">Elige la ruta que mejor se adapte a tu nivel y objetivo</small>
+        </div>
+        <span class="tag tag-green">Conversión 3D</span>
+      </div>
+
+      <div class="methods-grid">
+
+        <!-- MÉTODO A: AUTO IA 3D -->
+        <div class="method-card featured">
+          <h3><span>⚡</span> Método A: IA Automática a 3D (Rápido)</h3>
+          <div class="method-subtitle">La IA construye la malla 3D completa por ti a partir de la imagen</div>
+          
+          <ul class="step-list">
+            <li>
+              <span class="step-bullet">1</span>
+              <div><strong>Herramienta:</strong> Usa <a href="https://www.tripo3d.ai" target="_blank" style="color:var(--primary)">Tripo3D</a> o <a href="https://www.meshy.ai" target="_blank" style="color:var(--primary)">Meshy.ai</a>.</div>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <div><strong>Sube tu imagen:</strong> Elige modo <em>Low Poly</em> o <em>Voxel</em> y genera el modelo.</div>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <div><strong>Descarga en formato:</strong> <code>.obj</code> o <code>.glb</code>.</div>
+            </li>
+            <li>
+              <span class="step-bullet">4</span>
+              <div><strong>En Blockbench:</strong> Ve a <code>File > Plugins</code> e instala el plugin <em>OBJ Model Loader</em>. Luego abre tu <code>.obj</code> directamente para editar sus vértices, caras y texturas.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MÉTODO B: BLUEPRINT PLANOS EN BLOCKBENCH -->
+        <div class="method-card">
+          <h3><span>📐</span> Método B: Vistas de Fondo (Más Profesional)</h3>
+          <div class="method-subtitle">El estándar de modeladores: calcado perfecto y topología limpia</div>
+          
+          <ul class="step-list">
+            <li>
+              <span class="step-bullet">1</span>
+              <div>En Blockbench abre un proyecto <strong>Generic Model</strong> o <strong>Modded Entity</strong>.</div>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <div>Activa <strong>Reference Images</strong> (en la barra superior o menú <code>View > Reference Images</code>).</div>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <div>Carga <code>vista_frontal.png</code> en la cámara Frontal y <code>vista_lateral.png</code> en la cámara Lateral.</div>
+            </li>
+            <li>
+              <span class="step-bullet">4</span>
+              <div>Los planos quedarán flotando como guías 3D transparentes. Añade cubos y escálalos sobre la silueta de la IA. ¡Cero polígonos innecesarios!</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MÉTODO C: VOXELIZADOR A CUBOS BLOCKBENCH -->
+        <div class="method-card">
+          <h3><span>🧱</span> Método C: Voxel / Extrusión Directa</h3>
+          <div class="method-subtitle">Convierte píxeles en bloques sólidos 3D automáticamente</div>
+          
+          <ul class="step-list">
+            <li>
+              <span class="step-bullet">1</span>
+              <div>Si tu IA creó un pixel art: en Blockbench ve a <code>Tools > Extrude Texture</code>.</div>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <div>Blockbench convertirá automáticamente cada píxel en un volumen de cubos 3D.</div>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <div>O usa <strong>MagicaVoxel</strong> / <strong>VoxFix</strong> para convertir la silueta en voxels y luego exportar a Blockbench.</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="alert alert-success">
+        <span class="alert-icon">💡</span>
+        <div>
+          <strong>Recomendación para tu videojuego:</strong> El <strong>Método B (Planos de Referencia)</strong> produce modelos mucho más ligeros y optimizados para Unity, mientras que el <strong>Método A (Tripo3D/Meshy)</strong> es el más rápido si no quieres modelar cubo por cubo.
+        </div>
+      </div>
+    </div>
+
+    <!-- PASO 4: EDICIÓN EN BLOCKBENCH Y ENVÍO A UNITY -->
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🎮</div>
+        <div>
+          <h2>Paso 4: Exportación e Integración con Unity</h2>
+          <small style="color: var(--text-muted)">Llevar el modelo final a la carpeta Assets de este proyecto</small>
+        </div>
+        <span class="tag tag-blue">Motor Unity</span>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-box">
+          <h4>1. Estructura y Jerarquía</h4>
+          <p>En el panel derecho de Blockbench, organiza los cubos en grupos o huesos:<br>
+          • <code>Root</code><br>
+          &nbsp;&nbsp;↳ <code>Cuerpo</code> / <code>Cargador</code> / <code>Mira</code> / <code>Cañon</code></p>
+        </div>
+        <div class="tool-box">
+          <h4>2. Exportar Formato Óptimo</h4>
+          <p>• <strong>Estático (Armas/Props):</strong> <code>File > Export > Export OBJ Model</code>.<br>
+          • <strong>Animado (Personajes):</strong> <code>File > Export > Export glTF Model</code> (formato <code>.glb</code>).</p>
+        </div>
+        <div class="tool-box">
+          <h4>3. Guardar en tu Proyecto</h4>
+          <p>Guarda los archivos exportados (el modelo y la textura <code>.png</code>) en:<br>
+          <code style="color:var(--primary); font-size:0.8rem">c:\Users\REIKO\AK_47\Assets\Models\</code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      Guía creada para el proyecto <strong>Asesino del Aire (AK_47)</strong> &bull; Compatible con Unity 6 y Blockbench v4.x
+    </footer>
+
+  </div>
+
+  <script>
+    function copyPrompt(elementId, btn) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = "✅ ¡Copiado!";
+        btn.style.backgroundColor = "#10b981";
+        btn.style.color = "#000";
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.backgroundColor = "";
+          btn.style.color = "";
+        }, 2000);
+      }).catch(err => {
+        alert("Error al copiar: " + err);
+      });
+    }
+  </script>
+</body>
+</html>

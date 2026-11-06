@@ -1,0 +1,102 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Flow/FlowStyles.uss" />
+
+    <ui:VisualElement name="faction-root" class="flow-root solid-black-bg">
+        
+        <!-- CARRUSEL DE PANTALLA COMPLETA CON FONDO NEGRO ABSOLUTO -->
+        <ui:VisualElement name="carousel-container" class="carousel-full-screen solid-black-bg">
+            
+            <!-- PÁGINA COMPLETA DESLIZABLE -->
+            <ui:VisualElement name="carousel-swipe-area" class="faction-full-page solid-black-bg">
+                
+                <!-- 1. MARCO EXTERIOR DE LA FACCIÓN (Mantiene relación de aspecto 941:1671 por porcentaje) -->
+                <ui:VisualElement name="faction-bg-frame" class="faction-bg-frame">
+                    
+                    <!-- ZONA SEGURA INTERIOR DEL MARCO GRANDE (Porcentajes exactos dentro del cuadro negro) -->
+                    <ui:VisualElement name="faction-content-column" class="faction-safe-zone">
+                        
+                        <!-- FRAGMENTO VERTICAL: LA NAVE (Arriba, mantiene proporción 2:3 por porcentaje) -->
+                        <ui:VisualElement name="plane-frame-box" class="fragment-vertical-box">
+                            <ui:VisualElement class="vertical-safe-zone">
+                                <ui:VisualElement name="plane-sprite-display" class="plane-silhouette-sprite" />
+                                <ui:Label name="lbl-plane-code" text="«KÓLOKOL» VUELO LIBRE" class="plane-code-badge" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <!-- DESCRIPCIÓN DE LA NAVE Y FACCIÓN (Centro, en porcentaje dentro de las líneas) -->
+                        <ui:VisualElement name="faction-desc-box" class="fragment-desc-box">
+                            <ui:Label name="lbl-faction-title" text="FACCIÓN ANARQUISTA" class="faction-title-badge" />
+                            <ui:Label name="lbl-plane-slogan" text="«Sin amos, sin fronteras: el cielo pertenece a quien lo desafía»" class="faction-slogan-text" />
+                            <ui:Label name="lbl-philosophy" text="Caza táctico ultra-ligero de asalto guerrillero montado en talleres clandestinos. Cuenta con máxima aceleración y chasis flexible." class="faction-desc-text" />
+                        </ui:VisualElement>
+
+                        <!-- FRAGMENTO HORIZONTAL: LAS ESTADÍSTICAS (Abajo, mantiene proporción 2:1 por porcentaje) -->
+                        <ui:VisualElement name="stats-frame-box" class="fragment-horizontal-box">
+                            <ui:VisualElement class="horizontal-safe-zone">
+                                <!-- Velocidad -->
+                                <ui:VisualElement class="stat-block">
+                                    <ui:VisualElement class="stat-label-row">
+                                        <ui:Label text="VELOCIDAD" class="stat-name-label" />
+                                        <ui:Label name="val-stat-speed" text="9.5 / 10" class="stat-num-label" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="stat-bar-track">
+                                        <ui:VisualElement name="bar-stat-speed" class="stat-bar-fill speed-fill" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+
+                                <!-- Fuerza de Disparo -->
+                                <ui:VisualElement class="stat-block">
+                                    <ui:VisualElement class="stat-label-row">
+                                        <ui:Label text="FUERZA DE DISPARO" class="stat-name-label" />
+                                        <ui:Label name="val-stat-firepower" text="7.0 / 10" class="stat-num-label" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="stat-bar-track">
+                                        <ui:VisualElement name="bar-stat-firepower" class="stat-bar-fill firepower-fill" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+
+                                <!-- Blindaje -->
+                                <ui:VisualElement class="stat-block">
+                                    <ui:VisualElement class="stat-label-row">
+                                        <ui:Label text="BLINDAJE" class="stat-name-label" />
+                                        <ui:Label name="val-stat-armor" text="4.0 / 10" class="stat-num-label" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="stat-bar-track">
+                                        <ui:VisualElement name="bar-stat-armor" class="stat-bar-fill armor-fill" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+
+                                <!-- Mejoras -->
+                                <ui:VisualElement class="stat-block">
+                                    <ui:VisualElement class="stat-label-row">
+                                        <ui:Label text="MEJORAS" class="stat-name-label" />
+                                        <ui:Label name="val-stat-upgrades" text="9.8 / 10" class="stat-num-label" />
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="stat-bar-track">
+                                        <ui:VisualElement name="bar-stat-upgrades" class="stat-bar-fill upgrades-fill" />
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <!-- BOTÓN ELEGIR NAVE (En porcentaje dentro del cuadro negro inferior) -->
+                        <ui:Button name="btn-confirm-faction" class="btn-confirm-inside">
+                            <ui:Label text="ELEGIR NAVE" class="btn-confirm-inside-text" picking-mode="Ignore" />
+                        </ui:Button>
+
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- PAGINACIÓN DE PUNTOS (DOTS) FLOTANDO ABAJO FIJA -->
+        <ui:VisualElement name="carousel-dots-row" class="carousel-dots-row compact floating-dots">
+            <ui:VisualElement name="dot-0" class="carousel-dot active" />
+            <ui:VisualElement name="dot-1" class="carousel-dot" />
+            <ui:VisualElement name="dot-2" class="carousel-dot" />
+            <ui:VisualElement name="dot-3" class="carousel-dot" />
+        </ui:VisualElement>
+        
+    </ui:VisualElement>
+</ui:UXML>

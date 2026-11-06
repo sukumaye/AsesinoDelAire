@@ -168,7 +168,14 @@ namespace WorldGen.EditorTools
                 gen.SetDimensions(60, 60);
                 EditorUtility.SetDirty(gen);
             }
-            if (GUILayout.Button("80x80 (4 Continentes)", EditorStyles.miniButton))
+            if (GUILayout.Button("100x300 (Shmup Vertical)", EditorStyles.miniButton))
+            {
+                Undo.RecordObject(gen, "Preset 100x300 Shmup");
+                gen.SetDimensions(100, 300);
+                gen.SetChunkDimensions(100, 100);
+                EditorUtility.SetDirty(gen);
+            }
+            if (GUILayout.Button("80x80", EditorStyles.miniButton))
             {
                 Undo.RecordObject(gen, "Preset 80x80 Continentes");
                 gen.SetDimensions(80, 80);
@@ -176,19 +183,19 @@ namespace WorldGen.EditorTools
                 gen.FitChunksToFourContinents();
                 EditorUtility.SetDirty(gen);
             }
-            if (GUILayout.Button("100x100", EditorStyles.miniButton))
+            if (GUILayout.Button("60x60", EditorStyles.miniButton))
             {
-                Undo.RecordObject(gen, "Preset 100x100");
-                gen.SetDimensions(100, 100);
+                Undo.RecordObject(gen, "Preset 60x60");
+                gen.SetDimensions(60, 60);
                 EditorUtility.SetDirty(gen);
             }
             EditorGUILayout.EndHorizontal();
 
             SerializedProperty widthProp = serializedObject.FindProperty("width");
             SerializedProperty heightProp = serializedObject.FindProperty("height");
-            EditorGUILayout.IntSlider(widthProp, 30, 150, new GUIContent("Ancho (Width)"));
-            EditorGUILayout.IntSlider(heightProp, 30, 150, new GUIContent("Alto (Height)"));
-            EditorGUILayout.LabelField($"• Área total: {widthProp.intValue * heightProp.intValue} casillas. (80x80 recomendado para 4 continentes con chunks)", EditorStyles.miniLabel);
+            EditorGUILayout.IntSlider(widthProp, 30, 200, new GUIContent("Ancho (Width)"));
+            EditorGUILayout.IntSlider(heightProp, 30, 400, new GUIContent("Alto (Height)"));
+            EditorGUILayout.LabelField($"• Área total: {widthProp.intValue * heightProp.intValue} casillas. (100x300 recomendado para Shoot 'em Up vertical)", EditorStyles.miniLabel);
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(4);
@@ -205,6 +212,12 @@ namespace WorldGen.EditorTools
 
                 EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PrefixLabel("Preajustes Chunks:");
+                if (GUILayout.Button("100x100 (3 Secciones)", EditorStyles.miniButton))
+                {
+                    Undo.RecordObject(gen, "Preset Chunks 100x100");
+                    gen.SetChunkDimensions(100, 100);
+                    EditorUtility.SetDirty(gen);
+                }
                 if (GUILayout.Button("4 Continentes (40x40)", EditorStyles.miniButton))
                 {
                     Undo.RecordObject(gen, "Ajustar Chunks a 4 Continentes");
@@ -215,12 +228,6 @@ namespace WorldGen.EditorTools
                 {
                     Undo.RecordObject(gen, "Preset Chunks 20x20");
                     gen.SetChunkDimensions(20, 20);
-                    EditorUtility.SetDirty(gen);
-                }
-                if (GUILayout.Button("16x16 (Retro)", EditorStyles.miniButton))
-                {
-                    Undo.RecordObject(gen, "Preset Chunks 16x16");
-                    gen.SetChunkDimensions(16, 16);
                     EditorUtility.SetDirty(gen);
                 }
                 EditorGUILayout.EndHorizontal();
@@ -476,7 +483,51 @@ namespace WorldGen.EditorTools
 
             EditorGUILayout.Space(4);
 
-            // 7. Base de Datos y Tilemaps
+            // 7. Jefe Final / Personaje al Final del Mapa
+            EditorGUILayout.LabelField("👑 Jefe Final / Personaje al Final del Mapa (Tanque)", EditorStyles.boldLabel);
+            EditorGUILayout.BeginVertical("box");
+
+            SerializedProperty autoEndCharProp = serializedObject.FindProperty("autoPositionEndCharacterOnGenerate");
+            EditorGUILayout.PropertyField(autoEndCharProp, new GUIContent("Spawn / Reposicionar al Generar", "Al generar o randomizar el mapa, sitúa automáticamente al personaje en el extremo final del camino."));
+
+            SerializedProperty endPrefabProp = serializedObject.FindProperty("endLevelCharacterPrefab");
+            EditorGUILayout.PropertyField(endPrefabProp, new GUIContent("Prefab Personaje (Tanque)", "Prefab a instanciar al final del mapa."));
+
+            SerializedProperty endInstanceProp = serializedObject.FindProperty("endLevelCharacterInstance");
+            EditorGUILayout.PropertyField(endInstanceProp, new GUIContent("Instancia en Escena", "Si ya existe en la jerarquía, se reubicará al final en vez de instanciar uno nuevo."));
+
+            SerializedProperty endOffsetProp = serializedObject.FindProperty("endLevelSpawnOffset");
+            EditorGUILayout.PropertyField(endOffsetProp, new GUIContent("Offset de Posición", "Desplazamiento adicional respecto al final del camino."));
+
+            SerializedProperty endRotProp = serializedObject.FindProperty("endLevelCharacterRotationZ");
+            EditorGUILayout.PropertyField(endRotProp, new GUIContent("Rotación Z (Encarado)", "0° = alineado en el eje sin rotar."));
+
+            SerializedProperty ensureSgProp = serializedObject.FindProperty("ensureSortingGroupOnEndCharacter");
+            EditorGUILayout.PropertyField(ensureSgProp, new GUIContent("Asegurar SortingGroup", "Garantiza que las piezas 2D mantengan su orden de capas relativo."));
+
+            EditorGUILayout.Space(4);
+            EditorGUILayout.BeginHorizontal();
+            GUI.backgroundColor = new Color(1f, 0.45f, 0.3f);
+            if (GUILayout.Button("🎯 Posicionar Jefe al Final del Camino", GUILayout.Height(30)))
+            {
+                if (!Application.isPlaying) Undo.RecordObject(gen, "Posicionar Jefe al Final");
+                gen.PositionOrSpawnEndCharacter();
+                if (!Application.isPlaying) EditorUtility.SetDirty(gen);
+            }
+
+            GUI.backgroundColor = new Color(0.2f, 0.85f, 0.35f);
+            if (GUILayout.Button("🕷️ Configurar / Seleccionar Tanque Araña", GUILayout.Height(30)))
+            {
+                SpiderTankSetupUtility.SetupSpiderTankInScene();
+            }
+            GUI.backgroundColor = Color.white;
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.EndVertical();
+
+            EditorGUILayout.Space(4);
+
+            // 8. Base de Datos y Tilemaps
             showTilemaps = EditorGUILayout.Foldout(showTilemaps, "🎨 Tilemaps y Base de Datos Visual WFC");
             if (showTilemaps)
             {

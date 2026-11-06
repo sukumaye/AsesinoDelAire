@@ -3,15 +3,16 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using WorldGen.Data;
 using WorldGen.Generators;
+using WorldGen.Boss;
 
 namespace WorldGen.Core
 {
     public class MapGenerator : MonoBehaviour
     {
         [Header("Dimensiones del Mapa")]
-        [Tooltip("Tamaño del mundo en tiles. Se recomienda 80x80 para archipiélagos con espacio desahogado para pueblos, mesetas y bosques sin apiñamiento.")]
-        public int width = 80;
-        public int height = 80;
+        [Tooltip("Tamaño del mundo en tiles. Rectángulo vertical para modo Shoot 'em Up (100 de ancho x 300 hacia arriba).")]
+        public int width = 100;
+        public int height = 300;
 
         [Header("Geografía del Mundo")]
         [Tooltip("Tipo de mundo a generar: Archipiélago (islas, bahías, cabos y estrechos), Continente (golfos y penínsulas), Costa e Islas, o Lagos y Ríos.")]
@@ -84,6 +85,27 @@ namespace WorldGen.Core
         [HideInInspector]
         public List<Vector2Int> roadWaypoints = new List<Vector2Int>();
 
+        [Header("👑 Jefe Final / Personaje al Final del Mapa")]
+        [Tooltip("Prefab del personaje o jefe (ej. Tanque) a spawnear/posicionar al final de la carretera al generar el mundo.")]
+        public GameObject endLevelCharacterPrefab;
+
+        [Tooltip("Instancia ya colocada en escena a reubicar al final del mapa (opcional si usas prefab).")]
+        public Transform endLevelCharacterInstance;
+
+        [Tooltip("Si está activo, posiciona o spawnea automáticamente al personaje al término del camino cada vez que se genera el mapa.")]
+        public bool autoPositionEndCharacterOnGenerate = true;
+
+        [Tooltip("Desplazamiento adicional (offset) en la posición de spawn del personaje final.")]
+        public Vector3 endLevelSpawnOffset = Vector3.zero;
+
+        [Tooltip("Rotación en Z para orientar al personaje en el eje (0° = alineado en el eje sin rotación).")]
+        public float endLevelCharacterRotationZ = 0f;
+
+        [Tooltip("Asegura que el personaje tenga un SortingGroup para mantener la jerarquía de capas 2D.")]
+        public bool ensureSortingGroupOnEndCharacter = true;
+
+        public event System.Action<Vector3, Vector3> OnWorldGenerated;
+
         [Header("Caminos y Puentes")]
         [Tooltip("Permite que las carreteras construyan puentes automáticos sobre el agua para conectar las distintas islas y costas.")]
         public bool allowBridges = true;
@@ -138,11 +160,11 @@ namespace WorldGen.Core
         [Tooltip("Activa la partición del mundo en Chunks. Permite que los chunks aparezcan y desaparezcan según la posición del mapa o continente activo.")]
         public bool useChunkMap = true;
 
-        [Tooltip("Tamaño de cada chunk en casillas (tiles). Ej: 20x20, 16x16, o 40x40 para abarcar un continente entero por chunk.")]
-        public Vector2Int chunkSize = new Vector2Int(20, 20);
+        [Tooltip("Tamaño de cada chunk en casillas (tiles). Por defecto 100x100 para conformar 3 secciones de 100 casillas en un mundo de 100x300.")]
+        public Vector2Int chunkSize = new Vector2Int(100, 100);
 
         [Tooltip("Modo de visibilidad: Streaming por radio (mundo abierto), Sección de continente (4 cuadrantes), Pantalla única (retro) o Todo visible.")]
-        public ChunkStreamingMode chunkStreamingMode = ChunkStreamingMode.ContinentSection;
+        public ChunkStreamingMode chunkStreamingMode = ChunkStreamingMode.AllVisible;
 
         [Range(0, 3)]
         [Tooltip("Radio de chunks visibles alrededor del jugador/cámara en modo StreamingRadius (0 = solo chunk actual, 1 = 3x3 chunks).")]
@@ -179,8 +201,52 @@ namespace WorldGen.Core
         }
         public Dictionary<Vector2Int, WorldChunk> Chunks => chunks;
 
+        [Header("🌍 Planeta Sixela (Lore y Contexto Táctico)")]
+        public string planetName = "Sixela";
+        public string activeFactionName = "";
+        public string activeWeatherEvent = "";
+        public string activeSituationReport = "";
+
         private void Start()
         {
+            if (MissionDeploymentData.hasCustomDeployment)
+            {
+                width = MissionDeploymentData.selectedWidth;
+                height = MissionDeploymentData.selectedHeight;
+                chunkSize = MissionDeploymentData.selectedChunkSize;
+                terrainStyle = MissionDeploymentData.selectedTerrainStyle;
+                seed = MissionDeploymentData.selectedSeed;
+                useRandomSeed = false;
+                randomizeParametersOnGenerate = false;
+                lockTerrainStyle = true;
+                lockWaterLevel = true;
+                lockIslandSettings = true;
+                lockDimensions = true;
+
+                planetName = MissionDeploymentData.planetName;
+                activeFactionName = MissionDeploymentData.factionName;
+                activeWeatherEvent = MissionDeploymentData.weatherEvent;
+                activeSituationReport = MissionDeploymentData.situationReport;
+
+                Debug.Log($"<b>[MapGenerator]</b> 🌍 PLANETA {planetName.ToUpper()} // SECTOR: {MissionDeploymentData.selectedSectorName} ({MissionDeploymentData.selectedFrequency:F2} MHz) - Formación: {MissionDeploymentData.formationName} ({terrainStyle}) - Facción: {activeFactionName} - Clima: {activeWeatherEvent} - Semilla: {seed} ({width}x{height}).");
+            }
+            else if (PlayerPrefs.HasKey("SavedWorldSeed"))
+            {
+                seed = PlayerPrefs.GetInt("SavedWorldSeed");
+                terrainStyle = (TerrainStyle)PlayerPrefs.GetInt("SavedTerrainStyle", (int)TerrainStyle.Archipelago);
+                if (PlayerPrefs.HasKey("SavedWorldWidth")) width = PlayerPrefs.GetInt("SavedWorldWidth");
+                if (PlayerPrefs.HasKey("SavedWorldHeight")) height = PlayerPrefs.GetInt("SavedWorldHeight");
+                useRandomSeed = false;
+                randomizeParametersOnGenerate = false;
+                lockTerrainStyle = true;
+                lockWaterLevel = true;
+                lockIslandSettings = true;
+                lockDimensions = true;
+
+                if (PlayerPrefs.HasKey("SavedFactionName")) activeFactionName = PlayerPrefs.GetString("SavedFactionName");
+                Debug.Log($"<b>[MapGenerator]</b> 💾 Cargando mapa persistente de misión previa: Semilla={seed}, Estilo={terrainStyle}, Facción={activeFactionName}.");
+            }
+
             if (generateOnStart)
             {
                 GenerateWorld();
@@ -299,7 +365,7 @@ namespace WorldGen.Core
         [ContextMenu("Generar Mundo")]
         public void GenerateWorld()
         {
-            if (randomizeParametersOnGenerate)
+            if (randomizeParametersOnGenerate && !MissionDeploymentData.hasCustomDeployment)
             {
                 RandomizeTerrainParameters();
             }
@@ -350,7 +416,16 @@ namespace WorldGen.Core
             }
 
             int currentSeed = useRandomSeed ? Random.Range(1, 1000000) : seed;
+            seed = currentSeed;
             Random.InitState(currentSeed);
+
+            // Persistir la semilla y estilo del mapa generado para que el menú siempre pueda renderizar el mapa anterior
+            PlayerPrefs.SetInt("SavedWorldSeed", currentSeed);
+            PlayerPrefs.SetInt("SavedTerrainStyle", (int)terrainStyle);
+            PlayerPrefs.SetInt("SavedWorldWidth", width);
+            PlayerPrefs.SetInt("SavedWorldHeight", height);
+            PlayerPrefs.SetInt("HasCreatedMap", 1);
+            PlayerPrefs.Save();
 
             // Asegurar capas de renderizado: Ground=0, Path=5, Structure=10
             if (groundMap != null)
@@ -829,6 +904,14 @@ namespace WorldGen.Core
             {
                 PositionShmupAtRoadStart();
             }
+
+            // 8. Posicionar o Instanciar Jefe / Personaje (Tanque) al Final del Camino
+            if (autoPositionEndCharacterOnGenerate)
+            {
+                PositionOrSpawnEndCharacter();
+            }
+
+            OnWorldGenerated?.Invoke(roadStartPosition, roadEndPosition);
         }
 
         [ContextMenu("Posicionar Avión y Cámara al Inicio del Camino")]
@@ -865,17 +948,39 @@ namespace WorldGen.Core
             var pathToUse = (optimalFlightPath != null && optimalFlightPath.Count > 0) ? optimalFlightPath : roadPathPoints;
 
             // 2. Sincronizar objetivo guía de Cinemachine si existe en la escena
-            var cmTarget = FindAnyObjectByType<Shmup.CinemachineShmupTarget>();
+            var cmTarget = FindAnyObjectByType<Shmup.CinemachineShmupTarget>(FindObjectsInactive.Include);
             if (cmTarget != null)
             {
                 cmTarget.SetupAtPathStart(startPos, pathToUse);
                 Debug.Log($"<color=cyan><b>[Cinemachine Setup]</b> ¡Objetivo guía 'Cinemachine_PathTarget' sincronizado al inicio del camino!</color>");
             }
 
-            // 3. Localizar y sincronizar las cámaras
-            if (shmupCamera == null)
+            // 3. Localizar y sincronizar las cámaras (priorizando siempre la cámara de ESTA escena de juego)
+            if (shmupCamera == null || shmupCamera.gameObject.scene != gameObject.scene)
             {
-                shmupCamera = Camera.main;
+                shmupCamera = null;
+                if (gameObject.scene.isLoaded)
+                {
+                    var sceneRoots = gameObject.scene.GetRootGameObjects();
+                    foreach (var root in sceneRoots)
+                    {
+                        var cam = root.GetComponentInChildren<Camera>(true);
+                        if (cam != null && cam.CompareTag("MainCamera"))
+                        {
+                            shmupCamera = cam;
+                            break;
+                        }
+                        if (cam != null && shmupCamera == null && !cam.name.Contains("Preview"))
+                        {
+                            shmupCamera = cam;
+                        }
+                    }
+                }
+
+                if (shmupCamera == null)
+                {
+                    shmupCamera = Camera.main;
+                }
             }
 
             if (shmupCamera != null)
@@ -903,15 +1008,33 @@ namespace WorldGen.Core
                 cmCam.PreviousStateIsValid = false;
             }
 
-            // 4. Localizar o referenciar el avión del jugador
-            if (shmupPlayer == null)
+            // 4. Localizar o referenciar el avión del jugador (dentro de ESTA escena de juego)
+            if (shmupPlayer == null || shmupPlayer.gameObject.scene != gameObject.scene)
             {
-                var plane = FindAnyObjectByType<Shmup.ShmupPlaneController>();
-                if (plane != null) shmupPlayer = plane.transform;
-                else
+                shmupPlayer = null;
+                if (gameObject.scene.isLoaded)
                 {
-                    var playerObj = GameObject.FindWithTag("Player");
-                    if (playerObj != null) shmupPlayer = playerObj.transform;
+                    var sceneRoots = gameObject.scene.GetRootGameObjects();
+                    foreach (var root in sceneRoots)
+                    {
+                        var plane = root.GetComponentInChildren<Shmup.ShmupPlaneController>(true);
+                        if (plane != null)
+                        {
+                            shmupPlayer = plane.transform;
+                            break;
+                        }
+                    }
+                }
+
+                if (shmupPlayer == null)
+                {
+                    var plane = FindAnyObjectByType<Shmup.ShmupPlaneController>(FindObjectsInactive.Include);
+                    if (plane != null) shmupPlayer = plane.transform;
+                    else
+                    {
+                        var playerObj = GameObject.FindWithTag("Player");
+                        if (playerObj != null) shmupPlayer = playerObj.transform;
+                    }
                 }
             }
 
@@ -929,6 +1052,129 @@ namespace WorldGen.Core
                 }
                 Debug.Log($"<color=green><b>[Shmup Setup]</b> ¡Avión posicionado en inicio del camino: ({startPos.x:F1}, {startPos.y:F1}) y configurado con ruta de {pathToUse.Count} waypoints (horizontal y vertical)!</color>");
             }
+        }
+
+        /// <summary>
+        /// Devuelve la coordenada de mundo del final del camino (o el límite norte del mapa).
+        /// </summary>
+        public Vector3 GetRoadEndPosition()
+        {
+            if (optimalFlightPath != null && optimalFlightPath.Count > 0)
+            {
+                return optimalFlightPath[optimalFlightPath.Count - 1];
+            }
+            if (roadPathPoints != null && roadPathPoints.Count > 0)
+            {
+                return roadPathPoints[roadPathPoints.Count - 1];
+            }
+            if (roadEndPosition != Vector3.zero)
+            {
+                return roadEndPosition;
+            }
+            return new Vector3(width * 0.5f, height - 12f, 0f);
+        }
+
+        [ContextMenu("Posicionar Personaje al Final del Camino")]
+        public GameObject PositionOrSpawnEndCharacter()
+        {
+            Vector3 endPos = GetRoadEndPosition() + endLevelSpawnOffset;
+            float rotZ = endLevelCharacterRotationZ;
+            Quaternion rot = Quaternion.Euler(0f, 0f, rotZ);
+            GameObject characterGO = null;
+
+            // 1. Reutilizar instancia si ya está referenciada o colocada en escena
+            if (endLevelCharacterInstance != null)
+            {
+                characterGO = endLevelCharacterInstance.gameObject;
+                characterGO.transform.position = endPos;
+                characterGO.transform.rotation = rot;
+                var spider = characterGO.GetComponent<SpiderTankController>();
+                if (spider != null)
+                {
+                    endPos += new Vector3(0f, spider.outsideOffsetY, 0f);
+                    characterGO.transform.position = endPos;
+                    spider.SetAnchorPosition(endPos);
+                    spider.EnforceRightAngle();
+                }
+                Debug.Log($"<color=green><b>[MapGenerator]</b> Personaje final '{characterGO.name}' posicionado afuera al final del camino en ({endPos.x:F1}, {endPos.y:F1}) y mirando hacia abajo.</color>");
+            }
+            // 2. O instanciar el prefab configurado
+            else if (endLevelCharacterPrefab != null)
+            {
+#if UNITY_EDITOR
+                if (!Application.isPlaying)
+                {
+                    characterGO = UnityEditor.PrefabUtility.InstantiatePrefab(endLevelCharacterPrefab) as GameObject;
+                    if (characterGO != null)
+                    {
+                        UnityEditor.Undo.RegisterCreatedObjectUndo(characterGO, "Spawn End Character");
+                    }
+                }
+                else
+#endif
+                {
+                    characterGO = Instantiate(endLevelCharacterPrefab);
+                }
+
+                if (characterGO != null)
+                {
+                    characterGO.transform.position = endPos;
+                    characterGO.transform.rotation = rot;
+                    endLevelCharacterInstance = characterGO.transform;
+                    var spider = characterGO.GetComponent<SpiderTankController>();
+                    if (spider != null)
+                    {
+                        spider.SetAnchorPosition(endPos);
+                    }
+                    Debug.Log($"<color=green><b>[MapGenerator]</b> ¡Prefab '{endLevelCharacterPrefab.name}' instanciado al final del camino en ({endPos.x:F1}, {endPos.y:F1})!</color>");
+                }
+            }
+            else
+            {
+                // 3. Buscar si hay un SpiderTankController ya en la escena
+                var spider = FindAnyObjectByType<SpiderTankController>();
+                if (spider != null)
+                {
+                    endLevelCharacterInstance = spider.transform;
+                    characterGO = spider.gameObject;
+                    Vector3 bossPos = endPos + new Vector3(0f, spider.outsideOffsetY, 0f);
+                    characterGO.transform.position = bossPos;
+                    characterGO.transform.rotation = rot;
+                    spider.SetAnchorPosition(bossPos);
+                    spider.EnforceRightAngle();
+                    Debug.Log($"<color=green><b>[MapGenerator]</b> Tanque '{characterGO.name}' detectado y posicionado al final del camino en ({bossPos.x:F1}, {bossPos.y:F1}) alineado en el eje 0°.</color>");
+                }
+                else
+                {
+                    // Buscar si hay un objeto llamado "tanque" o con tag Boss en escena
+                    var allTransforms = FindObjectsByType<Transform>();
+                    foreach (var t in allTransforms)
+                    {
+                        if (t.name.ToLower().Contains("tanque") || t.CompareTag("Boss"))
+                        {
+                            endLevelCharacterInstance = t;
+                            characterGO = t.gameObject;
+                            characterGO.transform.position = endPos;
+                            characterGO.transform.rotation = rot;
+                            Debug.Log($"<color=green><b>[MapGenerator]</b> Objeto '{characterGO.name}' posicionado al final del camino en ({endPos.x:F1}, {endPos.y:F1}).</color>");
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+            if (characterGO != null && ensureSortingGroupOnEndCharacter)
+            {
+                var sg = characterGO.GetComponent<UnityEngine.Rendering.SortingGroup>();
+                if (sg == null)
+                {
+                    sg = characterGO.AddComponent<UnityEngine.Rendering.SortingGroup>();
+                }
+                sg.sortingOrder = 10;
+            }
+
+            return characterGO;
         }
 
         /// <summary>
